@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class ArmyUnit : MonoBehaviour {
+public class DragableObjects : MonoBehaviour {
 	public bool movementDecision = false;
 	public bool moving = false;
 	public bool dragging = false;
@@ -19,7 +19,7 @@ public class ArmyUnit : MonoBehaviour {
 	public int touchFingerId;
 
 	void Awake() {
-		mouseMode = (Application.platform == RuntimePlatform.OSXEditor);
+		mouseMode = true;
 	}
 
 	public void Init(GameObject general, GameObject arPrefab) {
