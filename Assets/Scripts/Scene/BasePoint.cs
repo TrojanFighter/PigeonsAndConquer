@@ -27,7 +27,7 @@ namespace Lords
 
 		void Awake()
 		{
-			fraction = GameManager.Fractions[(int) baseFraction];
+			fraction = DataManager.Fractions[(int) baseFraction];
 			Init();
 			FractionGodBasePosition = FractionGod.transform.position;
 			DOTween.Init(false, true, LogBehaviour.ErrorsOnly);
@@ -38,11 +38,9 @@ namespace Lords
 		{
 			FractionHP = fraction.FractionsInitHP;
 		}
-
+/*
 		void Check()
 		{
-
-
 
 
 			if (FractionHP < 0)
@@ -58,6 +56,7 @@ namespace Lords
 
 		}
 
+		
 		void LoseHP()
 		{
 			if (fraction.WinConditionHP)
@@ -111,15 +110,15 @@ namespace Lords
 			FractionHP += HP;
 			//FractionGodAdjust (MP);
 			Check();
-		}
+		}*/
 
 
 
 		/*
 		void OnTriggerEnter (Collider other)
 		{
-			//other.GetComponent<Unit>()&&&&other.GetComponent<Unit>().fraction != m_fraction&&other.GetComponent<Unit>().unitState==GlobalDefine.UnitState.Advance
-			if (other.GetComponent<Unit>()&&other.GetComponent<Unit>().fraction != baseFraction&&other.GetComponent<Unit>().unitState==GlobalDefine.UnitState.Advance) {
+			//other.GetComponent<Unit>()&&&&other.GetComponent<Unit>().fraction != m_fraction&&other.GetComponent<Unit>().unitState==GlobalDefine.UnitState.Advancing
+			if (other.GetComponent<Unit>()&&other.GetComponent<Unit>().fraction != baseFraction&&other.GetComponent<Unit>().unitState==GlobalDefine.UnitState.Advancing) {
 				Destroy (other.gameObject);
 			}
 	

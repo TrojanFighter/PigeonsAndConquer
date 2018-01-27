@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class General : ArmyUnit {
+public class General : DragableObjects {
 
 	public override void Update() {
 		// If we've selected to move the general and selected another point 

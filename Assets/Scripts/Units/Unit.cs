@@ -6,16 +6,7 @@ namespace Lords
 {
 	public abstract class Unit : MonoBehaviour
 	{
-		/*
-		// Use this for initialization
-		void Start () {
-		
-		}
-		
-		// Update is called once per frame
-		void Update () {
-		
-		}*/
+
 		public int UnitID;
 		
 		public GlobalDefine.UnitClass unitClass;
@@ -25,18 +16,21 @@ namespace Lords
 		public Collider2D m_hitCollider;
 		public AttackRangeCollider attackRangeCollider;
 		public Transform m_transform;
-		public Vector2 m_destination;
+		public Vector3 m_destination;
 		public float UnitSpeed=1;
 		public List<Unit> TargetUnitList;
 		public int normalHP;
-		protected MeshRenderer meshRenderer;
-		protected Material originMaterial;
-
-
+		//protected MeshRenderer meshRenderer;
+		//protected Material originMaterial;
+		
 
 		public delegate void informUnitDieDelegate(Unit unit);
 
 		public event informUnitDieDelegate informingUnitDieOrBetray;
+
+		public GameObject m_currentArrow;
+		public int touchFingerId;
+		public bool mouseMode,isBeingDragged;
 
 
 
@@ -60,21 +54,21 @@ namespace Lords
 			}
 
 
-			soldierType = GameManager.SoldierTypes[(int) unitClass];
+			soldierType = DataManager.SoldierTypes[(int) unitClass];
 			attackRangeCollider.myunitclass = unitClass;
-			SetAttackRange(soldierType.AttackRange);
+			//SetAttackRange(soldierType.AttackRange);
 			normalHP = soldierType.NormalHP;
 			//Debug.Log (soldierType.AttackRange);
 
-			unitState = GlobalDefine.UnitState.Advance;
+			unitState = GlobalDefine.UnitState.Advancing;
 
 			TargetUnitList = new List<Unit>();
 
 			attackRangeCollider.AddingTargetUnitList += AddTargetUnitList;
 			attackRangeCollider.RemovingTargetUnitList += RemoveTargetUnitList;
 
-			meshRenderer = this.GetComponent<MeshRenderer>();
-			originMaterial = meshRenderer.material;
+			//meshRenderer = this.GetComponent<MeshRenderer>();
+			//originMaterial = meshRenderer.material;
 
 		}
 
@@ -107,6 +101,7 @@ namespace Lords
 
 		public virtual void SetAttackRange(float attackRange)
 		{
+			return;
 			attackRangeCollider.transform.localPosition = new Vector3(0, 0, attackRange / 2);
 			attackRangeCollider.transform.localScale = new Vector3(5, 1, attackRange);
 		}
@@ -120,7 +115,7 @@ namespace Lords
 				if (soldierType.AttackType == 3)
 				{
 					//信仰攻击
-					unitState = GlobalDefine.UnitState.Attack;
+					//unitState = GlobalDefine.UnitState.Attack;
 					StartAttackTargetList();
 
 				}
@@ -128,7 +123,7 @@ namespace Lords
 				if (soldierType.AttackType == 1 || soldierType.AttackType == 2)
 				{
 					//普通攻击
-					unitState = GlobalDefine.UnitState.Attack;
+					//unitState = GlobalDefine.UnitState.Attack;
 					StartAttackClosestTarget();
 
 				}
@@ -144,7 +139,7 @@ namespace Lords
 				try
 				{
 					StopAllCoroutines();
-					unitState = GlobalDefine.UnitState.Advance;
+					unitState = GlobalDefine.UnitState.Advancing;
 				}
 				catch
 				{
@@ -228,14 +223,14 @@ namespace Lords
 					{
 						//近程攻击不打子弹
 						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower);
-						InAudio.PostEvent(gameObject, GameManager.Instance.KnightAttackEvent);
+						InAudio.PostEvent(gameObject, SceneManager.Instance.KnightAttackEvent);
 					}
 
 					if (soldierType.AttackType == 2)
 					{
 						//远程攻击要打子弹
 						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower);
-						InAudio.PostEvent(gameObject, GameManager.Instance.ArcherAttackEvent);
+						InAudio.PostEvent(gameObject, SceneManager.Instance.ArcherAttackEvent);
 					}
 				}
 
@@ -274,7 +269,7 @@ namespace Lords
 
 		public virtual void UnitSabotaged()
 		{
-			GameObject ray;
+			/*GameObject ray;
 			if (fraction == GlobalDefine.Fraction.One)
 			{
 				ray = GameManager.Instance.GodRayPurple;
@@ -291,7 +286,7 @@ namespace Lords
 			else
 			{
 				//ray
-			}
+			}*/
 
 
 			//UnitDie ();
@@ -308,8 +303,123 @@ namespace Lords
 
 		}
 
-		public void ReceiveCommand()
+		void MouseLogic()
 		{
+			// Mouse logic
+			if (mouseMode) {
+				if (Input.GetMouseButtonDown (0)) {
+					Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+					RaycastHit hit;
+					if (GetComponent<Collider> ().Raycast (ray, out hit, 100.0F)) {
+						isBeingDragged = true;
+						m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
+						GetComponent<LineRenderer> ().enabled = true;
+
+					}
+				}
+
+				if (isBeingDragged) {
+					Vector3 arrowPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+					arrowPos.z = -1f;
+					m_currentArrow.transform.position = arrowPos;
+					GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
+					if (Input.GetMouseButtonUp (0)) {
+						isBeingDragged = false;
+						if(m_currentArrow!=null)
+						Destroy (m_currentArrow);
+						GetComponent<LineRenderer> ().enabled = false;
+					}
+				}
+			} else {
+				// Touch logic
+				if (isBeingDragged) {
+					if (Input.touches.Length == 0) {
+						// Dragging has ended
+						MovementDecided ();
+					}
+					for(int i=0; i < Input.touches.Length; i++) {
+						if (Input.touches [i].fingerId == touchFingerId) {
+							TouchDrag (Input.touches [i]);
+							break;
+						} else if (i == Input.touches.Length - 1) {
+							// Dragging has ended
+							MovementDecided();
+						}
+					}
+				} else {
+					// Check to see if we're touching this object
+					foreach (Touch touch in Input.touches) {
+						Ray ray = Camera.main.ScreenPointToRay (touch.position);
+						RaycastHit hit;
+						if (GetComponent<Collider> ().Raycast (ray, out hit, 100.0F)) {
+							isBeingDragged = true;
+							touchFingerId = touch.fingerId;
+							m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
+							GetComponent<LineRenderer> ().enabled = true;
+						}
+					}
+				}
+			}
+		}
+		
+		public void MovementDecided() {
+			isBeingDragged = false;
+			if(m_currentArrow!=null)
+				Destroy (m_currentArrow);
+			GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, transform.position }); // Resets line to 0
+			GetComponent<LineRenderer> ().enabled = false;
+			// At this point we need to generate a messenger from the general
+		}
+
+		public void TouchDrag(Touch currentTouch) {
+			Vector3 arrowPos = Camera.main.ScreenToWorldPoint (currentTouch.position);
+			arrowPos.z = -1f;
+			m_destination = arrowPos;
+			m_currentArrow.transform.position = arrowPos;
+			GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
+		}
+		
+
+		public void Move() {
+			float step = UnitSpeed * Time.deltaTime;
+			transform.position = Vector2.MoveTowards(transform.position, m_destination, step);
+			if (transform.position == m_destination) {
+				//moving = false;
+				unitState = GlobalDefine.UnitState.Standing;
+			}
+		}
+
+
+		//Happens when a messenger Reaches the unit. Only the non-direct-controlled unit with correct id will accept it.
+		public bool ReceiveCommand(Command receivedCommand)
+		{
+			if (soldierType.CommandType == (int) GlobalDefine.CommandType.Unable)
+			{
+				return false;
+			}
+
+			if (receivedCommand.m_TargetUnitID != UnitID)
+			{
+				return false;
+			}
+
+			m_destination = receivedCommand.m_commandTargetPostion;
+			if (unitState == GlobalDefine.UnitState.Standing)
+			{
+				unitState = GlobalDefine.UnitState.Advancing;
+			}
+
+			return true;
+		}
+
+		public void SelfDestroy()
+		{
+			Destroy(this.gameObject);
+		}
+
+		public void StartPursuingTarget(int targetID)
+		{
+			
 		}
 
 	}

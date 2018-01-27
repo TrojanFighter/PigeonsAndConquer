@@ -14,10 +14,10 @@ public static class GlobalDefine  {
 	}
 	public enum UnitState
 	{
-		Born=0,
-		Advance,
-		Attack,
-		BeingPiked
+		Standing=0,
+		Advancing,
+		BeingPiked,
+		PursuingTarget
 	}
 
 	public enum CommandType

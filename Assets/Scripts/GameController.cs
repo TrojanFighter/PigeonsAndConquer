@@ -12,12 +12,12 @@ public class GameController : MonoBehaviour {
 	void Awake() {
 		GameObject newGeneral = Instantiate (generalPrefab) as GameObject;
 		GameObject newKnight = Instantiate (knightPrefab) as GameObject;
-		newKnight.GetComponent<ArmyUnit> ().Init (newGeneral, arrowPrefab);
+		newKnight.GetComponent<DragableObjects> ().Init (newGeneral, arrowPrefab);
 		newKnight = Instantiate (knightPrefab) as GameObject;
 		Vector3 pos = newKnight.transform.position;
 		pos.y += 2;
 		newKnight.transform.position = pos;
-		newKnight.GetComponent<ArmyUnit> ().Init (newGeneral, arrowPrefab);
+		newKnight.GetComponent<DragableObjects> ().Init (newGeneral, arrowPrefab);
 	}
 
 

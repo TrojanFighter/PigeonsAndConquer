@@ -5,16 +5,7 @@ namespace Lords
 {
 	public class AttackRangeCollider : MonoBehaviour
 	{
-		/*
-		// Use this for initialization
-		void Start () {
-		
-		}
-		
-		// Update is called once per frame
-		void Update () {
-		
-		}*/
+
 		public GlobalDefine.Fraction myfraction;
 		public GlobalDefine.UnitClass myunitclass;
 		public Unit myunit;
@@ -33,13 +24,10 @@ namespace Lords
 
 		void Awake()
 		{
+			if(myunit==null)
 			myunit = this.transform.GetComponentInParent<Unit>();
 		}
 
-		void Start()
-		{
-
-		}
 
 		void OnTriggerEnter2D(Collider2D other)
 		{

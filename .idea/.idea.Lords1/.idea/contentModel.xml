@@ -439,9 +439,6 @@
                 </e>
               </e>
             </e>
-            <e p="JetBrains" t="Include">
-              <e p="Unity3DRider.cs" t="Include" />
-            </e>
             <e p="RelationsInspector" t="Include">
               <e p="Backends" t="Include">
                 <e p="AutoBackend" t="Include">
@@ -475,13 +472,13 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="ArmyUnit.cs" t="Include" />
           <e p="Base" t="Include">
             <e p="MonoSingleton.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
           </e>
           <e p="Collider" t="Include">
             <e p="AttackRangeCollider.cs" t="Include" />
+            <e p="MessengerReceiver.cs" t="Include" />
           </e>
           <e p="Define" t="Include">
             <e p="Command.cs" t="Include" />
@@ -489,13 +486,15 @@
             <e p="GlobalDefine.cs" t="Include" />
             <e p="SoldierType.cs" t="Include" />
           </e>
+          <e p="DragableObjects.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="General.cs" t="Include" />
           <e p="Map.cs" t="Include" />
           <e p="Scene" t="Include">
             <e p="BasePoint.cs" t="Include" />
             <e p="CommandManager.cs" t="Include" />
-            <e p="GameManager.cs" t="Include" />
+            <e p="DataManager.cs" t="Include" />
+            <e p="SceneManager.cs" t="Include" />
           </e>
           <e p="Units" t="Include">
             <e p="ArcherUnit.cs" t="Include" />

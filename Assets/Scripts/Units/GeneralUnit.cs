@@ -35,5 +35,10 @@ public class GeneralUnit : Unit
 			}
 		}
 	}
+
+	public void IssueCommand()
+	{
+		
+	}
 }
 }
