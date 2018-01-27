@@ -5,6 +5,7 @@
     <e p="F:\UnityProjects\Lords1" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="ImportedLibrary" t="Include">
@@ -270,10 +271,207 @@
           </e>
         </e>
         <e p="Plugins" t="Include">
+          <e p="DarkTonic" t="Include">
+            <e p="CoreGameKit" t="Include">
+              <e p="ExampleScenes" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="KillableListenerSubclass.cs" t="Include" />
+                  <e p="KillableSubclass.cs" t="Include" />
+                  <e p="KW_Enemy.cs" t="Include" />
+                  <e p="KW_Fighter1.cs" t="Include" />
+                  <e p="KW_Fighter2.cs" t="Include" />
+                  <e p="KW_Instructions.cs" t="Include" />
+                  <e p="KW_Instructions2.cs" t="Include" />
+                  <e p="KW_Instructions3.cs" t="Include" />
+                  <e p="KW_Instructions4.cs" t="Include" />
+                  <e p="KW_Instructions5.cs" t="Include" />
+                  <e p="KW_Instructions6.cs" t="Include" />
+                  <e p="KW_MenuInstructions.cs" t="Include" />
+                  <e p="KW_MotherShip.cs" t="Include" />
+                  <e p="KW_Player.cs" t="Include" />
+                  <e p="KW_Projectile.cs" t="Include" />
+                  <e p="KW_Shot3.cs" t="Include" />
+                  <e p="KW_UFO.cs" t="Include" />
+                  <e p="KW_UFOProjectile.cs" t="Include" />
+                </e>
+              </e>
+              <e p="ReleaseNotes.txt" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="Combat" t="Include">
+                  <e p="ClickToKillOrDamage.cs" t="Include" />
+                  <e p="ClickToKillOrDamage2D.cs" t="Include" />
+                  <e p="Killable.cs" t="Include" />
+                  <e p="KillableChildCollision.cs" t="Include" />
+                  <e p="KillableChildVisibility.cs" t="Include" />
+                  <e p="KillableListener.cs" t="Include" />
+                </e>
+                <e p="CustomEvents" t="Include">
+                  <e p="CgkCustomEvent.cs" t="Include" />
+                  <e p="CGKCustomEventCategory.cs" t="Include" />
+                  <e p="ICgkEventReceiver.cs" t="Include" />
+                  <e p="UniversalCustomEventReceiver.cs" t="Include" />
+                </e>
+                <e p="Despawners" t="Include">
+                  <e p="ParticleDespawner.cs" t="Include" />
+                  <e p="TimedDespawner.cs" t="Include" />
+                  <e p="TimedDespawnerListener.cs" t="Include" />
+                  <e p="TriggeredDespawner.cs" t="Include" />
+                  <e p="TriggeredDespawnerListener.cs" t="Include" />
+                </e>
+                <e p="Level" t="Include">
+                  <e p="LevelSettings.cs" t="Include" />
+                  <e p="LevelSettingsListener.cs" t="Include" />
+                  <e p="LevelSpecifics.cs" t="Include" />
+                  <e p="LevelWave.cs" t="Include" />
+                  <e p="LevelWaveMusicSettings.cs" t="Include" />
+                </e>
+                <e p="Music" t="Include">
+                  <e p="WaveMusicChanger.cs" t="Include" />
+                  <e p="WaveMusicChangerListener.cs" t="Include" />
+                </e>
+                <e p="PoolBoss" t="Include">
+                  <e p="PoolableInfo.cs" t="Include" />
+                  <e p="PoolBoss.cs" t="Include" />
+                  <e p="PoolBossCategory.cs" t="Include" />
+                  <e p="PoolBossItem.cs" t="Include" />
+                  <e p="PoolBossListener.cs" t="Include" />
+                </e>
+                <e p="PrefabPool" t="Include">
+                  <e p="WavePrefabPool.cs" t="Include" />
+                  <e p="WavePrefabPoolGroup.cs" t="Include" />
+                  <e p="WavePrefabPoolItem.cs" t="Include" />
+                  <e p="WavePrefabPoolListener.cs" t="Include" />
+                </e>
+                <e p="Settings" t="Include">
+                  <e p="CGKCustomEventToFire.cs" t="Include" />
+                  <e p="CoreCustomEventAttribute.cs" t="Include" />
+                  <e p="CoreScriptOrder.cs" t="Include" />
+                  <e p="CoreWaveClassAttribute.cs" t="Include" />
+                  <e p="KillerFloat.cs" t="Include" />
+                  <e p="KillerInt.cs" t="Include" />
+                  <e p="KillerVariable.cs" t="Include" />
+                </e>
+                <e p="Spawners" t="Include">
+                  <e p="PlayerSpawner.cs" t="Include" />
+                  <e p="SpawnTracker.cs" t="Include" />
+                  <e p="TriggeredSpawner.cs" t="Include" />
+                  <e p="TriggeredSpawnerListener.cs" t="Include" />
+                  <e p="TriggeredSpawnerV2.cs" t="Include" />
+                  <e p="TrigSpawnTracker.cs" t="Include" />
+                  <e p="VisualizationMarker.cs" t="Include" />
+                  <e p="WaveSyncroPrefabSpawner.cs" t="Include" />
+                  <e p="WaveSyncroSpawnerListener.cs" t="Include" />
+                </e>
+                <e p="Utility" t="Include">
+                  <e p="CoreMonoHelper.cs" t="Include" />
+                  <e p="MechanimStateCoreCustomEvents.cs" t="Include" />
+                  <e p="PlayerPrefs.cs" t="Include" />
+                  <e p="SpawnerUtility.cs" t="Include" />
+                  <e p="SpawnUtility.cs" t="Include" />
+                </e>
+                <e p="Wave" t="Include">
+                  <e p="EventDespawnSpecifics.cs" t="Include" />
+                  <e p="TriggeredWaveMetaData.cs" t="Include" />
+                  <e p="TriggeredWaveSpecifics.cs" t="Include" />
+                  <e p="TrigSpawnerWaiterSpecifics.cs" t="Include" />
+                  <e p="TrigSpawnerWaveWaiter.cs" t="Include" />
+                  <e p="WaveSpecifics.cs" t="Include" />
+                </e>
+                <e p="WorldVariables" t="Include">
+                  <e p="InGameWorldVariable.cs" t="Include" />
+                  <e p="WorldVariable.cs" t="Include" />
+                  <e p="WorldVariableCollection.cs" t="Include" />
+                  <e p="WorldVariableListener.cs" t="Include" />
+                  <e p="WorldVariableModifier.cs" t="Include" />
+                  <e p="WorldVariableRange.cs" t="Include" />
+                  <e p="WorldVariableRangeCollection.cs" t="Include" />
+                  <e p="WorldVariableTracker.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
           <e p="Editor" t="Include">
+            <e p="DarkTonic" t="Include">
+              <e p="CoreGameKit" t="Include">
+                <e p="Combat" t="Include">
+                  <e p="KillableChildVisibilityInspector.cs" t="Include" />
+                  <e p="KillableInspector.cs" t="Include" />
+                </e>
+                <e p="CustomEvents" t="Include">
+                  <e p="CGKCustomEventPropertyDrawer.cs" t="Include" />
+                </e>
+                <e p="Despawners" t="Include">
+                  <e p="TimedDespawnerInspector.cs" t="Include" />
+                  <e p="TriggeredDespawnerInspector.cs" t="Include" />
+                </e>
+                <e p="Helpers" t="Include">
+                  <e p="CloningHelper.cs" t="Include" />
+                  <e p="CoreGameKitHierIcon.cs" t="Include" />
+                  <e p="CoreGameKitInspectorResources.cs" t="Include" />
+                  <e p="CoreScriptOrderManager.cs" t="Include" />
+                  <e p="DTInspectorUtility.cs" t="Include" />
+                  <e p="KillerVariablesHelper.cs" t="Include" />
+                </e>
+                <e p="Level" t="Include">
+                  <e p="CGKWaveClassNamePropertyDrawer.cs" t="Include" />
+                  <e p="LevelSettingsInspector.cs" t="Include" />
+                </e>
+                <e p="Menu" t="Include">
+                  <e p="UpgradeTriggeredSpawners2V2.cs" t="Include" />
+                </e>
+                <e p="PoolBoss" t="Include">
+                  <e p="PoolBossEditorUtility.cs" t="Include" />
+                  <e p="PoolBossInspector.cs" t="Include" />
+                </e>
+                <e p="PrefabPool" t="Include">
+                  <e p="WavePrefabPoolGroupInspector.cs" t="Include" />
+                  <e p="WavePrefabPoolInspector.cs" t="Include" />
+                </e>
+                <e p="Spawners" t="Include">
+                  <e p="TriggeredSpawnerInspector.cs" t="Include" />
+                  <e p="TriggeredSpawnerV2Inspector.cs" t="Include" />
+                  <e p="WaveSyncroPrefabSpawnerInspector.cs" t="Include" />
+                </e>
+                <e p="UndoHelper.cs" t="Include" />
+                <e p="WorldVariables" t="Include">
+                  <e p="WorldVariableInspector.cs" t="Include" />
+                  <e p="WorldVariableTrackerInspector.cs" t="Include" />
+                </e>
+              </e>
+            </e>
             <e p="JetBrains" t="Include">
               <e p="Unity3DRider.cs" t="Include" />
             </e>
+            <e p="RelationsInspector" t="Include">
+              <e p="Backends" t="Include">
+                <e p="AutoBackend" t="Include">
+                  <e p="ReflectionUtil.cs" t="Include" />
+                  <e p="RIAutoBackend.cs" t="Include" />
+                </e>
+                <e p="CoreGameKit" t="Include">
+                  <e p="KillableEventBackend.cs" t="Include" />
+                  <e p="SyncroSpawnerBackend.cs" t="Include" />
+                </e>
+                <e p="HierarchyExample" t="Include">
+                  <e p="SceneHierarchyBackend.cs" t="Include" />
+                  <e p="TagBackend.cs" t="Include" />
+                </e>
+              </e>
+              <e p="BackendUtils" t="Include">
+                <e p="BackendUtil.cs" t="Include" />
+                <e p="ColorLegendWidget.cs" t="Include" />
+                <e p="DrawUtil.cs" t="Include" />
+                <e p="MinimalBackend.cs" t="Include" />
+                <e p="RandomColor.cs" t="Include" />
+                <e p="ScriptableObjectBackend.cs" t="Include" />
+                <e p="ScriptableObjectBackendToolbar.cs" t="Include" />
+              </e>
+              <e p="RelationsInspectorCGKLink.cs" t="Include" />
+              <e p="RelationsInspectorMenuItem.cs" t="Include" />
+            </e>
+          </e>
+          <e p="RelationsInspector" t="Include">
+            <e p="AutoBackendAttributes.cs" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">

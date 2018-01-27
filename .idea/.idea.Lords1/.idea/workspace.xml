@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95a81e90-2554-4864-81f2-9d4ec4fa7474" name="Default" comment="" />
+    <list default="true" id="95a81e90-2554-4864-81f2-9d4ec4fa7474" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lords1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Lords1/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Archer.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Archer.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Cavalry.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Cavalry.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/General.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/General.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Messenger.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Messenger.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Pikeman.prefab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Pikeman.prefab.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scene_0.unity" afterPath="$PROJECT_DIR$/Assets/_Scene_0.unity" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -273,7 +287,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="160" />
     <option name="y" value="127" />
     <option name="width" value="1440" />
@@ -300,7 +314,7 @@
           <expand>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Lords1 (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Lords1 (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -343,12 +357,12 @@
       <updated>1517068146706</updated>
       <workItem from="1517068148804" duration="3773000" />
       <workItem from="1517075102398" duration="4098000" />
-      <workItem from="1517082053448" duration="1791000" />
+      <workItem from="1517082053448" duration="2136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9662000" />
+    <option name="totallyTimeSpent" value="10007000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -360,7 +374,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -496,18 +510,18 @@
         <state relative-caret-position="171">
           <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="25" />
           <folding>
-            <marker date="1517072153934" expanded="true" signature="6:78" ph="..." />
-            <marker date="1517072153934" expanded="true" signature="118:1862" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="426:479" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="504:850" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="506:847" ph="/* if (movementDecision == false) { ... */" />
-            <marker date="1517072153934" expanded="true" signature="882:1654" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="937:1229" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="1087:1225" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="1264:1651" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="1540:1647" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="1678:1860" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="1833:1857" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="6:78" ph="..." />
+            <marker date="1517084629941" expanded="true" signature="3242:3448" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="426:479" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="504:850" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="506:847" ph="/* if (movementDecision == false) { ... */" />
+            <marker date="1517084629941" expanded="true" signature="882:1654" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="937:1229" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="1087:1225" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="1264:1651" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="1540:1647" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="3264:3446" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="3419:3443" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -759,18 +773,18 @@
         <state relative-caret-position="171">
           <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="25" />
           <folding>
-            <marker date="1517072153934" expanded="true" signature="6:78" ph="..." />
-            <marker date="1517072153934" expanded="true" signature="118:1862" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="426:479" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="504:850" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="506:847" ph="/* if (movementDecision == false) { ... */" />
-            <marker date="1517072153934" expanded="true" signature="882:1654" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="937:1229" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="1087:1225" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="1264:1651" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="1540:1647" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="1678:1860" ph="{...}" />
-            <marker date="1517072153934" expanded="true" signature="1833:1857" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="6:78" ph="..." />
+            <marker date="1517084629941" expanded="true" signature="3242:3448" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="426:479" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="504:850" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="506:847" ph="/* if (movementDecision == false) { ... */" />
+            <marker date="1517084629941" expanded="true" signature="882:1654" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="937:1229" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="1087:1225" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="1264:1651" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="1540:1647" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="3264:3446" ph="{...}" />
+            <marker date="1517084629941" expanded="true" signature="3419:3443" ph="{...}" />
           </folding>
         </state>
       </provider>
