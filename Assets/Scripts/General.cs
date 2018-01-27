@@ -9,7 +9,7 @@ public class General : ArmyUnit {
 		if (Input.GetMouseButtonDown (0) && movementDecision) {
 			moving = true;
 			moveTo = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			moveTo.y = transform.position.y;
+			moveTo.z = transform.position.z;
 			movementDecision = false;
 		}
 

@@ -14,7 +14,7 @@ public class Map : MonoBehaviour {
 				GameObject newTile = Instantiate (groundSpritePrefab) as GameObject;
 				Vector3 pos = newTile.transform.position;
 				pos.x += i;
-				pos.z += j;
+				pos.y += j;
 				newTile.transform.position = pos;
 			}
 		}
