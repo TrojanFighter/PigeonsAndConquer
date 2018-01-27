@@ -44,28 +44,28 @@ public class ArmyUnit : MonoBehaviour {
 
 		// Mouse logic
 		if (mouseMode) {
-//			if (Input.GetMouseButtonDown (0)) {
-//				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-//				RaycastHit hit;
-//				if (GetComponent<Collider> ().Raycast (ray, out hit, 100.0F)) {
-//					dragging = true;
-//					currentArrow = Instantiate (arrowPrefab) as GameObject;
-//					GetComponent<LineRenderer> ().enabled = true;
-//
-//				}
-//			}
-//
-//			if (dragging) {
-//				Vector3 arrowPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-//				arrowPos.z = 5f;
-//				currentArrow.transform.position = arrowPos;
-//				GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
-//				if (Input.GetMouseButtonUp (0)) {
-//					dragging = false;
-//					Destroy (currentArrow);
-//					GetComponent<LineRenderer> ().enabled = false;
-//				}
-//			}
+			if (Input.GetMouseButtonDown (0)) {
+				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+				RaycastHit hit;
+				if (GetComponent<Collider> ().Raycast (ray, out hit, 100.0F)) {
+					dragging = true;
+					currentArrow = Instantiate (arrowPrefab) as GameObject;
+					GetComponent<LineRenderer> ().enabled = true;
+
+				}
+			}
+
+			if (dragging) {
+				Vector3 arrowPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+				arrowPos.z = -1f;
+				currentArrow.transform.position = arrowPos;
+				GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
+				if (Input.GetMouseButtonUp (0)) {
+					dragging = false;
+					Destroy (currentArrow);
+					GetComponent<LineRenderer> ().enabled = false;
+				}
+			}
 		} else {
 			// Touch logic
 			if (dragging) {
@@ -101,13 +101,14 @@ public class ArmyUnit : MonoBehaviour {
 	public void MovementDecided() {
 		dragging = false;
 		Destroy (currentArrow);
+		GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, transform.position }); // Resets line to 0
 		GetComponent<LineRenderer> ().enabled = false;
 		// At this point we need to generate a messenger from the general
 	}
 
 	public void TouchDrag(Touch currentTouch) {
 		Vector3 arrowPos = Camera.main.ScreenToWorldPoint (currentTouch.position);
-		arrowPos.z = 5f;
+		arrowPos.z = -1f;
 		moveTo = arrowPos;
 		currentArrow.transform.position = arrowPos;
 		GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
