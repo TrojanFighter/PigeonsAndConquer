@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Xml;
 
+namespace Lords
+{
+
 public static class XMLReader{
 	public static Dictionary<int,SoldierType> ReadSoldierTypeFile(string path)
 	{
@@ -27,24 +30,25 @@ public static class XMLReader{
 
 				newSoldierType.AttackType= int.Parse(GetInnerData(rowNode.ChildNodes[2]));
 
+				newSoldierType.CommandType= int.Parse(GetInnerData(rowNode.ChildNodes[3]));
+				
+				newSoldierType.NormalMoveSpeed=float.Parse(GetInnerData(rowNode.ChildNodes[4]));
 
-				newSoldierType.NormalMoveSpeed=float.Parse(GetInnerData(rowNode.ChildNodes[3]));
+				newSoldierType.NormalHP=int.Parse( GetInnerData(rowNode.ChildNodes[5]));
 
-				newSoldierType.NormalHP=int.Parse( GetInnerData(rowNode.ChildNodes[4]));
-
-				newSoldierType.AttackRange =float.Parse( GetInnerData (rowNode.ChildNodes [5]));
-				newSoldierType.AttackTime=float.Parse(GetInnerData(rowNode.ChildNodes[6]));
+				newSoldierType.AttackRange =float.Parse( GetInnerData (rowNode.ChildNodes [6]));
+				newSoldierType.AttackTime=float.Parse(GetInnerData(rowNode.ChildNodes[7]));
 
 
 
-				newSoldierType.NormalAttackPower= int.Parse(GetInnerData(rowNode.ChildNodes[7]));
-				newSoldierType.ArmorAgainstNormalAttack =int.Parse( GetInnerData(rowNode.ChildNodes[8]));
+				newSoldierType.NormalAttackPower= int.Parse(GetInnerData(rowNode.ChildNodes[8]));
+				newSoldierType.ArmorAgainstNormalAttack =int.Parse( GetInnerData(rowNode.ChildNodes[9]));
 
-				int BeingCapturedOrNotInt=int.Parse(GetInnerData(rowNode.ChildNodes[9]));
-				newSoldierType.StopWhenBeingCaptured = BeingCapturedOrNotInt == 1 ? true : false;
-				int JoinCombatOrNotInt=int.Parse(GetInnerData(rowNode.ChildNodes[10]));
+				int AttackWhenMove=int.Parse(GetInnerData(rowNode.ChildNodes[10]));
+				newSoldierType.AttackWhenMove= AttackWhenMove == 1 ? true : false;
+				int JoinCombatOrNotInt=int.Parse(GetInnerData(rowNode.ChildNodes[11]));
 				newSoldierType.JoinCombat = JoinCombatOrNotInt == 1 ? true : false;
-				newSoldierType.LifeTime=float.Parse(GetInnerData(rowNode.ChildNodes[11]));
+				newSoldierType.LifeTime=float.Parse(GetInnerData(rowNode.ChildNodes[12]));
 
 				/*string GapTimeString = GetInnerData(rowNode.ChildNodes[10]);
                 string[] GapTimeStringArray = GapTimeString.Split('+');
@@ -105,5 +109,7 @@ public static class XMLReader{
 	}
 
 
+}
+	
 }
 

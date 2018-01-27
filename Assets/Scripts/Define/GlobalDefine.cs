@@ -2,9 +2,10 @@
 public static class GlobalDefine  {
 	public enum UnitClass{
 		Messenger=0,
-		Knight=1,
-		Archer=2,
-		Pikeman=3,
+		General=1,
+		Cavalry=2,
+		Archer=3,
+		Pikeman=4,
 	}
 	public enum Fraction{
 		Netrual=0,
@@ -16,6 +17,14 @@ public static class GlobalDefine  {
 		Born=0,
 		Advance,
 		Attack,
+		BeingPiked
+	}
+
+	public enum CommandType
+	{
+		Unable=0,
+		DirectControl=1,
+		MessengerControl=2
 	}
 
 

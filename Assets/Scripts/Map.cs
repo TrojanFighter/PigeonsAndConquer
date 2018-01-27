@@ -5,12 +5,12 @@ using UnityEngine;
 // Creates the map
 public class Map : MonoBehaviour {
 	public GameObject groundSpritePrefab;
-	private int mapDimension = 18;
+	public int mapHeight = 18,mapWidth=16;
 
 	void Awake() {
 		// Generates a square map of size mapDimension
-		for (int i = 0; i < mapDimension; i++) {
-			for (int j = 0; j < mapDimension; j++) {
+		for (int i = 0; i < mapWidth; i++) {
+			for (int j = 0; j < mapHeight; j++) {
 				GameObject newTile = Instantiate (groundSpritePrefab) as GameObject;
 				Vector3 pos = newTile.transform.position;
 				pos.x += i;
