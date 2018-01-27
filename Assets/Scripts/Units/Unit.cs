@@ -60,13 +60,13 @@ namespace Lords
 			}
 
 
-			soldierType = GameManager.SoldierTypes[(int) unitClass];
+			soldierType = DataManager.SoldierTypes[(int) unitClass];
 			attackRangeCollider.myunitclass = unitClass;
 			SetAttackRange(soldierType.AttackRange);
 			normalHP = soldierType.NormalHP;
 			//Debug.Log (soldierType.AttackRange);
 
-			unitState = GlobalDefine.UnitState.Advance;
+			unitState = GlobalDefine.UnitState.Advancing;
 
 			TargetUnitList = new List<Unit>();
 
@@ -120,7 +120,7 @@ namespace Lords
 				if (soldierType.AttackType == 3)
 				{
 					//信仰攻击
-					unitState = GlobalDefine.UnitState.Attack;
+					//unitState = GlobalDefine.UnitState.Attack;
 					StartAttackTargetList();
 
 				}
@@ -128,7 +128,7 @@ namespace Lords
 				if (soldierType.AttackType == 1 || soldierType.AttackType == 2)
 				{
 					//普通攻击
-					unitState = GlobalDefine.UnitState.Attack;
+					//unitState = GlobalDefine.UnitState.Attack;
 					StartAttackClosestTarget();
 
 				}
@@ -144,7 +144,7 @@ namespace Lords
 				try
 				{
 					StopAllCoroutines();
-					unitState = GlobalDefine.UnitState.Advance;
+					unitState = GlobalDefine.UnitState.Advancing;
 				}
 				catch
 				{
@@ -228,14 +228,14 @@ namespace Lords
 					{
 						//近程攻击不打子弹
 						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower);
-						InAudio.PostEvent(gameObject, GameManager.Instance.KnightAttackEvent);
+						InAudio.PostEvent(gameObject, SceneManager.Instance.KnightAttackEvent);
 					}
 
 					if (soldierType.AttackType == 2)
 					{
 						//远程攻击要打子弹
 						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower);
-						InAudio.PostEvent(gameObject, GameManager.Instance.ArcherAttackEvent);
+						InAudio.PostEvent(gameObject, SceneManager.Instance.ArcherAttackEvent);
 					}
 				}
 
@@ -274,7 +274,7 @@ namespace Lords
 
 		public virtual void UnitSabotaged()
 		{
-			GameObject ray;
+			/*GameObject ray;
 			if (fraction == GlobalDefine.Fraction.One)
 			{
 				ray = GameManager.Instance.GodRayPurple;
@@ -291,7 +291,7 @@ namespace Lords
 			else
 			{
 				//ray
-			}
+			}*/
 
 
 			//UnitDie ();
@@ -308,8 +308,37 @@ namespace Lords
 
 		}
 
-		public void ReceiveCommand()
+		
+		//Happens when a messenger Reaches the unit. Only the non-direct-controlled unit with correct id will accept it.
+		public bool ReceiveCommand(Command receivedCommand)
 		{
+			if (soldierType.CommandType == (int) GlobalDefine.CommandType.Unable)
+			{
+				return false;
+			}
+
+			if (receivedCommand.m_TargetUnitID != UnitID)
+			{
+				return false;
+			}
+
+			m_destination = receivedCommand.m_commandTargetPostion;
+			if (unitState == GlobalDefine.UnitState.Standing)
+			{
+				unitState = GlobalDefine.UnitState.Advancing;
+			}
+
+			return true;
+		}
+
+		public void SelfDestroy()
+		{
+			Destroy(this.gameObject);
+		}
+
+		public void StartPursuingTarget(int targetID)
+		{
+			
 		}
 
 	}

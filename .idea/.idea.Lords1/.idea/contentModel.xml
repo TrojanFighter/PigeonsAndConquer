@@ -482,6 +482,7 @@
           </e>
           <e p="Collider" t="Include">
             <e p="AttackRangeCollider.cs" t="Include" />
+            <e p="MessengerReceiver.cs" t="Include" />
           </e>
           <e p="Define" t="Include">
             <e p="Command.cs" t="Include" />
@@ -495,7 +496,8 @@
           <e p="Scene" t="Include">
             <e p="BasePoint.cs" t="Include" />
             <e p="CommandManager.cs" t="Include" />
-            <e p="GameManager.cs" t="Include" />
+            <e p="DataManager.cs" t="Include" />
+            <e p="SceneManager.cs" t="Include" />
           </e>
           <e p="Units" t="Include">
             <e p="ArcherUnit.cs" t="Include" />
