@@ -23,7 +23,9 @@ namespace Lords
 
 		void Awake()
 		{
+			
 			Instance = this;
+			//CommandManager.instance.Init();
 
 			/*if (SpawnPointArray==null) {
 				SpawnPointArray = new GameObject[RoadArray.Length, 2];

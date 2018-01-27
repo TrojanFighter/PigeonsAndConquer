@@ -308,5 +308,9 @@ namespace Lords
 
 		}
 
+		public void ReceiveCommand()
+		{
+		}
+
 	}
 }

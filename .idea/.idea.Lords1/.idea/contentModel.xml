@@ -278,6 +278,10 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="ArmyUnit.cs" t="Include" />
+          <e p="Base" t="Include">
+            <e p="MonoSingleton.cs" t="Include" />
+            <e p="Singleton.cs" t="Include" />
+          </e>
           <e p="Collider" t="Include">
             <e p="AttackRangeCollider.cs" t="Include" />
           </e>
@@ -292,6 +296,7 @@
           <e p="Map.cs" t="Include" />
           <e p="Scene" t="Include">
             <e p="BasePoint.cs" t="Include" />
+            <e p="CommandManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
           </e>
           <e p="Units" t="Include">
