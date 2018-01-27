@@ -215,6 +215,19 @@
                 <marker date="1517089957820" expanded="true" signature="124:708" ph="{...}" />
                 <marker date="1517089957820" expanded="true" signature="256:704" ph="{...}" />
               </folding>
+<<<<<<< HEAD
+=======
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessengerReceiver.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Collider/MessengerReceiver.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="817">
+              <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+              <folding />
+>>>>>>> 6d11bf63101577d5539b64e9d54b8433dbcf57c3
             </state>
           </provider>
         </entry>
@@ -377,12 +390,20 @@
       <updated>1517068146706</updated>
       <workItem from="1517068148804" duration="3773000" />
       <workItem from="1517075102398" duration="4098000" />
+<<<<<<< HEAD
       <workItem from="1517082053448" duration="7697000" />
+=======
+      <workItem from="1517082053448" duration="7544000" />
+>>>>>>> 6d11bf63101577d5539b64e9d54b8433dbcf57c3
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="15568000" />
+=======
+    <option name="totallyTimeSpent" value="15415000" />
+>>>>>>> 6d11bf63101577d5539b64e9d54b8433dbcf57c3
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1131,6 +1152,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/../fog-of-war-master/Assets/DemoScence/Done/DoneScripts/DonePlayerMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -1139,6 +1161,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 6d11bf63101577d5539b64e9d54b8433dbcf57c3
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/DragableObjects.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
