@@ -8,6 +8,8 @@ namespace Lords
     {
         public static SceneManager Instance;
         public Unit Messenger, Knight, Archer, Pikeman;
+        
+        public GameObject arrowPrefab;
 
         public InAudioEvent MessengerDeliverEvent, KnightAttackEvent, ArcherAttackEvent, PickmanAttackEvent, VictoryBlast;
         //public Animator LeftPanel, RightPanel;
