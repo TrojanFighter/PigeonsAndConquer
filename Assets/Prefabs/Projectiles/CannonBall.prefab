@@ -102,6 +102,8 @@ MonoBehaviour:
   m_selfDestoryTime: 2
   explsionRadius: 2
   NormalAttackDamage: 20
+  explosionEffect: {fileID: 1269611583921836, guid: 17980af5b2939b94e854aff2d6113843,
+    type: 2}
 --- !u!114 &114991515952114424
 MonoBehaviour:
   m_ObjectHideFlags: 1

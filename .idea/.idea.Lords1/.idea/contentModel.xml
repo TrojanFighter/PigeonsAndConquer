@@ -474,6 +474,12 @@
             <e p="AutoBackendAttributes.cs" t="Include" />
           </e>
         </e>
+        <e p="Resources" t="Include">
+          <e p="XML" t="Include">
+            <e p="Fractions.xml" t="Include" />
+            <e p="Soldiers.xml" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Base" t="Include">
             <e p="MonoSingleton.cs" t="Include" />
