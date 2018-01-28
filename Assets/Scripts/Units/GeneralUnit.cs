@@ -13,7 +13,7 @@ public class GeneralUnit : Unit
 	public Sprite[] pidgeonUISprites;
 	public Transform pidgeonUI;
 
-	public int CurrentMessengerNum = 3, MaxMessengerNum = 3;
+	public int CurrentMessengerNum, MaxMessengerNum;
 
 	public float MessengerRechargeRate = 0.2f, MessengerRechargePercentage = 0f;
 
@@ -22,6 +22,12 @@ public class GeneralUnit : Unit
 	public GameObject ProjectilePrefab;
 	public string customEventName = "";
 	public Image rechargeMeter;
+	
+		void Awake() {
+			CurrentMessengerNum = 3;
+			MaxMessengerNum = 3;
+			base.Awake ();
+		}
 	
 	// Use this for initialization
 	public override void Init()
