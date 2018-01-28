@@ -15,10 +15,27 @@ namespace Lords
 		protected override void Init()
 		{
 			base.Init();
-			SoldierTypes = XMLReader.ReadSoldierTypeFile(Application.dataPath + GlobalDefine.PathDefines.XML_Path +
-			                                             GlobalDefine.FileName.SoldierType);
-			Fractions = XMLReader.ReadFractionsFile(Application.dataPath + GlobalDefine.PathDefines.XML_Path +
-			                                        GlobalDefine.FileName.Fraction);
+			if (Application.platform == RuntimePlatform.Android) {
+				
+//				Debug.Log ("ASSET PATH: " + Application.streamingAssetsPath + GlobalDefine.PathDefines.XML_Path +
+//					GlobalDefine.FileName.SoldierType);
+//				Debug.Log ("FILE EXISTS: " + System.IO.File.Exists (Application.streamingAssetsPath + GlobalDefine.PathDefines.XML_Path +
+//					GlobalDefine.FileName.SoldierType));
+//				SoldierTypes = XMLReader.ReadSoldierTypeFile("file:///android_asset/XML/" + GlobalDefine.FileName.SoldierType);
+//				Fractions = XMLReader.ReadFractionsFile(Application.streamingAssetsPath + GlobalDefine.PathDefines.XML_Path +
+//					GlobalDefine.FileName.Fraction);
+
+				SoldierTypes = XMLReader.ReadSoldierTypeFile(Application.streamingAssetsPath + GlobalDefine.PathDefines.XML_Path +
+					GlobalDefine.FileName.SoldierType);
+				Fractions = XMLReader.ReadFractionsFile(Application.streamingAssetsPath + GlobalDefine.PathDefines.XML_Path +
+					GlobalDefine.FileName.Fraction);
+			} else {
+				SoldierTypes = XMLReader.ReadSoldierTypeFile(Application.dataPath + GlobalDefine.PathDefines.XML_Path +
+					GlobalDefine.FileName.SoldierType);
+				Fractions = XMLReader.ReadFractionsFile(Application.dataPath + GlobalDefine.PathDefines.XML_Path +
+					GlobalDefine.FileName.Fraction);
+			}
+
 			//BasePoints = new Dictionary<GlobalDefine.Fraction, BasePoint>();
 			//BasePoints.Add(GlobalDefine.Fraction.One, BasePointArray[0]);
 			//BasePoints.Add(GlobalDefine.Fraction.Two, BasePointArray[1]);

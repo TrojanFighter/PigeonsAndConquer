@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
-using UnityEditor;
+//using UnityEditor;
 
 namespace Lords
 {
@@ -385,16 +385,11 @@ namespace Lords
 
 
 				if (isBeingDragged) {
-					Vector3 arrowPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-					arrowPos.z = -1f;
 					if (m_currentArrow == null)
 					{
 						m_currentArrow = Instantiate (SceneManager.instance.arrowPrefab) as GameObject;
 					}
-
-					m_currentArrow.transform.position = arrowPos;
-					GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
-					m_commanddestination = arrowPos;
+					TouchDrag (Input.mousePosition);
 				}
 			} else {
 				// Touch logic
@@ -405,7 +400,7 @@ namespace Lords
 					}
 					for(int i=0; i < Input.touches.Length; i++) {
 						if (Input.touches [i].fingerId == touchFingerId) {
-							TouchDrag (Input.touches [i]);
+							TouchDrag (Input.touches [i].position);
 							break;
 						} else if (i == Input.touches.Length - 1) {
 							// Dragging has ended
@@ -445,12 +440,12 @@ namespace Lords
 			// At this point we need to generate a messenger from the general
 		}
 
-		public void TouchDrag(Touch currentTouch) {
-			Vector3 arrowPos = Camera.main.ScreenToWorldPoint (currentTouch.position);
+		public void TouchDrag(Vector3 pos) {
+			Vector3 arrowPos = Camera.main.ScreenToWorldPoint (pos);
 			arrowPos.z = -1f;
-			m_commanddestination = arrowPos;
 			m_currentArrow.transform.position = arrowPos;
 			GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
+			m_commanddestination = arrowPos;
 		}
 
 
@@ -489,6 +484,7 @@ namespace Lords
 
 		void StartCommanding(Vector2 destinationposition)
 		{
+			Debug.Log ("soldierType.CommandType = " + (int)soldierType.CommandType);
 			switch (soldierType.CommandType)
 			{
 				case	(int)GlobalDefine.CommandType.DirectControl:

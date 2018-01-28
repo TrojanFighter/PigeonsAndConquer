@@ -10,8 +10,13 @@ public static class XMLReader{
 	{
 		Dictionary<int,SoldierType> soldierTypeList = new Dictionary<int, SoldierType>();
 		XmlDocument xDoc = new XmlDocument();
-		xDoc.Load(path);
-
+			// Android hack fix that doesn't require filepath
+			if (Application.platform == RuntimePlatform.Android) {
+				TextAsset soldierXML = Resources.Load<TextAsset> ("XML/Soldiers");
+				xDoc.LoadXml (soldierXML.text);
+			} else {
+				xDoc.Load (path);
+			}
 		XmlNamespaceManager xnm = new XmlNamespaceManager(xDoc.NameTable);
 		xnm.AddNamespace("WB", "urn:schemas-microsoft-com:office:spreadsheet");
 		XmlElement root = xDoc.DocumentElement;
@@ -72,7 +77,12 @@ public static class XMLReader{
 	{
 		Dictionary<int,Fraction> fractionsList = new Dictionary<int, Fraction>();
 		XmlDocument xDoc = new XmlDocument();
-		xDoc.Load(path);
+			if (Application.platform == RuntimePlatform.Android) {
+				TextAsset fractionXML = Resources.Load<TextAsset> ("XML/Fractions");
+				xDoc.LoadXml (fractionXML.text);
+			} else {
+				xDoc.Load (path);
+			}
 
 		XmlNamespaceManager xnm = new XmlNamespaceManager(xDoc.NameTable);
 		xnm.AddNamespace("WB", "urn:schemas-microsoft-com:office:spreadsheet");
