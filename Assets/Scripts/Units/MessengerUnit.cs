@@ -9,23 +9,31 @@ namespace Lords
 	{
 
 		//public Command m_Command;
-		public int m_commandID,m_targetUnitID;
+		public int m_commandID,m_commandTargetUnitID;
 		public override void Init()
 		{
 
 			unitClass = GlobalDefine.UnitClass.Messenger;
 			base.Init();
 		}
+		
+		public void CarryCommand(int commandID)
+		{
+			Command m_command= CommandManager.instance.GetCommand(commandID);
+			m_commandID = commandID;
+			CarryCommand(m_command);
+		}
 
 		public void CarryCommand(Command inputCommand)
 		{
-			m_commandID=CommandManager.instance.GenerateCommand(inputCommand);
-			m_targetUnitID = inputCommand.m_TargetUnitID;
+			m_commandID=inputCommand.CommandID;
+			m_commandTargetUnitID = inputCommand.m_TargetUnitID;
+			StartPursueTarget(inputCommand.m_TargetUnitID);
 		}
 
 		public int CheckCommandTargetID()
 		{
-			return m_targetUnitID;
+			return m_commandTargetUnitID;
 		}
 
 		public Command ExtractCommand()

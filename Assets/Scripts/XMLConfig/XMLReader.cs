@@ -24,6 +24,7 @@ public static class XMLReader{
 			{
 				SoldierType newSoldierType = new SoldierType();
 				//评论ID
+				//Debug.LogWarning(GetInnerData(rowNode.ChildNodes[0]));
 				newSoldierType.SoldierTypeID = int.Parse(GetInnerData(rowNode.ChildNodes[0]));
 
 				newSoldierType.SoldierTypeName = GetInnerData(rowNode.ChildNodes[1]);
@@ -88,7 +89,7 @@ public static class XMLReader{
 				newFraction.FractionsMaxHP = int.Parse(GetInnerData(rowNode.ChildNodes[1]));
 
 				newFraction.FractionsInitHP= int.Parse(GetInnerData(rowNode.ChildNodes[2]));
-				int WinConditionHPInt=int.Parse( GetInnerData(rowNode.ChildNodes[7]));
+				int WinConditionHPInt=int.Parse( GetInnerData(rowNode.ChildNodes[3]));
 				newFraction.WinConditionHP = WinConditionHPInt == 1 ? true : false;
 				fractionsList.Add(newFraction.FractionID,newFraction);
 			}

@@ -4,10 +4,9 @@ using UnityEngine;
 
 namespace Lords
 {
-    public class SceneManager : MonoBehaviour
+    public class SceneManager : MonoSingleton<SceneManager>
     {
-        public static SceneManager Instance;
-        public Unit Messenger,General, Cavalary, Archer, Pikeman;
+        public GameObject Messenger1, Messenger2;//General1,General2//, Cavalary, Archer, Pikeman;
         private int currentUnitIDNum = 1;
         private static Dictionary<int, Unit> PresentUnits;
 
@@ -17,22 +16,22 @@ namespace Lords
 
         public InAudioEvent MessengerDeliverEvent, KnightAttackEvent, ArcherAttackEvent, PickmanAttackEvent, VictoryBlast;
         //public Animator LeftPanel, RightPanel;
-        private void Awake()
+        protected override void Init()
         {
-            Instance = this;
+            base.Init();
             PresentUnits=new Dictionary<int, Unit>();
         }
 
         private void Start()
         {
-            if (GeneralFraction1 != null)
+            /*if (GeneralFraction1 != null)
             {
                 RegisterUnit(GeneralFraction1);
             }
             if (GeneralFraction2 != null)
             {
                 RegisterUnit(GeneralFraction2);
-            }
+            }*/
         }
 
         public int RegisterUnit(Unit unit)
@@ -61,6 +60,33 @@ namespace Lords
             Unit queryUnit;
             PresentUnits.TryGetValue(unitID,out queryUnit);
             return queryUnit;
+        }
+
+        public Vector3 QueryUnitPosition(int unitID)
+        {
+            Unit queryUnit;
+            PresentUnits.TryGetValue(unitID,out queryUnit);
+            if(queryUnit!=null)
+            return queryUnit.transform.position;
+            else
+            {
+                return Vector3.negativeInfinity;
+            }
+        }
+
+        public GeneralUnit FindGeneral(GlobalDefine.Fraction fraction)
+        {
+            switch (fraction)
+            {
+                    case GlobalDefine.Fraction.One:
+                        return GeneralFraction1;
+                        break;
+                        
+                        case GlobalDefine.Fraction.Two :
+                            return GeneralFraction2;
+                        break;
+                            default: return null;
+            }
         }
 
     }

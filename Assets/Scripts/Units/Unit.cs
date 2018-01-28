@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 
 namespace Lords
 {
 	public abstract class Unit : MonoBehaviour
 	{
 
+		public bool inited = false;	
 		public int UnitID;
 		
 		public GlobalDefine.UnitClass unitClass;
@@ -16,12 +18,15 @@ namespace Lords
 		public Collider2D m_hitCollider;
 		public AttackRangeCollider attackRangeCollider;
 		public Rigidbody2D m_rigidbody2D;
-		public Transform m_transform;
+		public Transform m_transform, m_turnableRoot;
 		public Vector3 m_commanddestination,m_patrollingdestination;
 		public int m_pursueTargetID = -1;
 		public float UnitSpeed=2,RotationSpeed = 5;
 		public List<Unit> TargetUnitList;
 		public int normalHP;
+		public bool isDraggable = true;
+
+		public MessengerReceiver m_MessengerReceiver;
 		//protected MeshRenderer meshRenderer;
 		//protected Material originMaterial;
 		
@@ -32,21 +37,23 @@ namespace Lords
 
 		public GameObject m_currentArrow;
 		public int touchFingerId;
-		public bool mouseMode, isBeingDragged;
+		public bool mouseMode,isBeingDragged;
 
-		void Awake() {
-			// CHANGE FOR PC/TOUCH
-			mouseMode = false;
+
+		protected virtual void Awake(){
+			//Init();
 		}
 
-		public virtual void OnEnable()
+		protected virtual void OnEnable()
 		{
-			//Init ();
+			Init ();
 		}
 
 
 		public virtual void Init()
 		{
+			if (inited) return;
+			
 			m_transform = this.transform;
 			if (attackRangeCollider == null)
 			{
@@ -74,6 +81,9 @@ namespace Lords
 
 			//meshRenderer = this.GetComponent<MeshRenderer>();
 			//originMaterial = meshRenderer.material;
+			SceneManager.instance.RegisterUnit(this);
+			
+			inited = true;
 
 		}
 
@@ -228,14 +238,14 @@ namespace Lords
 					{
 						//近程攻击不打子弹
 						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower);
-						InAudio.PostEvent(gameObject, SceneManager.Instance.KnightAttackEvent);
+						InAudio.PostEvent(gameObject, SceneManager.instance.KnightAttackEvent);
 					}
 
 					if (soldierType.AttackType == 2)
 					{
 						//远程攻击要打子弹
 						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower);
-						InAudio.PostEvent(gameObject, SceneManager.Instance.ArcherAttackEvent);
+						InAudio.PostEvent(gameObject, SceneManager.instance.ArcherAttackEvent);
 					}
 				}
 
@@ -315,29 +325,55 @@ namespace Lords
 				//m_patrollingdestination=m_rigidbody2D.position;
 				return;
 			}
+			
+			Vector3 targetPosition=new Vector3();
 
-			Vector3 pos = m_rigidbody2D.position;
-
-			//Vector3 target = waypoints[_currentWaypoint];
-			//target.y = pos.y;
-
-			pos = Vector3.MoveTowards(pos, m_patrollingdestination, UnitSpeed * Time.fixedDeltaTime);
-			if ((pos - m_patrollingdestination).sqrMagnitude < 0.1f)
+			if (unitState == GlobalDefine.UnitState.Patrolling)
 			{
-				unitState = GlobalDefine.UnitState.Standing;
+				targetPosition = m_patrollingdestination;
 			}
-			else
+			else if (unitState == GlobalDefine.UnitState.PursuingTarget)
 			{
-				Vector3 vectorToTarget = m_patrollingdestination - transform.position;
-				float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
-				Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-				
-				
-				m_rigidbody2D.MoveRotation(Mathf.LerpAngle(m_rigidbody2D.rotation,Quaternion.Slerp(transform.rotation, q, Time.deltaTime * RotationSpeed).eulerAngles.y, RotationSpeed * Time.deltaTime));
+				targetPosition = SceneManager.instance.QueryUnitPosition(m_pursueTargetID);
+				if (targetPosition == Vector3.negativeInfinity)
+				{
+					unitState = GlobalDefine.UnitState.Standing;
+					targetPosition = transform.position;
+					Debug.LogWarning("失去目标id: "+m_pursueTargetID);
+				}
 			}
-			//m_rigidbody2D.rotation = Quaternion.Slerp(m_rigidbody2D.rotation, Quaternion.LookRotation(target - pos, Vector3.up), UnitSpeed * Time.fixedDeltaTime);
 
-			m_rigidbody2D.position = pos;
+			{
+
+				Vector3 pos = m_rigidbody2D.position;
+
+				pos = Vector3.MoveTowards(pos, targetPosition, UnitSpeed * Time.fixedDeltaTime);
+				if ((pos - targetPosition).sqrMagnitude < 0.1f)
+				{
+					unitState = GlobalDefine.UnitState.Standing;
+				}
+				else
+				{
+					Vector3 vectorToTarget = targetPosition - transform.position;
+
+					//vectorToTarget.Normalize();
+
+					float rot_z = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+					//transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+
+
+					//m_rigidbody2D.MoveRotation(Mathf.LerpAngle(m_rigidbody2D.rotation,rot_z - 90, RotationSpeed * Time.deltaTime));
+					//m_turnableRoot.transform.eulerAngles=new Vector3(0,0,Mathf.LerpAngle(m_turnableRoot.transform.eulerAngles.z,rot_z - 90, RotationSpeed * Time.deltaTime));
+
+					//Quaternion newRot = Quaternion.Euler(new Vector3(0,0,rot_z - 90));
+					m_turnableRoot.eulerAngles = new Vector3(0, 0, rot_z - 90);
+
+					//m_turnableRoot.localRotation = Quaternion.Slerp(m_turnableRoot.localRotation, Quaternion.LookRotation(vectorToTarget, Vector3.up), RotationSpeed * Time.fixedDeltaTime);
+				}
+				//m_rigidbody2D.rotation = Quaternion.Slerp(m_rigidbody2D.rotation, Quaternion.LookRotation(target - pos, Vector3.up), UnitSpeed * Time.fixedDeltaTime);
+
+				m_rigidbody2D.position = pos;
+			}
 		}
 
 		protected virtual void Update()
@@ -356,10 +392,10 @@ namespace Lords
 
 				if (isBeingDragged) {
 					Vector3 arrowPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-					arrowPos.z = -1f;
+					arrowPos.z = 0f;
 					if (m_currentArrow == null)
 					{
-						m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
+						m_currentArrow = Instantiate (SceneManager.instance.arrowPrefab) as GameObject;
 					}
 
 					m_currentArrow.transform.position = arrowPos;
@@ -386,12 +422,14 @@ namespace Lords
 			}
 		}
 		
-		public void Grab() {
+		public void Grab()
+		{
+			if (!isDraggable) return;
 			if (!isBeingDragged) {
 				isBeingDragged = true;
 				if (m_currentArrow == null)
 				{
-					m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
+					m_currentArrow = Instantiate (SceneManager.instance.arrowPrefab) as GameObject;
 				}
 				GetComponent<LineRenderer> ().enabled = true;
 			}
@@ -409,7 +447,7 @@ namespace Lords
 			Destroy (m_currentArrow);
 			GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, transform.position }); // Resets line to 0
 			GetComponent<LineRenderer> ().enabled = false;
-			StartPatrol(m_commanddestination);
+			StartCommanding(m_commanddestination);
 			// At this point we need to generate a messenger from the general
 		}
 
@@ -454,21 +492,36 @@ namespace Lords
 			Destroy(this.gameObject);
 		}
 
-		public void StartPatrol(Vector2 destinationposition)
+		void StartCommanding(Vector2 destinationposition)
+		{
+			switch (soldierType.CommandType)
+			{
+				case	(int)GlobalDefine.CommandType.DirectControl:
+					StartPatrol(destinationposition);
+					break;
+				case (int)GlobalDefine.CommandType.MessengerControl:
+					StartIssueCommand(destinationposition);
+					break;
+				case (int)GlobalDefine.CommandType.Unable:
+					break;
+			}
+		}
+
+		protected void StartPatrol(Vector2 destinationposition)
 		{
 			unitState = GlobalDefine.UnitState.Patrolling;
 			m_patrollingdestination = destinationposition;
 		}
 
-		public void StartPursueTarget(int targetID)
+		protected void StartPursueTarget(int targetID)
 		{
 			m_pursueTargetID = targetID;
 			unitState = GlobalDefine.UnitState.PursuingTarget;
 		}
 
-		public void StartIssueCommand()
+		public void StartIssueCommand(Vector2 destinationposition)
 		{
-			
+			SceneManager.instance.FindGeneral(fraction).IssueCommand(fraction, UnitID, destinationposition);
 		}
 
 	}

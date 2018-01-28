@@ -5,12 +5,12 @@ using UnityEngine;
 namespace Lords
 {
 
-    public class CommandManager:Singleton<CommandManager>
+    public class CommandManager:MonoSingleton<CommandManager>
     {
         private Dictionary<int, Command> CommandDictionary;
         private int currentCommandIDNum = 1;
 
-        public override void Init()
+        protected override void Init()
         {
             base.Init();
             CommandDictionary=new Dictionary<int, Command>();

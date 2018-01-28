@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-
+using UnityEditor.PackageManager;
 using UnityEngine;
 namespace Lords
 {
@@ -37,7 +37,7 @@ public class GeneralUnit : Unit
 		}
 	}
 
-	public bool IssueCommand(Fraction fraction, int TargetUnitID, Vector2 destinationPosition)
+	public bool IssueCommand(GlobalDefine.Fraction fraction, int TargetUnitID, Vector2 destinationPosition)
 	{
 		if (CurrentMessengerNum <= 0)
 		{
@@ -59,6 +59,26 @@ public class GeneralUnit : Unit
 
 	public void SendMessenger(int commandID)
 	{
+		GameObject messenger;
+		if (fraction == GlobalDefine.Fraction.One)
+		{
+			messenger = Instantiate(SceneManager.instance.Messenger1);
+		}
+		else
+		{
+			messenger = Instantiate(SceneManager.instance.Messenger2);
+		}
+
+		MessengerUnit messengerUnit= messenger.GetComponent<MessengerUnit>();
+		if (messengerUnit == null)
+		{
+			Debug.LogError("Messenger Not Found");
+			return;
+		}
+
+		messengerUnit.transform.position = transform.position;
+		messengerUnit.Init();
+		messengerUnit.CarryCommand(commandID);
 		
 	}
 }
