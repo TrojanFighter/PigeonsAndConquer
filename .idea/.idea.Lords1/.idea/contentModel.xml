@@ -496,6 +496,10 @@
             <e p="General.cs" t="Include" />
             <e p="Map.cs" t="Include" />
           </e>
+          <e p="Projectile" t="Include">
+            <e p="CannonBall.cs" t="Include" />
+            <e p="Projectile.cs" t="Include" />
+          </e>
           <e p="Scene" t="Include">
             <e p="BasePoint.cs" t="Include" />
             <e p="CommandManager.cs" t="Include" />
