@@ -346,7 +346,6 @@ namespace Lords
 		protected void MouseLogic()
 		{
 			// Mouse logic
-			// Mouse logic
 			if (mouseMode) {
 				if (Input.GetMouseButtonDown (0)) {
 
@@ -357,11 +356,6 @@ namespace Lords
 					arrowPos.z = -1f;
 					m_currentArrow.transform.position = arrowPos;
 					GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
-//				if (Input.GetMouseButtonUp (0)) {
-//					dragging = false;
-//					Destroy (currentArrow);
-//					GetComponent<LineRenderer> ().enabled = false;
-//				}
 				}
 			} else {
 				// Touch logic
@@ -379,8 +373,6 @@ namespace Lords
 							MovementDecided();
 						}
 					}
-				} else {
-
 				}
 			}
 		}
@@ -398,12 +390,6 @@ namespace Lords
 				touchFingerId = touchFID;
 				Grab ();
 			}
-		}
-
-		public void LetGo() {
-			isBeingDragged = false;
-			Destroy (m_currentArrow);
-			GetComponent<LineRenderer> ().enabled = false;
 		}
 
 		public void MovementDecided() {

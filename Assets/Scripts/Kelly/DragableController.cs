@@ -26,7 +26,7 @@ namespace Lords
 
 			if (Input.GetMouseButtonUp(0) && grabbedUnit != null)
 			{
-				grabbedUnit.GetComponent<Unit>().LetGo();
+				grabbedUnit.GetComponent<Unit>().MovementDecided();
 				grabbedUnit = null;
 			}
 
@@ -38,8 +38,7 @@ namespace Lords
 					RaycastHit2D[] hits = Physics2D.RaycastAll(inputPos, inputPos);
 					if (hits.Length > 0)
 					{
-						grabbedUnit = hits[0].transform;
-						grabbedUnit.GetComponent<Unit>().Grab(touch.fingerId);
+						hits[0].transform.GetComponent<Unit>().Grab(touch.fingerId);
 					}
 				}
 			}
