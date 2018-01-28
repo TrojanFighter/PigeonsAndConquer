@@ -70,21 +70,21 @@ public class DragableObjects : MonoBehaviour {
 			}
 		} else {
 			// Touch logic
-//			if (dragging) {
-//				if (Input.touches.Length == 0) {
-//					// Dragging has ended
-//					MovementDecided ();
-//				}
-//				for(int i=0; i < Input.touches.Length; i++) {
-//					if (Input.touches [i].fingerId == touchFingerId) {
-//						TouchDrag (Input.touches [i]);
-//						break;
-//					} else if (i == Input.touches.Length - 1) {
-//						// Dragging has ended
-//						MovementDecided();
-//					}
-//				}
-//			} else {
+			if (dragging) {
+				if (Input.touches.Length == 0) {
+					// Dragging has ended
+					MovementDecided ();
+				}
+				for(int i=0; i < Input.touches.Length; i++) {
+					if (Input.touches [i].fingerId == touchFingerId) {
+						TouchDrag (Input.touches [i]);
+						break;
+					} else if (i == Input.touches.Length - 1) {
+						// Dragging has ended
+						MovementDecided();
+					}
+				}
+			} else {
 //				// Check to see if we're touching this object
 //				foreach (Touch touch in Input.touches) {
 //					Ray ray = Camera.main.ScreenPointToRay (touch.position);
@@ -96,7 +96,7 @@ public class DragableObjects : MonoBehaviour {
 //						GetComponent<LineRenderer> ().enabled = true;
 //					}
 //				}
-//			}
+			}
 		}
 	}
 
@@ -105,6 +105,13 @@ public class DragableObjects : MonoBehaviour {
 			dragging = true;
 			currentArrow = Instantiate (arrowPrefab) as GameObject;
 			GetComponent<LineRenderer> ().enabled = true;
+		}
+	}
+
+	public void Grab(int touchFID) {
+		if (!dragging) {
+			touchFingerId = touchFID;
+			Grab ();
 		}
 	}
 
