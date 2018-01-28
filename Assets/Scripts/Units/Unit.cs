@@ -47,7 +47,7 @@ namespace Lords
 
 		protected virtual void Awake(){
 			//Init();
-			mouseMode = true;
+			mouseMode = false;
 			attackFrames = -1;
 		}
 
