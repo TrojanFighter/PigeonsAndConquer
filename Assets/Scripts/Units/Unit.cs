@@ -311,6 +311,7 @@ namespace Lords
 			FixedUpdateMove();
 			if (attackFrames == 0) {
 				if (!isBeingDragged) {
+					GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, transform.position }); // Resets line to 0
 					GetComponent<LineRenderer> ().enabled = false;
 					attackFrames--;
 				}
