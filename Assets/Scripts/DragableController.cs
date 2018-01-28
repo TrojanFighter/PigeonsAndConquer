@@ -24,8 +24,7 @@ public class DragableController : MonoBehaviour {
 				Vector2 inputPos = Camera.main.ScreenToWorldPoint(touch.position);
 				RaycastHit2D[] hits = Physics2D.RaycastAll (inputPos, inputPos);
 				if (hits.Length > 0) {
-					grabbedUnit = hits [0].transform;
-					grabbedUnit.GetComponent<DragableObjects> ().Grab(touch.fingerId);
+					hits [0].transform.GetComponent<DragableObjects> ().Grab(touch.fingerId);
 				}
 			}
 		}
