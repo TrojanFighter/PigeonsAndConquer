@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Lords
 {
@@ -15,6 +16,14 @@ namespace Lords
         public GameObject arrowPrefab;
 
         public InAudioEvent MessengerDeliverEvent, KnightAttackEvent, ArcherAttackEvent, PickmanAttackEvent, VictoryBlast;
+
+        public GameObject RestartScreen;
+
+        public void Restart()
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        }
+
         //public Animator LeftPanel, RightPanel;
         protected override void Init()
         {
@@ -32,6 +41,14 @@ namespace Lords
             {
                 RegisterUnit(GeneralFraction2);
             }*/
+        }
+
+        void Update()
+        {
+            if (GeneralFraction1 == null || GeneralFraction2 == null)
+            {
+                RestartScreen.SetActive(true);
+            }
         }
 
         public int RegisterUnit(Unit unit)
@@ -70,7 +87,7 @@ namespace Lords
             return queryUnit.transform.position;
             else
             {
-                return Vector3.negativeInfinity;
+                return Vector3.one*1000;
             }
         }
 

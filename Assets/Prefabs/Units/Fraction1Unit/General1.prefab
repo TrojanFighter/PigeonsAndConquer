@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4272051786718844}
   - component: {fileID: 58976786922339390}
   - component: {fileID: 114611825017432578}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: MessengerReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,8 +290,14 @@ MonoBehaviour:
   touchFingerId: 0
   mouseMode: 1
   isBeingDragged: 0
-  CurrentMessengerNum: 4
-  MaxMessengerNum: 4
+  pidgeonUISprites:
+  - {fileID: 21300000, guid: 72dc9f194b88042518cdf8f9f38b947e, type: 3}
+  - {fileID: 21300002, guid: 72dc9f194b88042518cdf8f9f38b947e, type: 3}
+  - {fileID: 21300004, guid: 72dc9f194b88042518cdf8f9f38b947e, type: 3}
+  - {fileID: 21300006, guid: 72dc9f194b88042518cdf8f9f38b947e, type: 3}
+  pidgeonUI: {fileID: 0}
+  CurrentMessengerNum: 3
+  MaxMessengerNum: 3
   MessengerRechargeRate: 0.2
   MessengerRechargePercentage: 0
   CurrentCannonNum: 1

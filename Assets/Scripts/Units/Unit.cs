@@ -162,6 +162,7 @@ namespace Lords
 			{
 				try
 				{
+					if (gameObject == null) return;
 					StopAllCoroutines();
 					if (m_pursueTargetID < 0)
 					{
@@ -307,6 +308,7 @@ namespace Lords
 				return;
 			}
 			if (m_rigidbody2D == null) return;
+			if (m_turnableRoot == null) return;
 			
 			Vector3 targetPosition=new Vector3();
 
@@ -317,11 +319,13 @@ namespace Lords
 			else if (unitState == GlobalDefine.UnitState.PursuingTarget)
 			{
 				targetPosition = SceneManager.instance.QueryUnitPosition(m_pursueTargetID);
-				if (targetPosition == Vector3.negativeInfinity)
+				if (targetPosition ==  Vector3.one*1000)
 				{
+					/*
 					unitState = GlobalDefine.UnitState.Standing;
 					targetPosition = transform.position;
-					Debug.LogWarning("失去目标id: "+m_pursueTargetID);
+					Debug.LogWarning("失去目标id: "+m_pursueTargetID);*/
+					SelfDestroy();
 				}
 			}
 
@@ -361,6 +365,7 @@ namespace Lords
 					//m_turnableRoot.transform.eulerAngles=new Vector3(0,0,Mathf.LerpAngle(m_turnableRoot.transform.eulerAngles.z,rot_z - 90, RotationSpeed * Time.deltaTime));
 
 					//Quaternion newRot = Quaternion.Euler(new Vector3(0,0,rot_z - 90));
+					
 					m_turnableRoot.eulerAngles = new Vector3(0, 0, rot_z - 90);
 
 					//m_turnableRoot.localRotation = Quaternion.Slerp(m_turnableRoot.localRotation, Quaternion.LookRotation(vectorToTarget, Vector3.up), RotationSpeed * Time.fixedDeltaTime);

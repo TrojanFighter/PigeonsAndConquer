@@ -66,8 +66,7 @@
     <Cell ss:StyleID="s62"><Data ss:Type="String">兵种指挥类型,0为无法指挥，1为直接控制无需信使，2为需要信使传达命令</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">兵种正常状态移动速度</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">兵种普通HP</Data></Cell>
-    <Cell ss:StyleID="s62"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">兵种射程 don’t work now</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">兵种射程 don’t work now</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">兵种每次攻击需时，每多少秒进行一次攻击，值越小攻击越快</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">兵种普通攻击力</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">兵种抵抗普通攻击护甲值</Data></Cell>
@@ -97,7 +96,7 @@
     <Cell ss:StyleID="s62"><Data ss:Type="String">Messenger</Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
-    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
     <Cell><Data ss:Type="Number">10</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
@@ -113,8 +112,8 @@
     <Cell ss:StyleID="s62"><Data ss:Type="String">General</Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
-    <Cell><Data ss:Type="Number">2</Data></Cell>
-    <Cell><Data ss:Type="Number">50</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="Number">10</Data></Cell>
@@ -129,7 +128,7 @@
     <Cell ss:StyleID="s62"><Data ss:Type="String">Cavalry</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
-    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1.5</Data></Cell>
     <Cell><Data ss:Type="Number">40</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
@@ -145,7 +144,7 @@
     <Cell ss:StyleID="s62"><Data ss:Type="String">Archer</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
-    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
     <Cell><Data ss:Type="Number">20</Data></Cell>
     <Cell><Data ss:Type="Number">8</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
@@ -161,7 +160,7 @@
     <Cell ss:StyleID="s62"><Data ss:Type="String">Pikeman</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
-    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
     <Cell><Data ss:Type="Number">30</Data></Cell>
     <Cell><Data ss:Type="Number">5</Data></Cell>
     <Cell><Data ss:Type="Number">0.4</Data></Cell>
@@ -198,8 +197,8 @@
     </Pane>
     <Pane>
      <Number>1</Number>
-     <ActiveRow>7</ActiveRow>
-     <ActiveCol>7</ActiveCol>
+     <ActiveRow>4</ActiveRow>
+     <ActiveCol>5</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
