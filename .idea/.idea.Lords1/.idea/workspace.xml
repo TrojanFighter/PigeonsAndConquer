@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfd8948c-56cd-40de-8982-e50a537a42fe" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lords1/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Lords1/.idea/contentModel.xml" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kelly/DragableController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Kelly/DragableController.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Archer1.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Archer1.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Cavalry1.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Cavalry1.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/General1.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/General1.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Messenger1.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Messenger1.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Pikeman1.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Pikeman1.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Archer2.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Archer2.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Cavalry2.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Cavalry2.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/General2.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/General2.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Messenger2.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Messenger2.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Pikeman2.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Pikeman2.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/XML/Soldiers.xml" afterPath="$PROJECT_DIR$/Assets/Resources/XML/Soldiers.xml" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/Main1.unity" afterPath="$PROJECT_DIR$/Assets/Scene/Main1.unity" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/GeneralUnit.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/GeneralUnit.cs" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,137 +33,196 @@
       <file leaf-file-name="GeneralUnit.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Units/GeneralUnit.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="31" />
+            <state relative-caret-position="263">
+              <caret line="70" column="68" lean-forward="false" selection-start-line="70" selection-start-column="68" selection-end-line="70" selection-end-column="68" />
               <folding>
-                <marker date="1517165650205" expanded="true" signature="6:143" ph="..." />
-                <marker date="1517165650205" expanded="true" signature="159:3139" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="193:3137" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="595:663" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="703:866" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="830:863" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="905:1160" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="953:1157" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="1078:1153" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="1195:1429" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="1237:1426" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="1353:1422" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="1465:2055" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="1565:1735" ph="/* if (!string.IsNullOrEmpty(customEventName) &amp;&amp; LevelSettings.CustomEventExists(customEventName)) { ... */" />
-                <marker date="1517165650205" expanded="true" signature="1738:1864" ph="/* InAudio.PostEvent(); ... */" />
-                <marker date="1517165650205" expanded="true" signature="2161:2546" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="2196:2221" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="2228:2542" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="2582:3135" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="2611:2626" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="2696:2766" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="2773:2843" ph="{...}" />
-                <marker date="1517165650205" expanded="true" signature="2945:3006" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="6:165" ph="..." />
+                <marker date="1517172289271" expanded="true" signature="182:3758" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="216:3756" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="730:842" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="882:977" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="1016:1554" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="1064:1551" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="1189:1547" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="1276:1388" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="1397:1503" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="1589:1922" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="1631:1919" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="1739:1806" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="1846:1915" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="1957:2580" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="2057:2227" ph="/* if (!string.IsNullOrEmpty(customEventName) &amp;&amp; LevelSettings.CustomEventExists(customEventName)) { ... */" />
+                <marker date="1517172289271" expanded="true" signature="2230:2356" ph="/* InAudio.PostEvent(); ... */" />
+                <marker date="1517172289271" expanded="true" signature="2686:3165" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="2721:2746" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="2753:3161" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="3201:3754" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="3230:3245" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="3315:3385" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="3392:3462" ph="{...}" />
+                <marker date="1517172289271" expanded="true" signature="3564:3625" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Unit.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MessengerReceiver.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Collider/MessengerReceiver.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-85">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding>
+                <marker date="1517114085685" expanded="false" signature="6:78" ph="..." />
+                <marker date="1517114085685" expanded="true" signature="95:1935" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="145:1933" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="305:500" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="516:535" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="579:1402" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="648:691" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="785:1396" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="901:1046" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="1170:1391" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="1444:1453" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="1495:1929" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="1537:1559" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="1634:1925" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="1756:1770" ph="{...}" />
+                <marker date="1517114085685" expanded="true" signature="1905:1919" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Unit.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2584">
-              <caret line="233" column="51" lean-forward="false" selection-start-line="233" selection-start-column="51" selection-end-line="233" selection-end-column="51" />
+            <state relative-caret-position="171">
+              <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
               <folding>
-                <marker date="1517165537059" expanded="false" signature="6:107" ph="..." />
-                <marker date="1517165537059" expanded="true" signature="145:13317" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="191:13315" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="1011:1088" ph="/* protected MeshRenderer meshRenderer; ... */" />
-                <marker date="1517165537059" expanded="true" signature="1353:1392" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="1429:1449" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="1480:2512" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="1580:1693" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="1724:1782" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="1895:1987" ph="/* attackRangeCollider.myunitclass = unitClass; ... */" />
-                <marker date="1517165537059" expanded="true" signature="2344:2440" ph="/* meshRenderer = this.GetComponent&lt;MeshRenderer&gt;(); ... */" />
-                <marker date="1517165537059" expanded="true" signature="2583:3405" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="2635:2866" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="2919:3150" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="3158:3401" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="3462:3644" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="3697:4215" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="3840:4210" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="3850:4173" ph="/* if (soldierType.AttackType == 3) ... */" />
-                <marker date="1517165537059" expanded="true" signature="4271:4615" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="4342:4611" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="4355:4572" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="4418:4485" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="4495:4566" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="4587:4606" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="4667:4744" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="4801:5889" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="4821:5885" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="4946:5764" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="5004:5259" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="5166:5252" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="5298:5522" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="5561:5758" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="5973:6286" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="6033:6108" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="6164:6234" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="6257:6282" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="6323:6468" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="6368:6414" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="6510:7158" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="6518:7018" ph="/* GameObject ray; ... */" />
-                <marker date="1517165537059" expanded="true" signature="7078:7124" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="7198:7228" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="7272:9574" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="7329:7405" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="7544:7600" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="7664:7962" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="7801:7957" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="8060:8166" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="8118:8161" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="8242:8292" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="8403:8465" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="8474:9339" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="8742:9091" ph="/* m_rigidbody2D.MoveRotation(Mathf.LerpAngle(m_rigidbody2D.rotation,rot_z - 90, RotationSpeed * Time.deltaTime)) ... */" />
-                <marker date="1517165537059" expanded="true" signature="9344:9536" ph="/* m_rigidbody2D.rotation = Quaternion.Slerp(m_rigidbody2D.rotation, Quaternion.LookRotation(target - pos, Vector ... */" />
-                <marker date="1517165537059" expanded="true" signature="9609:9634" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="9665:10421" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="9706:9966" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="9744:9756" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="9783:9961" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="9817:9917" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="10017:10412" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="10055:10117" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="10167:10406" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="10224:10294" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="10335:10399" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="10445:10719" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="10503:10715" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="10563:10660" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="10754:10833" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="10780:10829" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="10867:11215" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="11254:11521" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="11567:11692" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="11861:12249" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="11938:11966" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="12016:12044" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="12167:12228" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="12278:12369" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="12422:12830" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="12538:12826" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="12889:12997" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="13047:13141" ph="{...}" />
-                <marker date="1517165537059" expanded="true" signature="13203:13311" ph="{...}" />
+                <marker date="1517173237334" expanded="false" signature="6:107" ph="..." />
+                <marker date="1517173237334" expanded="true" signature="145:13422" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="191:13420" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="1011:1088" ph="/* protected MeshRenderer meshRenderer; ... */" />
+                <marker date="1517173237334" expanded="true" signature="1353:1392" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="1429:1449" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="1480:2512" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="1580:1693" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="1724:1782" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="1895:1987" ph="/* attackRangeCollider.myunitclass = unitClass; ... */" />
+                <marker date="1517173237334" expanded="true" signature="2344:2440" ph="/* meshRenderer = this.GetComponent&lt;MeshRenderer&gt;(); ... */" />
+                <marker date="1517173237334" expanded="true" signature="2583:3405" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="2635:2866" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="2919:3150" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="3158:3401" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="3462:3644" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="3697:4215" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="3840:4210" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="3850:4173" ph="/* if (soldierType.AttackType == 3) ... */" />
+                <marker date="1517173237334" expanded="true" signature="4271:4652" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="4342:4648" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="4355:4609" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="4455:4522" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="4532:4603" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="4624:4643" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="4704:4781" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="4838:5926" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="4858:5922" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="4983:5801" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="5041:5296" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="5203:5289" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="5335:5559" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="5598:5795" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="6010:6323" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="6070:6145" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="6201:6271" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="6294:6319" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="6360:6505" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="6405:6451" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="6547:7195" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="6555:7055" ph="/* GameObject ray; ... */" />
+                <marker date="1517173237334" expanded="true" signature="7115:7161" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="7235:7265" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="7309:9679" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="7366:7442" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="7620:7676" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="7740:8061" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="7870:8056" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="7882:8030" ph="/* unitState = GlobalDefine.UnitState.Standing; ... */" />
+                <marker date="1517173237334" expanded="true" signature="8159:8265" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="8217:8260" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="8341:8391" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="8502:8564" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="8573:9444" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="8841:9190" ph="/* m_rigidbody2D.MoveRotation(Mathf.LerpAngle(m_rigidbody2D.rotation,rot_z - 90, RotationSpeed * Time.deltaTime)) ... */" />
+                <marker date="1517173237334" expanded="true" signature="9449:9641" ph="/* m_rigidbody2D.rotation = Quaternion.Slerp(m_rigidbody2D.rotation, Quaternion.LookRotation(target - pos, Vector ... */" />
+                <marker date="1517173237334" expanded="true" signature="9714:9739" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="9770:10526" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="9811:10071" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="9849:9861" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="9888:10066" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="9922:10022" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="10122:10517" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="10160:10222" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="10272:10511" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="10329:10399" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="10440:10504" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="10550:10824" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="10608:10820" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="10668:10765" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="10859:10938" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="10885:10934" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="10972:11320" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="11359:11626" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="11672:11797" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="11966:12354" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="12043:12071" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="12121:12149" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="12272:12333" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="12383:12474" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="12527:12935" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="12643:12931" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="12994:13102" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="13152:13246" ph="{...}" />
+                <marker date="1517173237334" expanded="true" signature="13308:13416" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DragableController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SceneManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="81" column="30" lean-forward="false" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+              <folding>
+                <marker date="1517173233053" expanded="true" signature="6:113" ph="..." />
+                <marker date="1517173233053" expanded="true" signature="130:3004" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="192:3002" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="707:794" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="883:982" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="1012:1272" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="1035:1262" ph="/* if (GeneralFraction1 != null) ... */" />
+                <marker date="1517173233053" expanded="true" signature="1295:1460" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="1375:1450" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="1504:1690" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="1738:1985" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="1798:1900" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="1917:1975" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="2030:2168" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="2222:2497" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="2418:2487" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="2569:2995" ph="{...}" />
+                <marker date="1517173233053" expanded="true" signature="2609:2985" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DragableController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Kelly/DragableController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            <state relative-caret-position="475">
+              <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
               <folding>
                 <marker date="1517166187090" expanded="false" signature="6:78" ph="..." />
                 <marker date="1517166187090" expanded="true" signature="95:1687" ph="{...}" />
@@ -166,6 +240,306 @@
                 <marker date="1517166187090" expanded="true" signature="1345:1464" ph="{...}" />
                 <marker date="1517166187090" expanded="true" signature="1561:1603" ph="{...}" />
                 <marker date="1517166187090" expanded="true" signature="1639:1673" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PoolBoss.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Plugins/DarkTonic/CoreGameKit/Scripts/PoolBoss/PoolBoss.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+              <folding>
+                <marker date="1516582463000" expanded="false" signature="52:205" ph="..." />
+                <marker date="1516582463000" expanded="true" signature="287:71705" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="293:479" ph="/// This class is used to spawn and despawn things using pooling (avoids Instantiate and Destroy calls). ... " />
+                <marker date="1516582463000" expanded="true" signature="556:65373" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="1831:1877" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="2813:3466" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="3332:3456" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="3508:3810" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="3526:3800" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="3654:3751" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="4100:4693" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="4549:4649" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="4770:4922" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="4798:4883" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="4964:5937" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="5015:5033" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="5118:5769" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="5266:5317" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="5360:5521" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="5687:5735" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="5875:5933" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="5947:6194" ph="/// Called automatically when not using Multiplayer / Photon.  ... " />
+                <marker date="1516582463000" expanded="true" signature="6235:6535" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="6573:8110" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="6646:6685" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="6849:7035" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="7066:7236" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="7272:7438" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="7572:7729" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="7794:7833" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="7864:7968" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="8004:8070" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="8114:8336" ph="/// This is called by PoolableInfo components on objects that begin in the Scene, so Pool Boss will know about th ... " />
+                <marker date="1516582463000" expanded="true" signature="8414:8546" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="8471:8489" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="8552:8744" ph="/// This is called by PoolableInfo components that get spawned, so we know to remove them from the in scene objec ... " />
+                <marker date="1516582463000" expanded="true" signature="8823:8874" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="8968:9835" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="9983:11560" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="10099:10223" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="10336:10482" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="10718:10959" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="11115:11356" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="11398:11529" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="11570:12112" ph="/// This method allows you to add a new Pool Item at runtime. ... " />
+                <marker date="1516582463000" expanded="true" signature="12316:12900" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="12363:12693" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="12743:12830" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="13045:15347" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="13079:13140" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="13188:13227" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="13275:13644" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="13312:13466" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="13861:14041" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="14282:14441" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="14511:14924" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="15052:15279" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="15118:15263" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="15357:15855" ph="/// Call this method to spawn a prefab using Pool Boss, which will be spawned with no parent Transform (outside t ... " />
+                <marker date="1516582463000" expanded="true" signature="15961:16034" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="16044:16538" ph="/// Call this method to spawn a prefab using Pool Boss, which will be spawned with no parent Transform (outside t ... " />
+                <marker date="1516582463000" expanded="true" signature="16651:16728" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="16738:17217" ph="/// Call this method to spawn a prefab using Pool Boss, which will be a child of the Pool Boss prefab. ... " />
+                <marker date="1516582463000" expanded="true" signature="17318:17392" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="17402:17877" ph="/// Call this method to spawn a prefab using Pool Boss, which will be a child of the Pool Boss prefab. ... " />
+                <marker date="1516582463000" expanded="true" signature="17985:18063" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="18229:18342" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="18370:18696" ph="/* Sends and receives serialized data to/from the network. ... */" />
+                <marker date="1516582463000" expanded="true" signature="18786:19224" ph="/* Essentially the same method as Spawn() but called from NetworkPooler on all clients ... */" />
+                <marker date="1516582463000" expanded="true" signature="22982:23184" ph="/* Basically the same method as Despawn() but this will be called from netowrkPooler on all clients.  ... */" />
+                <marker date="1516582463000" expanded="true" signature="23500:23604" ph="/* ReSharper disable once ConditionIsAlwaysTrueOrFalse ... */" />
+                <marker date="1516582463000" expanded="true" signature="25343:25668" ph="/* In the case that an object needs to be despawned but the despawn call was not made by the owner ... */" />
+                <marker date="1516582463000" expanded="true" signature="26102:26309" ph="/* technically, any client could request despawns here to &quot;Cheat&quot; but the client to client builds should only exi ... */" />
+                <marker date="1516582463000" expanded="true" signature="27201:27630" ph="/* else our object to despawn is null casue we didnt find a matching view id so log the error ... */" />
+                <marker date="1516582463000" expanded="true" signature="27942:28158" ph="/* TODO: add a list of tags in here that should define their prefab as client side only ... */" />
+                <marker date="1516582463000" expanded="true" signature="28289:28398" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="28468:28552" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="28593:29146" ph="/// Call this method to spawn a prefab using Pool Boss. All the Spawners and Killable use this method. ... " />
+                <marker date="1516582463000" expanded="true" signature="29275:30292" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="29304:29402" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="29442:29566" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="29602:29646" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="29760:29852" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="29904:29988" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="30302:30863" ph="/// Call this method to spawn a prefab using Pool Boss. All the Spawners and Killable use this method. ... " />
+                <marker date="1516582463000" expanded="true" signature="30985:35597" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="31077:31222" ph="/* hijack this function and send it over to networkPooler by trying network instantiate ... */" />
+                <marker date="1516582463000" expanded="true" signature="31269:31405" ph="/* if we are not in offline mode ... */" />
+                <marker date="1516582463000" expanded="true" signature="31784:33675" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="31842:32656" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="31895:32121" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="32838:33162" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="33420:33643" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="33715:33794" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="33993:34297" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="34558:34656" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="34866:35049" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="34974:35035" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="35243:35432" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="35477:35553" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="35676:35999" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="35816:35881" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="36009:36237" ph="/// This method returns the number of items in a category that are currently despawned. ... " />
+                <marker date="1516582463000" expanded="true" signature="36304:36954" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="36340:36428" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="36563:36913" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="36698:36747" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="36810:36899" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="36964:37176" ph="/// This method returns a list of active items in a category. ... " />
+                <marker date="1516582463000" expanded="true" signature="37252:37935" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="37342:37440" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="37543:37892" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="37678:37727" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="37788:37878" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="37945:38171" ph="/// This method returns the number of items in a category that are currently spawned. ... " />
+                <marker date="1516582463000" expanded="true" signature="38236:38882" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="38272:38360" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="38495:38841" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="38630:38679" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="38740:38827" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="38892:39321" ph="/// Call this method to despawn a prefab using Pool Boss. All the Spawners and Killable use this method. ... " />
+                <marker date="1516582463000" expanded="true" signature="39402:43231" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="39431:39530" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="39639:39971" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="40065:40157" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="40205:40403" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="40237:40353" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="40520:40954" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="40576:40671" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="41826:41980" ph="/* the owner of this object must have left the game or d/c ... */" />
+                <marker date="1516582463000" expanded="true" signature="42558:42623" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="42772:42852" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="42917:43017" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="43241:43436" ph="/// This method will damage all spawned instances of prefabs. ... " />
+                <marker date="1516582463000" expanded="true" signature="43499:43898" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="43535:43621" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="43724:43888" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="43908:44015" ph="/// This method will despawn all spawned instances of prefabs. ... " />
+                <marker date="1516582463000" expanded="true" signature="44063:44449" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="44099:44185" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="44288:44439" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="44459:44568" ph="/// This method will &quot;Kill&quot; all spawned instances of all prefab. ... " />
+                <marker date="1516582463000" expanded="true" signature="44613:44996" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="44649:44735" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="44838:44986" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="45006:45205" ph="/// This method will Despawn all spawned instances of all prefabs in a single category. ... " />
+                <marker date="1516582463000" expanded="true" signature="45278:45775" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="45314:45400" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="45503:45765" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="45638:45687" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="45785:46072" ph="/// This method will damage all spawned instances of all prefabs in a single category. ... " />
+                <marker date="1516582463000" expanded="true" signature="46162:46672" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="46198:46284" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="46387:46662" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="46522:46571" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="46682:46880" ph="/// This method will &quot;Kill&quot; all spawned instances of all prefabs in a single category. ... " />
+                <marker date="1516582463000" expanded="true" signature="46950:47444" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="46986:47072" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="47175:47434" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="47310:47359" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="47454:47745" ph="/// This method will damage all spawned instances of the prefab you pass in. ... " />
+                <marker date="1516582463000" expanded="true" signature="47835:48821" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="47871:47957" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="47999:48130" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="48247:48427" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="48601:48811" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="48701:48771" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="48831:49034" ph="/// This method will despawn all spawned instances of the prefab you pass in. ... " />
+                <marker date="1516582463000" expanded="true" signature="49107:49981" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="49143:49229" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="49271:49403" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="49520:49740" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="49896:49971" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="49985:50251" ph="/// Destroys the pool item, and all prefabs from it that are already spawned. You should never call this except m ... " />
+                <marker date="1516582463000" expanded="true" signature="50314:51364" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="50341:50394" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="50429:50519" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="50619:50779" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="50884:50950" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="51008:51072" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="51313:51360" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="51370:51679" ph="/// Destroys all pool items in the category specified, and all prefabs from it that are already spawned. You shou ... " />
+                <marker date="1516582463000" expanded="true" signature="51747:52834" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="51774:51827" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="51875:51978" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="52089:52218" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="52176:52213" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="52262:52830" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="52320:52388" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="52448:52514" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="52776:52825" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="52844:53043" ph="/// This method will &quot;Kill&quot; all spawned instances of the prefab you pass in. ... " />
+                <marker date="1516582463000" expanded="true" signature="53110:54115" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="53146:53232" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="53271:53400" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="53514:53728" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="53902:54105" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="54002:54065" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="54125:54372" ph="/// Call this get the next available item to spawn for a pool item. ... " />
+                <marker date="1516582463000" expanded="true" signature="54442:54505" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="54515:54768" ph="/// Call this get the next available item to spawn for a pool item. ... " />
+                <marker date="1516582463000" expanded="true" signature="54838:55748" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="54867:54936" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="54994:55038" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="55155:55226" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="55280:55324" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="55485:55529" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="55758:56073" ph="/// Call this method get info on a Pool Boss item (number of spawned and despawned copies, allow instantiate more ... " />
+                <marker date="1516582463000" expanded="true" signature="56157:56422" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="56211:56255" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="56317:56361" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="56432:56703" ph="/// Call this method determine if the item (Transform) you pass in is set up in Pool Boss. ... " />
+                <marker date="1516582463000" expanded="true" signature="56763:56943" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="56791:56857" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="56953:57221" ph="/// Call this method determine if the item name you pass in is set up in Pool Boss. ... " />
+                <marker date="1516582463000" expanded="true" signature="57282:57488" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="57310:57408" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="57498:57833" ph="/// This will tell you how many available clones of a prefab are despawned and ready to spawn. A value of -1 indi ... " />
+                <marker date="1516582463000" expanded="true" signature="57904:58666" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="57940:58029" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="58068:58207" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="58321:58548" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="58676:59003" ph="/// This will tell you how many clones of a prefab are already spawned out of Pool Boss. A value of -1 indicates  ... " />
+                <marker date="1516582463000" expanded="true" signature="59072:59824" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="59108:59197" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="59236:59373" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="59487:59712" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="59834:60074" ph="/// Call this method to find out if all are despawned ... " />
+                <marker date="1516582463000" expanded="true" signature="60149:60219" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="61686:61781" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="61822:61948" ph="/// This property will tell you how many different items are set up in Pool Boss. ... " />
+                <marker date="1516582463000" expanded="true" signature="61987:62211" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="62005:62201" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="62037:62106" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="62221:62522" ph="/// This will return the name of the game object's prefab without &quot;(Clone X)&quot; in the name. It is used internally  ... " />
+                <marker date="1516582463000" expanded="true" signature="62583:62935" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="62616:62660" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="62759:62816" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="62945:63245" ph="/// This will return the name of the game object's prefab without &quot;(Clone X)&quot; in the name. It is used internally  ... " />
+                <marker date="1516582463000" expanded="true" signature="63304:63491" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="63334:63378" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="63501:63748" ph="/// This will return the name of the game object's prefab without &quot;(Clone X)&quot; in the name.  ... " />
+                <marker date="1516582463000" expanded="true" signature="63816:64048" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="63929:64006" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="64123:64335" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="64151:64252" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="64383:64722" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="64427:64471" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="64560:64584" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="64789:64935" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="64807:64925" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="64972:65020" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="65060:65343" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="65078:65333" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="65203:65287" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="65379:65531" ph="/// Extension methods of Pool Boss methods, that you can call with one less parameter from the Transform componen ... " />
+                <marker date="1516582463000" expanded="true" signature="65575:71703" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="65585:65750" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="65830:65907" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="65917:66285" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="66449:66578" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="66588:66772" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="66867:66948" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="66958:67126" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="67193:67257" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="67267:67403" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="67481:67549" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="67559:67718" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="67784:67845" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="67855:67988" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="68060:68122" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="68132:68291" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="68366:68433" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="68443:68608" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="68684:68758" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="68768:68927" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="68992:69054" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="69064:69229" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="69303:69375" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="69385:69639" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="69752:69838" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="69848:70102" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="70220:70311" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="70321:70626" ph="/// Calls the same named Pool Boss method ... " />
+                <marker date="1516582463000" expanded="true" signature="70760:70857" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="70867:71047" ph="/// Change the layer of something you just spawned. ... " />
+                <marker date="1516582463000" expanded="true" signature="71123:71299" ph="{...}" />
+                <marker date="1516582463000" expanded="true" signature="71309:71530" ph="/// Change the local scale of something you just spawned. ... " />
+                <marker date="1516582463000" expanded="true" signature="71615:71697" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -202,10 +576,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Define/SoldierType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/XMLConfig/XMLReader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/DarkTonic/CoreGameKit/Scripts/PoolBoss/PoolBoss.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile/CannonBall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Kelly/DragableController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collider/MessengerReceiver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile/SimpleSelfDestory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Mad God/Assets/Scripts/Unit/FireWarrior.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/DarkTonic/CoreGameKit/ExampleScenes/Scripts/KW_Player.cs" root0="FORCE_HIGHLIGHTING" />
@@ -218,12 +594,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Define/SoldierType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/XMLConfig/XMLReader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Collider/AttackRangeCollider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/CannonBall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/SimpleSelfDestory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/Projectile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Units/GeneralUnit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Kelly/DragableController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Units/GeneralUnit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs" />
       </list>
     </option>
   </component>
@@ -233,9 +610,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="176" />
-    <option name="y" value="33" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="377" />
+    <option name="y" value="63" />
     <option name="width" value="1440" />
     <option name="height" value="981" />
   </component>
@@ -301,12 +678,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517150353506</updated>
-      <workItem from="1517150357928" duration="12813000" />
+      <workItem from="1517150357928" duration="16965000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12813000" />
+    <option name="totallyTimeSpent" value="16965000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -318,7 +695,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="377" y="63" width="1440" height="981" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -329,13 +706,13 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18489583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32880098" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954337" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05686032" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -352,7 +729,22 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Collider/MessengerReceiver.cs</url>
+          <line>32</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Collider/MessengerReceiver.cs">
+            <startOffsets>
+              <startOffset value="598" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="648" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -373,20 +765,20 @@
         <state relative-caret-position="223">
           <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="45" />
           <folding>
-            <marker date="1517165537063" expanded="false" signature="6:70" ph="..." />
-            <marker date="1517165537063" expanded="true" signature="87:4409" ph="{...}" />
-            <marker date="1517165537063" expanded="true" signature="120:4405" ph="{...}" />
-            <marker date="1517165537063" expanded="true" signature="197:327" ph="{...}" />
-            <marker date="1517165537063" expanded="true" signature="658:2628" ph="{...}" />
-            <marker date="1517165537063" expanded="true" signature="733:2624" ph="{...}" />
-            <marker date="1517165537063" expanded="true" signature="795:862" ph="/* 评论ID ... */" />
-            <marker date="1517165537063" expanded="true" signature="2218:2547" ph="/* string GapTimeString = GetInnerData(rowNode.ChildNodes[10]); ... */" />
-            <marker date="1517165537063" expanded="true" signature="3292:4224" ph="{...}" />
-            <marker date="1517165537063" expanded="true" signature="3607:4197" ph="{...}" />
-            <marker date="1517165537063" expanded="true" signature="3682:4193" ph="{...}" />
-            <marker date="1517165537063" expanded="true" signature="4278:4401" ph="{...}" />
-            <marker date="1517165537063" expanded="true" signature="4313:4361" ph="{...}" />
-            <marker date="1517165537063" expanded="true" signature="4361:4398" ph="{...}" />
+            <marker date="1517169007387" expanded="false" signature="6:70" ph="..." />
+            <marker date="1517169007387" expanded="true" signature="87:4526" ph="{...}" />
+            <marker date="1517169007387" expanded="true" signature="120:4522" ph="{...}" />
+            <marker date="1517169007387" expanded="true" signature="197:327" ph="{...}" />
+            <marker date="1517169007387" expanded="true" signature="658:2628" ph="{...}" />
+            <marker date="1517169007387" expanded="true" signature="733:2624" ph="{...}" />
+            <marker date="1517169007387" expanded="true" signature="795:862" ph="/* 评论ID ... */" />
+            <marker date="1517169007387" expanded="true" signature="2218:2547" ph="/* string GapTimeString = GetInnerData(rowNode.ChildNodes[10]); ... */" />
+            <marker date="1517169007387" expanded="true" signature="3409:4341" ph="{...}" />
+            <marker date="1517169007387" expanded="true" signature="3724:4314" ph="{...}" />
+            <marker date="1517169007387" expanded="true" signature="3799:4310" ph="{...}" />
+            <marker date="1517169007387" expanded="true" signature="4395:4518" ph="{...}" />
+            <marker date="1517169007387" expanded="true" signature="4430:4478" ph="{...}" />
+            <marker date="1517169007387" expanded="true" signature="4478:4515" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -524,304 +916,6 @@
             <marker date="1517155658792" expanded="true" signature="3058:3913" ph="{...}" />
             <marker date="1517155658792" expanded="true" signature="3154:3799" ph="/* if (myfraction == GlobalDefine.Fraction.One &amp;&amp; other.gameObject.GetComponent&lt;Unit&gt;().fraction==GlobalDefine.Fr ... */" />
             <marker date="1517155658792" expanded="true" signature="3839:3908" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Plugins/DarkTonic/CoreGameKit/Scripts/PoolBoss/PoolBoss.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8633">
-          <caret line="438" column="32" lean-forward="false" selection-start-line="438" selection-start-column="32" selection-end-line="438" selection-end-column="32" />
-          <folding>
-            <marker date="1516582463000" expanded="false" signature="52:205" ph="..." />
-            <marker date="1516582463000" expanded="true" signature="287:71705" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="293:479" ph="/// This class is used to spawn and despawn things using pooling (avoids Instantiate and Destroy calls). ... " />
-            <marker date="1516582463000" expanded="true" signature="556:65373" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="1831:1877" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="2813:3466" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="3332:3456" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="3508:3810" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="3526:3800" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="3654:3751" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="4100:4693" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="4549:4649" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="4770:4922" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="4798:4883" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="4964:5937" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="5015:5033" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="5118:5769" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="5266:5317" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="5360:5521" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="5687:5735" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="5875:5933" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="5947:6194" ph="/// Called automatically when not using Multiplayer / Photon.  ... " />
-            <marker date="1516582463000" expanded="true" signature="6235:6535" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="6573:8110" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="6646:6685" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="6849:7035" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="7066:7236" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="7272:7438" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="7572:7729" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="7794:7833" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="7864:7968" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="8004:8070" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="8114:8336" ph="/// This is called by PoolableInfo components on objects that begin in the Scene, so Pool Boss will know about th ... " />
-            <marker date="1516582463000" expanded="true" signature="8414:8546" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="8471:8489" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="8552:8744" ph="/// This is called by PoolableInfo components that get spawned, so we know to remove them from the in scene objec ... " />
-            <marker date="1516582463000" expanded="true" signature="8823:8874" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="8968:9835" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="9983:11560" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="10099:10223" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="10336:10482" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="10718:10959" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="11115:11356" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="11398:11529" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="11570:12112" ph="/// This method allows you to add a new Pool Item at runtime. ... " />
-            <marker date="1516582463000" expanded="true" signature="12316:12900" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="12363:12693" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="12743:12830" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="13045:15347" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="13079:13140" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="13188:13227" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="13275:13644" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="13312:13466" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="13861:14041" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="14282:14441" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="14511:14924" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="15052:15279" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="15118:15263" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="15357:15855" ph="/// Call this method to spawn a prefab using Pool Boss, which will be spawned with no parent Transform (outside t ... " />
-            <marker date="1516582463000" expanded="true" signature="15961:16034" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="16044:16538" ph="/// Call this method to spawn a prefab using Pool Boss, which will be spawned with no parent Transform (outside t ... " />
-            <marker date="1516582463000" expanded="true" signature="16651:16728" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="16738:17217" ph="/// Call this method to spawn a prefab using Pool Boss, which will be a child of the Pool Boss prefab. ... " />
-            <marker date="1516582463000" expanded="true" signature="17318:17392" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="17402:17877" ph="/// Call this method to spawn a prefab using Pool Boss, which will be a child of the Pool Boss prefab. ... " />
-            <marker date="1516582463000" expanded="true" signature="17985:18063" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="18229:18342" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="18370:18696" ph="/* Sends and receives serialized data to/from the network. ... */" />
-            <marker date="1516582463000" expanded="true" signature="18786:19224" ph="/* Essentially the same method as Spawn() but called from NetworkPooler on all clients ... */" />
-            <marker date="1516582463000" expanded="true" signature="22982:23184" ph="/* Basically the same method as Despawn() but this will be called from netowrkPooler on all clients.  ... */" />
-            <marker date="1516582463000" expanded="true" signature="23500:23604" ph="/* ReSharper disable once ConditionIsAlwaysTrueOrFalse ... */" />
-            <marker date="1516582463000" expanded="true" signature="25343:25668" ph="/* In the case that an object needs to be despawned but the despawn call was not made by the owner ... */" />
-            <marker date="1516582463000" expanded="true" signature="26102:26309" ph="/* technically, any client could request despawns here to &quot;Cheat&quot; but the client to client builds should only exi ... */" />
-            <marker date="1516582463000" expanded="true" signature="27201:27630" ph="/* else our object to despawn is null casue we didnt find a matching view id so log the error ... */" />
-            <marker date="1516582463000" expanded="true" signature="27942:28158" ph="/* TODO: add a list of tags in here that should define their prefab as client side only ... */" />
-            <marker date="1516582463000" expanded="true" signature="28289:28398" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="28468:28552" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="28593:29146" ph="/// Call this method to spawn a prefab using Pool Boss. All the Spawners and Killable use this method. ... " />
-            <marker date="1516582463000" expanded="true" signature="29275:30292" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="29304:29402" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="29442:29566" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="29602:29646" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="29760:29852" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="29904:29988" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="30302:30863" ph="/// Call this method to spawn a prefab using Pool Boss. All the Spawners and Killable use this method. ... " />
-            <marker date="1516582463000" expanded="true" signature="30985:35597" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="31077:31222" ph="/* hijack this function and send it over to networkPooler by trying network instantiate ... */" />
-            <marker date="1516582463000" expanded="true" signature="31269:31405" ph="/* if we are not in offline mode ... */" />
-            <marker date="1516582463000" expanded="true" signature="31784:33675" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="31842:32656" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="31895:32121" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="32838:33162" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="33420:33643" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="33715:33794" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="33993:34297" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="34558:34656" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="34866:35049" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="34974:35035" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="35243:35432" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="35477:35553" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="35676:35999" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="35816:35881" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="36009:36237" ph="/// This method returns the number of items in a category that are currently despawned. ... " />
-            <marker date="1516582463000" expanded="true" signature="36304:36954" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="36340:36428" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="36563:36913" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="36698:36747" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="36810:36899" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="36964:37176" ph="/// This method returns a list of active items in a category. ... " />
-            <marker date="1516582463000" expanded="true" signature="37252:37935" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="37342:37440" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="37543:37892" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="37678:37727" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="37788:37878" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="37945:38171" ph="/// This method returns the number of items in a category that are currently spawned. ... " />
-            <marker date="1516582463000" expanded="true" signature="38236:38882" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="38272:38360" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="38495:38841" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="38630:38679" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="38740:38827" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="38892:39321" ph="/// Call this method to despawn a prefab using Pool Boss. All the Spawners and Killable use this method. ... " />
-            <marker date="1516582463000" expanded="true" signature="39402:43231" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="39431:39530" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="39639:39971" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="40065:40157" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="40205:40403" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="40237:40353" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="40520:40954" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="40576:40671" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="41826:41980" ph="/* the owner of this object must have left the game or d/c ... */" />
-            <marker date="1516582463000" expanded="true" signature="42558:42623" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="42772:42852" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="42917:43017" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="43241:43436" ph="/// This method will damage all spawned instances of prefabs. ... " />
-            <marker date="1516582463000" expanded="true" signature="43499:43898" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="43535:43621" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="43724:43888" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="43908:44015" ph="/// This method will despawn all spawned instances of prefabs. ... " />
-            <marker date="1516582463000" expanded="true" signature="44063:44449" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="44099:44185" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="44288:44439" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="44459:44568" ph="/// This method will &quot;Kill&quot; all spawned instances of all prefab. ... " />
-            <marker date="1516582463000" expanded="true" signature="44613:44996" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="44649:44735" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="44838:44986" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="45006:45205" ph="/// This method will Despawn all spawned instances of all prefabs in a single category. ... " />
-            <marker date="1516582463000" expanded="true" signature="45278:45775" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="45314:45400" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="45503:45765" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="45638:45687" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="45785:46072" ph="/// This method will damage all spawned instances of all prefabs in a single category. ... " />
-            <marker date="1516582463000" expanded="true" signature="46162:46672" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="46198:46284" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="46387:46662" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="46522:46571" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="46682:46880" ph="/// This method will &quot;Kill&quot; all spawned instances of all prefabs in a single category. ... " />
-            <marker date="1516582463000" expanded="true" signature="46950:47444" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="46986:47072" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="47175:47434" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="47310:47359" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="47454:47745" ph="/// This method will damage all spawned instances of the prefab you pass in. ... " />
-            <marker date="1516582463000" expanded="true" signature="47835:48821" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="47871:47957" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="47999:48130" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="48247:48427" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="48601:48811" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="48701:48771" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="48831:49034" ph="/// This method will despawn all spawned instances of the prefab you pass in. ... " />
-            <marker date="1516582463000" expanded="true" signature="49107:49981" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="49143:49229" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="49271:49403" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="49520:49740" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="49896:49971" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="49985:50251" ph="/// Destroys the pool item, and all prefabs from it that are already spawned. You should never call this except m ... " />
-            <marker date="1516582463000" expanded="true" signature="50314:51364" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="50341:50394" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="50429:50519" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="50619:50779" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="50884:50950" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="51008:51072" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="51313:51360" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="51370:51679" ph="/// Destroys all pool items in the category specified, and all prefabs from it that are already spawned. You shou ... " />
-            <marker date="1516582463000" expanded="true" signature="51747:52834" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="51774:51827" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="51875:51978" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="52089:52218" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="52176:52213" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="52262:52830" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="52320:52388" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="52448:52514" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="52776:52825" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="52844:53043" ph="/// This method will &quot;Kill&quot; all spawned instances of the prefab you pass in. ... " />
-            <marker date="1516582463000" expanded="true" signature="53110:54115" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="53146:53232" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="53271:53400" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="53514:53728" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="53902:54105" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="54002:54065" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="54125:54372" ph="/// Call this get the next available item to spawn for a pool item. ... " />
-            <marker date="1516582463000" expanded="true" signature="54442:54505" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="54515:54768" ph="/// Call this get the next available item to spawn for a pool item. ... " />
-            <marker date="1516582463000" expanded="true" signature="54838:55748" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="54867:54936" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="54994:55038" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="55155:55226" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="55280:55324" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="55485:55529" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="55758:56073" ph="/// Call this method get info on a Pool Boss item (number of spawned and despawned copies, allow instantiate more ... " />
-            <marker date="1516582463000" expanded="true" signature="56157:56422" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="56211:56255" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="56317:56361" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="56432:56703" ph="/// Call this method determine if the item (Transform) you pass in is set up in Pool Boss. ... " />
-            <marker date="1516582463000" expanded="true" signature="56763:56943" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="56791:56857" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="56953:57221" ph="/// Call this method determine if the item name you pass in is set up in Pool Boss. ... " />
-            <marker date="1516582463000" expanded="true" signature="57282:57488" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="57310:57408" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="57498:57833" ph="/// This will tell you how many available clones of a prefab are despawned and ready to spawn. A value of -1 indi ... " />
-            <marker date="1516582463000" expanded="true" signature="57904:58666" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="57940:58029" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="58068:58207" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="58321:58548" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="58676:59003" ph="/// This will tell you how many clones of a prefab are already spawned out of Pool Boss. A value of -1 indicates  ... " />
-            <marker date="1516582463000" expanded="true" signature="59072:59824" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="59108:59197" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="59236:59373" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="59487:59712" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="59834:60074" ph="/// Call this method to find out if all are despawned ... " />
-            <marker date="1516582463000" expanded="true" signature="60149:60219" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="61686:61781" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="61822:61948" ph="/// This property will tell you how many different items are set up in Pool Boss. ... " />
-            <marker date="1516582463000" expanded="true" signature="61987:62211" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="62005:62201" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="62037:62106" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="62221:62522" ph="/// This will return the name of the game object's prefab without &quot;(Clone X)&quot; in the name. It is used internally  ... " />
-            <marker date="1516582463000" expanded="true" signature="62583:62935" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="62616:62660" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="62759:62816" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="62945:63245" ph="/// This will return the name of the game object's prefab without &quot;(Clone X)&quot; in the name. It is used internally  ... " />
-            <marker date="1516582463000" expanded="true" signature="63304:63491" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="63334:63378" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="63501:63748" ph="/// This will return the name of the game object's prefab without &quot;(Clone X)&quot; in the name.  ... " />
-            <marker date="1516582463000" expanded="true" signature="63816:64048" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="63929:64006" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="64123:64335" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="64151:64252" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="64383:64722" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="64427:64471" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="64560:64584" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="64789:64935" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="64807:64925" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="64972:65020" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="65060:65343" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="65078:65333" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="65203:65287" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="65379:65531" ph="/// Extension methods of Pool Boss methods, that you can call with one less parameter from the Transform componen ... " />
-            <marker date="1516582463000" expanded="true" signature="65575:71703" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="65585:65750" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="65830:65907" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="65917:66285" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="66449:66578" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="66588:66772" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="66867:66948" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="66958:67126" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="67193:67257" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="67267:67403" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="67481:67549" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="67559:67718" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="67784:67845" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="67855:67988" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="68060:68122" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="68132:68291" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="68366:68433" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="68443:68608" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="68684:68758" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="68768:68927" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="68992:69054" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="69064:69229" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="69303:69375" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="69385:69639" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="69752:69838" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="69848:70102" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="70220:70311" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="70321:70626" ph="/// Calls the same named Pool Boss method ... " />
-            <marker date="1516582463000" expanded="true" signature="70760:70857" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="70867:71047" ph="/// Change the layer of something you just spawned. ... " />
-            <marker date="1516582463000" expanded="true" signature="71123:71299" ph="{...}" />
-            <marker date="1516582463000" expanded="true" signature="71309:71530" ph="/// Change the local scale of something you just spawned. ... " />
-            <marker date="1516582463000" expanded="true" signature="71615:71697" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1294,135 +1388,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Units/GeneralUnit.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="31" />
-          <folding>
-            <marker date="1517165650205" expanded="true" signature="6:143" ph="..." />
-            <marker date="1517165650205" expanded="true" signature="159:3139" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="193:3137" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="595:663" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="703:866" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="830:863" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="905:1160" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="953:1157" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="1078:1153" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="1195:1429" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="1237:1426" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="1353:1422" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="1465:2055" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="1565:1735" ph="/* if (!string.IsNullOrEmpty(customEventName) &amp;&amp; LevelSettings.CustomEventExists(customEventName)) { ... */" />
-            <marker date="1517165650205" expanded="true" signature="1738:1864" ph="/* InAudio.PostEvent(); ... */" />
-            <marker date="1517165650205" expanded="true" signature="2161:2546" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="2196:2221" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="2228:2542" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="2582:3135" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="2611:2626" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="2696:2766" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="2773:2843" ph="{...}" />
-            <marker date="1517165650205" expanded="true" signature="2945:3006" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2584">
-          <caret line="233" column="51" lean-forward="false" selection-start-line="233" selection-start-column="51" selection-end-line="233" selection-end-column="51" />
-          <folding>
-            <marker date="1517165537059" expanded="false" signature="6:107" ph="..." />
-            <marker date="1517165537059" expanded="true" signature="145:13317" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="191:13315" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="1011:1088" ph="/* protected MeshRenderer meshRenderer; ... */" />
-            <marker date="1517165537059" expanded="true" signature="1353:1392" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="1429:1449" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="1480:2512" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="1580:1693" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="1724:1782" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="1895:1987" ph="/* attackRangeCollider.myunitclass = unitClass; ... */" />
-            <marker date="1517165537059" expanded="true" signature="2344:2440" ph="/* meshRenderer = this.GetComponent&lt;MeshRenderer&gt;(); ... */" />
-            <marker date="1517165537059" expanded="true" signature="2583:3405" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="2635:2866" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="2919:3150" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="3158:3401" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="3462:3644" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="3697:4215" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="3840:4210" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="3850:4173" ph="/* if (soldierType.AttackType == 3) ... */" />
-            <marker date="1517165537059" expanded="true" signature="4271:4615" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="4342:4611" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="4355:4572" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="4418:4485" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="4495:4566" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="4587:4606" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="4667:4744" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="4801:5889" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="4821:5885" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="4946:5764" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="5004:5259" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="5166:5252" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="5298:5522" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="5561:5758" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="5973:6286" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="6033:6108" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="6164:6234" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="6257:6282" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="6323:6468" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="6368:6414" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="6510:7158" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="6518:7018" ph="/* GameObject ray; ... */" />
-            <marker date="1517165537059" expanded="true" signature="7078:7124" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="7198:7228" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="7272:9574" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="7329:7405" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="7544:7600" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="7664:7962" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="7801:7957" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="8060:8166" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="8118:8161" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="8242:8292" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="8403:8465" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="8474:9339" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="8742:9091" ph="/* m_rigidbody2D.MoveRotation(Mathf.LerpAngle(m_rigidbody2D.rotation,rot_z - 90, RotationSpeed * Time.deltaTime)) ... */" />
-            <marker date="1517165537059" expanded="true" signature="9344:9536" ph="/* m_rigidbody2D.rotation = Quaternion.Slerp(m_rigidbody2D.rotation, Quaternion.LookRotation(target - pos, Vector ... */" />
-            <marker date="1517165537059" expanded="true" signature="9609:9634" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="9665:10421" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="9706:9966" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="9744:9756" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="9783:9961" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="9817:9917" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="10017:10412" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="10055:10117" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="10167:10406" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="10224:10294" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="10335:10399" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="10445:10719" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="10503:10715" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="10563:10660" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="10754:10833" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="10780:10829" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="10867:11215" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="11254:11521" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="11567:11692" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="11861:12249" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="11938:11966" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="12016:12044" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="12167:12228" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="12278:12369" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="12422:12830" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="12538:12826" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="12889:12997" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="13047:13141" ph="{...}" />
-            <marker date="1517165537059" expanded="true" signature="13203:13311" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Kelly/DragableController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        <state relative-caret-position="475">
+          <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
           <folding>
             <marker date="1517166187090" expanded="false" signature="6:78" ph="..." />
             <marker date="1517166187090" expanded="true" signature="95:1687" ph="{...}" />
@@ -1440,6 +1409,484 @@
             <marker date="1517166187090" expanded="true" signature="1345:1464" ph="{...}" />
             <marker date="1517166187090" expanded="true" signature="1561:1603" ph="{...}" />
             <marker date="1517166187090" expanded="true" signature="1639:1673" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Plugins/DarkTonic/CoreGameKit/Scripts/PoolBoss/PoolBoss.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+          <folding>
+            <marker date="1516582463000" expanded="false" signature="52:205" ph="..." />
+            <marker date="1516582463000" expanded="true" signature="287:71705" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="293:479" ph="/// This class is used to spawn and despawn things using pooling (avoids Instantiate and Destroy calls). ... " />
+            <marker date="1516582463000" expanded="true" signature="556:65373" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="1831:1877" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="2813:3466" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="3332:3456" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="3508:3810" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="3526:3800" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="3654:3751" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="4100:4693" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="4549:4649" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="4770:4922" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="4798:4883" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="4964:5937" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="5015:5033" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="5118:5769" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="5266:5317" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="5360:5521" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="5687:5735" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="5875:5933" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="5947:6194" ph="/// Called automatically when not using Multiplayer / Photon.  ... " />
+            <marker date="1516582463000" expanded="true" signature="6235:6535" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="6573:8110" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="6646:6685" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="6849:7035" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="7066:7236" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="7272:7438" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="7572:7729" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="7794:7833" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="7864:7968" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="8004:8070" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="8114:8336" ph="/// This is called by PoolableInfo components on objects that begin in the Scene, so Pool Boss will know about th ... " />
+            <marker date="1516582463000" expanded="true" signature="8414:8546" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="8471:8489" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="8552:8744" ph="/// This is called by PoolableInfo components that get spawned, so we know to remove them from the in scene objec ... " />
+            <marker date="1516582463000" expanded="true" signature="8823:8874" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="8968:9835" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="9983:11560" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="10099:10223" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="10336:10482" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="10718:10959" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="11115:11356" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="11398:11529" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="11570:12112" ph="/// This method allows you to add a new Pool Item at runtime. ... " />
+            <marker date="1516582463000" expanded="true" signature="12316:12900" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="12363:12693" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="12743:12830" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="13045:15347" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="13079:13140" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="13188:13227" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="13275:13644" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="13312:13466" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="13861:14041" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="14282:14441" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="14511:14924" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="15052:15279" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="15118:15263" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="15357:15855" ph="/// Call this method to spawn a prefab using Pool Boss, which will be spawned with no parent Transform (outside t ... " />
+            <marker date="1516582463000" expanded="true" signature="15961:16034" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="16044:16538" ph="/// Call this method to spawn a prefab using Pool Boss, which will be spawned with no parent Transform (outside t ... " />
+            <marker date="1516582463000" expanded="true" signature="16651:16728" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="16738:17217" ph="/// Call this method to spawn a prefab using Pool Boss, which will be a child of the Pool Boss prefab. ... " />
+            <marker date="1516582463000" expanded="true" signature="17318:17392" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="17402:17877" ph="/// Call this method to spawn a prefab using Pool Boss, which will be a child of the Pool Boss prefab. ... " />
+            <marker date="1516582463000" expanded="true" signature="17985:18063" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="18229:18342" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="18370:18696" ph="/* Sends and receives serialized data to/from the network. ... */" />
+            <marker date="1516582463000" expanded="true" signature="18786:19224" ph="/* Essentially the same method as Spawn() but called from NetworkPooler on all clients ... */" />
+            <marker date="1516582463000" expanded="true" signature="22982:23184" ph="/* Basically the same method as Despawn() but this will be called from netowrkPooler on all clients.  ... */" />
+            <marker date="1516582463000" expanded="true" signature="23500:23604" ph="/* ReSharper disable once ConditionIsAlwaysTrueOrFalse ... */" />
+            <marker date="1516582463000" expanded="true" signature="25343:25668" ph="/* In the case that an object needs to be despawned but the despawn call was not made by the owner ... */" />
+            <marker date="1516582463000" expanded="true" signature="26102:26309" ph="/* technically, any client could request despawns here to &quot;Cheat&quot; but the client to client builds should only exi ... */" />
+            <marker date="1516582463000" expanded="true" signature="27201:27630" ph="/* else our object to despawn is null casue we didnt find a matching view id so log the error ... */" />
+            <marker date="1516582463000" expanded="true" signature="27942:28158" ph="/* TODO: add a list of tags in here that should define their prefab as client side only ... */" />
+            <marker date="1516582463000" expanded="true" signature="28289:28398" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="28468:28552" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="28593:29146" ph="/// Call this method to spawn a prefab using Pool Boss. All the Spawners and Killable use this method. ... " />
+            <marker date="1516582463000" expanded="true" signature="29275:30292" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="29304:29402" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="29442:29566" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="29602:29646" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="29760:29852" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="29904:29988" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="30302:30863" ph="/// Call this method to spawn a prefab using Pool Boss. All the Spawners and Killable use this method. ... " />
+            <marker date="1516582463000" expanded="true" signature="30985:35597" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="31077:31222" ph="/* hijack this function and send it over to networkPooler by trying network instantiate ... */" />
+            <marker date="1516582463000" expanded="true" signature="31269:31405" ph="/* if we are not in offline mode ... */" />
+            <marker date="1516582463000" expanded="true" signature="31784:33675" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="31842:32656" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="31895:32121" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="32838:33162" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="33420:33643" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="33715:33794" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="33993:34297" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="34558:34656" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="34866:35049" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="34974:35035" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="35243:35432" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="35477:35553" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="35676:35999" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="35816:35881" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="36009:36237" ph="/// This method returns the number of items in a category that are currently despawned. ... " />
+            <marker date="1516582463000" expanded="true" signature="36304:36954" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="36340:36428" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="36563:36913" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="36698:36747" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="36810:36899" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="36964:37176" ph="/// This method returns a list of active items in a category. ... " />
+            <marker date="1516582463000" expanded="true" signature="37252:37935" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="37342:37440" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="37543:37892" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="37678:37727" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="37788:37878" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="37945:38171" ph="/// This method returns the number of items in a category that are currently spawned. ... " />
+            <marker date="1516582463000" expanded="true" signature="38236:38882" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="38272:38360" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="38495:38841" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="38630:38679" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="38740:38827" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="38892:39321" ph="/// Call this method to despawn a prefab using Pool Boss. All the Spawners and Killable use this method. ... " />
+            <marker date="1516582463000" expanded="true" signature="39402:43231" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="39431:39530" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="39639:39971" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="40065:40157" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="40205:40403" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="40237:40353" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="40520:40954" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="40576:40671" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="41826:41980" ph="/* the owner of this object must have left the game or d/c ... */" />
+            <marker date="1516582463000" expanded="true" signature="42558:42623" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="42772:42852" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="42917:43017" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="43241:43436" ph="/// This method will damage all spawned instances of prefabs. ... " />
+            <marker date="1516582463000" expanded="true" signature="43499:43898" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="43535:43621" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="43724:43888" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="43908:44015" ph="/// This method will despawn all spawned instances of prefabs. ... " />
+            <marker date="1516582463000" expanded="true" signature="44063:44449" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="44099:44185" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="44288:44439" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="44459:44568" ph="/// This method will &quot;Kill&quot; all spawned instances of all prefab. ... " />
+            <marker date="1516582463000" expanded="true" signature="44613:44996" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="44649:44735" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="44838:44986" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="45006:45205" ph="/// This method will Despawn all spawned instances of all prefabs in a single category. ... " />
+            <marker date="1516582463000" expanded="true" signature="45278:45775" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="45314:45400" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="45503:45765" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="45638:45687" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="45785:46072" ph="/// This method will damage all spawned instances of all prefabs in a single category. ... " />
+            <marker date="1516582463000" expanded="true" signature="46162:46672" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="46198:46284" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="46387:46662" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="46522:46571" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="46682:46880" ph="/// This method will &quot;Kill&quot; all spawned instances of all prefabs in a single category. ... " />
+            <marker date="1516582463000" expanded="true" signature="46950:47444" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="46986:47072" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="47175:47434" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="47310:47359" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="47454:47745" ph="/// This method will damage all spawned instances of the prefab you pass in. ... " />
+            <marker date="1516582463000" expanded="true" signature="47835:48821" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="47871:47957" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="47999:48130" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="48247:48427" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="48601:48811" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="48701:48771" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="48831:49034" ph="/// This method will despawn all spawned instances of the prefab you pass in. ... " />
+            <marker date="1516582463000" expanded="true" signature="49107:49981" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="49143:49229" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="49271:49403" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="49520:49740" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="49896:49971" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="49985:50251" ph="/// Destroys the pool item, and all prefabs from it that are already spawned. You should never call this except m ... " />
+            <marker date="1516582463000" expanded="true" signature="50314:51364" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="50341:50394" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="50429:50519" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="50619:50779" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="50884:50950" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="51008:51072" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="51313:51360" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="51370:51679" ph="/// Destroys all pool items in the category specified, and all prefabs from it that are already spawned. You shou ... " />
+            <marker date="1516582463000" expanded="true" signature="51747:52834" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="51774:51827" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="51875:51978" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="52089:52218" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="52176:52213" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="52262:52830" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="52320:52388" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="52448:52514" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="52776:52825" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="52844:53043" ph="/// This method will &quot;Kill&quot; all spawned instances of the prefab you pass in. ... " />
+            <marker date="1516582463000" expanded="true" signature="53110:54115" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="53146:53232" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="53271:53400" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="53514:53728" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="53902:54105" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="54002:54065" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="54125:54372" ph="/// Call this get the next available item to spawn for a pool item. ... " />
+            <marker date="1516582463000" expanded="true" signature="54442:54505" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="54515:54768" ph="/// Call this get the next available item to spawn for a pool item. ... " />
+            <marker date="1516582463000" expanded="true" signature="54838:55748" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="54867:54936" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="54994:55038" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="55155:55226" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="55280:55324" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="55485:55529" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="55758:56073" ph="/// Call this method get info on a Pool Boss item (number of spawned and despawned copies, allow instantiate more ... " />
+            <marker date="1516582463000" expanded="true" signature="56157:56422" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="56211:56255" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="56317:56361" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="56432:56703" ph="/// Call this method determine if the item (Transform) you pass in is set up in Pool Boss. ... " />
+            <marker date="1516582463000" expanded="true" signature="56763:56943" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="56791:56857" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="56953:57221" ph="/// Call this method determine if the item name you pass in is set up in Pool Boss. ... " />
+            <marker date="1516582463000" expanded="true" signature="57282:57488" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="57310:57408" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="57498:57833" ph="/// This will tell you how many available clones of a prefab are despawned and ready to spawn. A value of -1 indi ... " />
+            <marker date="1516582463000" expanded="true" signature="57904:58666" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="57940:58029" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="58068:58207" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="58321:58548" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="58676:59003" ph="/// This will tell you how many clones of a prefab are already spawned out of Pool Boss. A value of -1 indicates  ... " />
+            <marker date="1516582463000" expanded="true" signature="59072:59824" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="59108:59197" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="59236:59373" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="59487:59712" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="59834:60074" ph="/// Call this method to find out if all are despawned ... " />
+            <marker date="1516582463000" expanded="true" signature="60149:60219" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="61686:61781" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="61822:61948" ph="/// This property will tell you how many different items are set up in Pool Boss. ... " />
+            <marker date="1516582463000" expanded="true" signature="61987:62211" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="62005:62201" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="62037:62106" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="62221:62522" ph="/// This will return the name of the game object's prefab without &quot;(Clone X)&quot; in the name. It is used internally  ... " />
+            <marker date="1516582463000" expanded="true" signature="62583:62935" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="62616:62660" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="62759:62816" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="62945:63245" ph="/// This will return the name of the game object's prefab without &quot;(Clone X)&quot; in the name. It is used internally  ... " />
+            <marker date="1516582463000" expanded="true" signature="63304:63491" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="63334:63378" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="63501:63748" ph="/// This will return the name of the game object's prefab without &quot;(Clone X)&quot; in the name.  ... " />
+            <marker date="1516582463000" expanded="true" signature="63816:64048" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="63929:64006" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="64123:64335" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="64151:64252" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="64383:64722" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="64427:64471" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="64560:64584" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="64789:64935" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="64807:64925" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="64972:65020" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="65060:65343" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="65078:65333" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="65203:65287" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="65379:65531" ph="/// Extension methods of Pool Boss methods, that you can call with one less parameter from the Transform componen ... " />
+            <marker date="1516582463000" expanded="true" signature="65575:71703" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="65585:65750" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="65830:65907" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="65917:66285" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="66449:66578" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="66588:66772" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="66867:66948" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="66958:67126" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="67193:67257" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="67267:67403" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="67481:67549" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="67559:67718" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="67784:67845" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="67855:67988" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="68060:68122" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="68132:68291" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="68366:68433" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="68443:68608" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="68684:68758" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="68768:68927" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="68992:69054" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="69064:69229" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="69303:69375" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="69385:69639" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="69752:69838" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="69848:70102" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="70220:70311" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="70321:70626" ph="/// Calls the same named Pool Boss method ... " />
+            <marker date="1516582463000" expanded="true" signature="70760:70857" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="70867:71047" ph="/// Change the layer of something you just spawned. ... " />
+            <marker date="1516582463000" expanded="true" signature="71123:71299" ph="{...}" />
+            <marker date="1516582463000" expanded="true" signature="71309:71530" ph="/// Change the local scale of something you just spawned. ... " />
+            <marker date="1516582463000" expanded="true" signature="71615:71697" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Units/GeneralUnit.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="70" column="68" lean-forward="false" selection-start-line="70" selection-start-column="68" selection-end-line="70" selection-end-column="68" />
+          <folding>
+            <marker date="1517172289271" expanded="true" signature="6:165" ph="..." />
+            <marker date="1517172289271" expanded="true" signature="182:3758" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="216:3756" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="730:842" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="882:977" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="1016:1554" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="1064:1551" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="1189:1547" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="1276:1388" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="1397:1503" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="1589:1922" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="1631:1919" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="1739:1806" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="1846:1915" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="1957:2580" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="2057:2227" ph="/* if (!string.IsNullOrEmpty(customEventName) &amp;&amp; LevelSettings.CustomEventExists(customEventName)) { ... */" />
+            <marker date="1517172289271" expanded="true" signature="2230:2356" ph="/* InAudio.PostEvent(); ... */" />
+            <marker date="1517172289271" expanded="true" signature="2686:3165" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="2721:2746" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="2753:3161" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="3201:3754" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="3230:3245" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="3315:3385" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="3392:3462" ph="{...}" />
+            <marker date="1517172289271" expanded="true" signature="3564:3625" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Collider/MessengerReceiver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <marker date="1517114085685" expanded="false" signature="6:78" ph="..." />
+            <marker date="1517114085685" expanded="true" signature="95:1935" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="145:1933" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="305:500" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="516:535" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="579:1402" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="648:691" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="785:1396" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="901:1046" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="1170:1391" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="1444:1453" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="1495:1929" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="1537:1559" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="1634:1925" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="1756:1770" ph="{...}" />
+            <marker date="1517114085685" expanded="true" signature="1905:1919" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="81" column="30" lean-forward="false" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+          <folding>
+            <marker date="1517173233053" expanded="true" signature="6:113" ph="..." />
+            <marker date="1517173233053" expanded="true" signature="130:3004" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="192:3002" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="707:794" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="883:982" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="1012:1272" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="1035:1262" ph="/* if (GeneralFraction1 != null) ... */" />
+            <marker date="1517173233053" expanded="true" signature="1295:1460" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="1375:1450" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="1504:1690" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="1738:1985" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="1798:1900" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="1917:1975" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="2030:2168" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="2222:2497" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="2418:2487" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="2569:2995" ph="{...}" />
+            <marker date="1517173233053" expanded="true" signature="2609:2985" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+          <folding>
+            <marker date="1517173237334" expanded="false" signature="6:107" ph="..." />
+            <marker date="1517173237334" expanded="true" signature="145:13422" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="191:13420" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="1011:1088" ph="/* protected MeshRenderer meshRenderer; ... */" />
+            <marker date="1517173237334" expanded="true" signature="1353:1392" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="1429:1449" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="1480:2512" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="1580:1693" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="1724:1782" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="1895:1987" ph="/* attackRangeCollider.myunitclass = unitClass; ... */" />
+            <marker date="1517173237334" expanded="true" signature="2344:2440" ph="/* meshRenderer = this.GetComponent&lt;MeshRenderer&gt;(); ... */" />
+            <marker date="1517173237334" expanded="true" signature="2583:3405" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="2635:2866" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="2919:3150" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="3158:3401" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="3462:3644" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="3697:4215" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="3840:4210" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="3850:4173" ph="/* if (soldierType.AttackType == 3) ... */" />
+            <marker date="1517173237334" expanded="true" signature="4271:4652" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="4342:4648" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="4355:4609" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="4455:4522" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="4532:4603" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="4624:4643" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="4704:4781" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="4838:5926" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="4858:5922" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="4983:5801" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="5041:5296" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="5203:5289" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="5335:5559" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="5598:5795" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="6010:6323" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="6070:6145" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="6201:6271" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="6294:6319" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="6360:6505" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="6405:6451" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="6547:7195" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="6555:7055" ph="/* GameObject ray; ... */" />
+            <marker date="1517173237334" expanded="true" signature="7115:7161" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="7235:7265" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="7309:9679" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="7366:7442" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="7620:7676" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="7740:8061" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="7870:8056" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="7882:8030" ph="/* unitState = GlobalDefine.UnitState.Standing; ... */" />
+            <marker date="1517173237334" expanded="true" signature="8159:8265" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="8217:8260" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="8341:8391" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="8502:8564" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="8573:9444" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="8841:9190" ph="/* m_rigidbody2D.MoveRotation(Mathf.LerpAngle(m_rigidbody2D.rotation,rot_z - 90, RotationSpeed * Time.deltaTime)) ... */" />
+            <marker date="1517173237334" expanded="true" signature="9449:9641" ph="/* m_rigidbody2D.rotation = Quaternion.Slerp(m_rigidbody2D.rotation, Quaternion.LookRotation(target - pos, Vector ... */" />
+            <marker date="1517173237334" expanded="true" signature="9714:9739" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="9770:10526" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="9811:10071" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="9849:9861" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="9888:10066" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="9922:10022" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="10122:10517" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="10160:10222" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="10272:10511" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="10329:10399" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="10440:10504" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="10550:10824" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="10608:10820" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="10668:10765" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="10859:10938" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="10885:10934" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="10972:11320" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="11359:11626" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="11672:11797" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="11966:12354" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="12043:12071" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="12121:12149" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="12272:12333" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="12383:12474" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="12527:12935" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="12643:12931" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="12994:13102" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="13152:13246" ph="{...}" />
+            <marker date="1517173237334" expanded="true" signature="13308:13416" ph="{...}" />
           </folding>
         </state>
       </provider>

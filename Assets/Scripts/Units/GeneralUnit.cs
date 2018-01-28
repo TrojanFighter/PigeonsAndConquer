@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using DarkTonic.CoreGameKit;
 //using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.UI;
+
 namespace Lords
 {
 public class GeneralUnit : Unit
@@ -18,7 +20,8 @@ public class GeneralUnit : Unit
 	public int CurrentCannonNum = 1, MaxCannonNum = 1;
 	public float CannonRechargeRate = 0.2f, CannonRechargePercentage = 0;
 	public GameObject ProjectilePrefab;
-	public string customEventName = ""; 
+	public string customEventName = "";
+	public Image rechargeMeter;
 	
 		void Awake() {
 			CurrentMessengerNum = 3;
@@ -40,10 +43,6 @@ public class GeneralUnit : Unit
 		base.FixedUpdate();
 		MessengerRechargePerDeltaTime();
 		CannonRechargePerDeltaTime();
-//		if (Input.GetMouseButtonDown(0))
-//		{
-//			ShootCannonForward();
-//		}
 	}
 
 	void MessengerRechargePerDeltaTime()
@@ -54,7 +53,15 @@ public class GeneralUnit : Unit
 			if (MessengerRechargePercentage >= 1f)
 			{
 				CurrentMessengerNum++;
-				pidgeonUI.GetComponent<SpriteRenderer> ().sprite = pidgeonUISprites [CurrentMessengerNum];
+				if (CurrentMessengerNum > pidgeonUISprites.Length)
+				{
+					pidgeonUI.GetComponent<SpriteRenderer>().sprite = pidgeonUISprites[pidgeonUISprites.Length-1];
+				}
+				else
+				{
+					pidgeonUI.GetComponent<SpriteRenderer>().sprite = pidgeonUISprites[CurrentMessengerNum];
+				}
+
 				MessengerRechargePercentage = 0f;
 			}
 		}
@@ -64,15 +71,21 @@ public class GeneralUnit : Unit
 		if (CurrentCannonNum < MaxCannonNum)
 		{
 			CannonRechargePercentage += CannonRechargeRate * Time.fixedDeltaTime;
+
+			if (rechargeMeter != null)
+			{
+				rechargeMeter.fillAmount = CannonRechargePercentage;
+			}
+
 			if (CannonRechargePercentage >= 1f)
 			{
 				CurrentCannonNum++;
-				CannonRechargePercentage = 0f;
+				CannonRechargePercentage = 1f;
 			}
 		}
 	}
 
-	private void ShootCannonForward()
+	public void ShootCannonForward()
 	{
 		if (CurrentCannonNum <= 0) return;
 		var spawnPos = transform.position+m_turnableRoot.up*1;
@@ -85,6 +98,7 @@ public class GeneralUnit : Unit
 		GameObject newProjectile= Instantiate(ProjectilePrefab, spawnPos, m_turnableRoot.transform.rotation);
 		newProjectile.GetComponent<Projectile>().FiringUnit = this;
 		CurrentCannonNum--;
+		CannonRechargePercentage = 0f;
 	}
 
 	public bool IssueCommand(GlobalDefine.Fraction fraction, int TargetUnitID, Vector2 destinationPosition)

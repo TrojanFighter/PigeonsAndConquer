@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4018969020096016}
   - component: {fileID: 58861980452268168}
   - component: {fileID: 114731532381245964}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: MessengerReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}

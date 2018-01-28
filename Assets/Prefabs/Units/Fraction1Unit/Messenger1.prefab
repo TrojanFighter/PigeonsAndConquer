@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50627862914580362}
   - component: {fileID: 61562999669598300}
   - component: {fileID: 114279799623636106}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Messenger1
   m_TagString: Fraction1Unit
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4540555190937406}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: TurnableRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,8 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841da1188414fc745b7f7077e471d5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myfraction: 0
-  myunitclass: 2
   myunit: {fileID: 0}
 --- !u!114 &114653238564775384
 MonoBehaviour:
@@ -231,6 +229,10 @@ MonoBehaviour:
   TargetUnitList: []
   normalHP: 0
   isDraggable: 1
+  bUnderPikeEffect: 0
+  lastPikedTime: 0
+  PikeRecoverTime: 0.5
+  pikedSpeedModifier: 0.3
   m_MessengerReceiver: {fileID: 0}
   m_currentArrow: {fileID: 0}
   touchFingerId: 0
