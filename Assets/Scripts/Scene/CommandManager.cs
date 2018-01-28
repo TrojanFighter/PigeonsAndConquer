@@ -12,6 +12,7 @@ namespace Lords
 
         public override void Init()
         {
+            base.Init();
             CommandDictionary=new Dictionary<int, Command>();
         }
 

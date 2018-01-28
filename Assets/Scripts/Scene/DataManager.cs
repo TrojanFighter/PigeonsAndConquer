@@ -14,6 +14,7 @@ namespace Lords
 
 		public override void Init()
 		{
+			base.Init();
 			SoldierTypes = XMLReader.ReadSoldierTypeFile(Application.dataPath + GlobalDefine.PathDefines.XML_Path +
 			                                             GlobalDefine.FileName.SoldierType);
 			Fractions = XMLReader.ReadFractionsFile(Application.dataPath + GlobalDefine.PathDefines.XML_Path +
