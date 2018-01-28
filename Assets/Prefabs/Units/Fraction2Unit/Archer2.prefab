@@ -11,6 +11,23 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1805978413923986}
   m_IsPrefabParent: 1
+--- !u!1 &1084363373124922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4433682553378840}
+  - component: {fileID: 58495383158366800}
+  - component: {fileID: 114731474728360344}
+  m_Layer: 8
+  m_Name: MessengerReceiver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1309402012861288
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,8 +94,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4746911288542372}
+  - {fileID: 4433682553378840}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4433682553378840
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1084363373124922}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4032112606366242}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4746911288542372
 Transform:
@@ -126,7 +157,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!50 &50618636678686808
 Rigidbody2D:
   serializedVersion: 4
@@ -147,6 +178,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58495383158366800
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1084363373124922}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.9
 --- !u!61 &61255372539008556
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -208,6 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d679338a06933fc418630232d599783c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inited: 0
   UnitID: 0
   unitClass: 3
   fraction: 2
@@ -225,6 +272,7 @@ MonoBehaviour:
   RotationSpeed: 5
   TargetUnitList: []
   normalHP: 0
+  m_MessengerReceiver: {fileID: 114731474728360344}
   m_currentArrow: {fileID: 0}
   touchFingerId: 0
   mouseMode: 1
@@ -241,6 +289,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolItemName: Archer2
+--- !u!114 &114731474728360344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1084363373124922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb148dbe6e213141891f852dc429a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myfraction: 2
+  myunitclass: 3
+  myunit: {fileID: 114363833388776476}
+  inited: 0
 --- !u!114 &114825519894265688
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -257,7 +257,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c279909b5d840094ab2f3b54a72efa4c, type: 2}
       propertyPath: _frames
-      value: 1660
+      value: 2034
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: c279909b5d840094ab2f3b54a72efa4c, type: 2}
       propertyPath: useWaves
@@ -1122,6 +1122,58 @@ MonoBehaviour:
   levelFilter: 0
   useCopyWave: 0
   isSpawnerSelectedAsTarget: 0
+--- !u!1001 &1234820659
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4015700955810160, guid: 9d737d2b010f2c64b82a39831c0911e4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015700955810160, guid: 9d737d2b010f2c64b82a39831c0911e4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015700955810160, guid: 9d737d2b010f2c64b82a39831c0911e4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015700955810160, guid: 9d737d2b010f2c64b82a39831c0911e4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015700955810160, guid: 9d737d2b010f2c64b82a39831c0911e4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015700955810160, guid: 9d737d2b010f2c64b82a39831c0911e4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015700955810160, guid: 9d737d2b010f2c64b82a39831c0911e4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015700955810160, guid: 9d737d2b010f2c64b82a39831c0911e4, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426897505038926, guid: 9d737d2b010f2c64b82a39831c0911e4,
+        type: 2}
+      propertyPath: GeneralFraction1
+      value: 
+      objectReference: {fileID: 1427528586}
+    - target: {fileID: 114426897505038926, guid: 9d737d2b010f2c64b82a39831c0911e4,
+        type: 2}
+      propertyPath: GeneralFraction2
+      value: 
+      objectReference: {fileID: 1333180143}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9d737d2b010f2c64b82a39831c0911e4, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1333180142
 Prefab:
   m_ObjectHideFlags: 0
@@ -1326,7 +1378,6 @@ GameObject:
   - component: {fileID: 1789359245}
   - component: {fileID: 1789359244}
   - component: {fileID: 1789359248}
-  - component: {fileID: 1789359249}
   - component: {fileID: 1789359250}
   m_Layer: 0
   m_Name: Main Camera
@@ -1418,37 +1469,6 @@ MonoBehaviour:
   - {fileID: 21300002, guid: 61159604c35c84861be659a03b9ef4a7, type: 3}
   - {fileID: 21300004, guid: 61159604c35c84861be659a03b9ef4a7, type: 3}
   - {fileID: 21300006, guid: 61159604c35c84861be659a03b9ef4a7, type: 3}
---- !u!114 &1789359249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1789359243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5183e0ba148f874abb94c8824c1fd75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Messenger: {fileID: 114653238564775384, guid: 3688fdd9749d1db4b991ebdc00e5046c,
-    type: 2}
-  General: {fileID: 114068396909786648, guid: 930e493aee16fc641866312760da9489, type: 2}
-  Cavalary: {fileID: 114029318440324108, guid: 202680e3d06df47409b6ec56b4d0441d, type: 2}
-  Archer: {fileID: 114005664748999010, guid: f5bda1b848e425149a2e526357bc7a27, type: 2}
-  Pikeman: {fileID: 114911274968152870, guid: ead88585d459673488efbb85d6a75407, type: 2}
-  GeneralFraction1: {fileID: 1427528586}
-  GeneralFraction2: {fileID: 1333180143}
-  arrowPrefab: {fileID: 1563718506604590, guid: 2f361939c73f841da9081ff955035d4d,
-    type: 2}
-  MessengerDeliverEvent:
-    Events: []
-  KnightAttackEvent:
-    Events: []
-  ArcherAttackEvent:
-    Events: []
-  PickmanAttackEvent:
-    Events: []
-  VictoryBlast:
-    Events: []
 --- !u!114 &1789359250
 MonoBehaviour:
   m_ObjectHideFlags: 0

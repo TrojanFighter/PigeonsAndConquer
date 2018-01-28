@@ -45,6 +45,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1581934542158136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4336382593673714}
+  - component: {fileID: 58317603584176016}
+  - component: {fileID: 114022463009425548}
+  m_Layer: 8
+  m_Name: MessengerReceiver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1832623862504706
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,6 +96,19 @@ Transform:
   m_Father: {fileID: 4901910094091034}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4336382593673714
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581934542158136}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4441851927701212}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4441851927701212
 Transform:
   m_ObjectHideFlags: 1
@@ -90,6 +120,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4901910094091034}
+  - {fileID: 4336382593673714}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -126,7 +157,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!50 &50633204250223016
 Rigidbody2D:
   serializedVersion: 4
@@ -147,6 +178,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58317603584176016
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581934542158136}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.9
 --- !u!61 &61323629953124722
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -197,6 +243,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114022463009425548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581934542158136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb148dbe6e213141891f852dc429a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myfraction: 2
+  myunitclass: 4
+  myunit: {fileID: 114803752989987158}
+  inited: 0
 --- !u!114 &114338176118906912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -222,6 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe99298aa49e07f4597ea69e1a544435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inited: 0
   UnitID: 0
   unitClass: 4
   fraction: 2
@@ -239,6 +301,7 @@ MonoBehaviour:
   RotationSpeed: 5
   TargetUnitList: []
   normalHP: 0
+  m_MessengerReceiver: {fileID: 114022463009425548}
   m_currentArrow: {fileID: 0}
   touchFingerId: 0
   mouseMode: 1

@@ -23,6 +23,8 @@ namespace Lords
 		public float UnitSpeed=2,RotationSpeed = 5;
 		public List<Unit> TargetUnitList;
 		public int normalHP;
+
+		public MessengerReceiver m_MessengerReceiver;
 		//protected MeshRenderer meshRenderer;
 		//protected Material originMaterial;
 		

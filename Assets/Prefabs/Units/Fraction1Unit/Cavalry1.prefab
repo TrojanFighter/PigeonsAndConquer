@@ -26,6 +26,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1389121962250824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4991399026000404}
+  - component: {fileID: 58989354233338918}
+  - component: {fileID: 114542530333979986}
+  m_Layer: 8
+  m_Name: MessengerReceiver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1434822916653914
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,8 +121,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4188237790999122}
+  - {fileID: 4991399026000404}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4991399026000404
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1389121962250824}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4851631896419874}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50336913927671706
 Rigidbody2D:
@@ -146,7 +177,22 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!58 &58989354233338918
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1389121962250824}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.9
 --- !u!61 &61090777357005866
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -220,6 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb36a9c6b53f6346944642b5009f972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inited: 0
   UnitID: 0
   unitClass: 2
   fraction: 1
@@ -237,10 +284,26 @@ MonoBehaviour:
   RotationSpeed: 5
   TargetUnitList: []
   normalHP: 0
+  m_MessengerReceiver: {fileID: 114542530333979986}
   m_currentArrow: {fileID: 0}
   touchFingerId: 0
   mouseMode: 1
   isBeingDragged: 0
+--- !u!114 &114542530333979986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1389121962250824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb148dbe6e213141891f852dc429a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myfraction: 1
+  myunitclass: 2
+  myunit: {fileID: 114029318440324108}
+  inited: 0
 --- !u!114 &114751785547824944
 MonoBehaviour:
   m_ObjectHideFlags: 1

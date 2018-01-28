@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1938366449782614}
+  m_IsPrefabParent: 1
+--- !u!1 &1938366449782614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4015700955810160}
+  - component: {fileID: 114426897505038926}
+  - component: {fileID: 114824921644445320}
+  - component: {fileID: 114721999983599480}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4015700955810160
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938366449782614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114426897505038926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938366449782614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5183e0ba148f874abb94c8824c1fd75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Messenger: {fileID: 114653238564775384, guid: 3688fdd9749d1db4b991ebdc00e5046c,
+    type: 2}
+  General: {fileID: 114068396909786648, guid: 930e493aee16fc641866312760da9489, type: 2}
+  Cavalary: {fileID: 114029318440324108, guid: 202680e3d06df47409b6ec56b4d0441d, type: 2}
+  Archer: {fileID: 114005664748999010, guid: f5bda1b848e425149a2e526357bc7a27, type: 2}
+  Pikeman: {fileID: 114911274968152870, guid: ead88585d459673488efbb85d6a75407, type: 2}
+  GeneralFraction1: {fileID: 0}
+  GeneralFraction2: {fileID: 0}
+  arrowPrefab: {fileID: 1563718506604590, guid: 2f361939c73f841da9081ff955035d4d,
+    type: 2}
+  MessengerDeliverEvent:
+    Events: []
+  KnightAttackEvent:
+    Events: []
+  ArcherAttackEvent:
+    Events: []
+  PickmanAttackEvent:
+    Events: []
+  VictoryBlast:
+    Events: []
+--- !u!114 &114721999983599480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938366449782614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfe26fe3555c38e4692f52249e24a08c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114824921644445320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938366449782614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9acd3e1c4f64c6f4693aede0650e0ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
