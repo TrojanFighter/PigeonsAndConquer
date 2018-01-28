@@ -7,8 +7,11 @@ namespace Lords
 {
 public class GeneralUnit : Unit
 {
+	// Pidgeon UI code
+	public Sprite[] pidgeonUISprites;
+	public Transform pidgeonUI;
 
-	public int CurrentMessengerNum = 4, MaxMessengerNum = 4;
+	public int CurrentMessengerNum = 3, MaxMessengerNum = 3;
 
 	public float MessengerRechargeRate = 0.2f, MessengerRechargePercentage = 0f;
 
@@ -20,9 +23,10 @@ public class GeneralUnit : Unit
 	// Use this for initialization
 	public override void Init()
 	{
-
+		pidgeonUI = transform.Find ("pidgeonUI");
 		unitClass = GlobalDefine.UnitClass.General;
 		base.Init();
+
 	}
 
 	protected override void FixedUpdate()
@@ -44,6 +48,7 @@ public class GeneralUnit : Unit
 			if (MessengerRechargePercentage >= 1f)
 			{
 				CurrentMessengerNum++;
+//				pidgeonUI.GetComponent<SpriteRenderer> ().sprite = pidgeonUISprites [CurrentMessengerNum];
 				MessengerRechargePercentage = 0f;
 			}
 		}
@@ -91,6 +96,7 @@ public class GeneralUnit : Unit
 			int commandID= CommandManager.instance.GenerateCommand(command);
 			SendMessenger(commandID);
 			CurrentMessengerNum--;
+//			pidgeonUI.GetComponent<SpriteRenderer> ().sprite = pidgeonUISprites [CurrentMessengerNum];
 			return true;
 		}
 
