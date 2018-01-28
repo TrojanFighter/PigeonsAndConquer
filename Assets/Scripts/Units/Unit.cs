@@ -43,10 +43,12 @@ namespace Lords
 		public int touchFingerId;
 		public bool mouseMode,isBeingDragged;
 
+		public int attackFrames;
 
 		protected virtual void Awake(){
 			//Init();
 			mouseMode = true;
+			attackFrames = -1;
 		}
 
 		protected virtual void OnEnable()
@@ -211,6 +213,11 @@ namespace Lords
 					{
 						//近程攻击不打子弹
 						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower,soldierType.MakePikeEffect);
+						Vector3 pos = TargetUnitList [closestTargetNum].transform.position;
+						pos.z = -1;
+						GetComponent<LineRenderer> ().enabled = true;
+						GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, pos });
+						attackFrames = 20;
 						InAudio.PostEvent(gameObject, SceneManager.instance.KnightAttackEvent);
 					}
 
@@ -218,6 +225,11 @@ namespace Lords
 					{
 						//远程攻击要打子弹
 						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower);
+						Vector3 pos = TargetUnitList [closestTargetNum].transform.position;
+						pos.z = -1;
+						GetComponent<LineRenderer> ().enabled = true;
+						GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, pos });
+						attackFrames = 20;
 						InAudio.PostEvent(gameObject, SceneManager.instance.ArcherAttackEvent);
 					}
 				}
@@ -297,6 +309,14 @@ namespace Lords
 		protected virtual void FixedUpdate()
 		{
 			FixedUpdateMove();
+			if (attackFrames == 0) {
+				if (!isBeingDragged) {
+					GetComponent<LineRenderer> ().enabled = false;
+					attackFrames--;
+				}
+			} else {
+				attackFrames--;
+			}
 		}
 
 		protected virtual void FixedUpdateMove()
@@ -484,7 +504,6 @@ namespace Lords
 
 		void StartCommanding(Vector2 destinationposition)
 		{
-			Debug.Log ("soldierType.CommandType = " + (int)soldierType.CommandType);
 			switch (soldierType.CommandType)
 			{
 				case	(int)GlobalDefine.CommandType.DirectControl:

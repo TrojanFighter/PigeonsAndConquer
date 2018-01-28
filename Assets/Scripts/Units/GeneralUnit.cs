@@ -11,7 +11,7 @@ public class GeneralUnit : Unit
 	public Sprite[] pidgeonUISprites;
 	public Transform pidgeonUI;
 
-	public int CurrentMessengerNum = 3, MaxMessengerNum = 3;
+	public int CurrentMessengerNum, MaxMessengerNum;
 
 	public float MessengerRechargeRate = 0.2f, MessengerRechargePercentage = 0f;
 
@@ -19,6 +19,12 @@ public class GeneralUnit : Unit
 	public float CannonRechargeRate = 0.2f, CannonRechargePercentage = 0;
 	public GameObject ProjectilePrefab;
 	public string customEventName = ""; 
+	
+		void Awake() {
+			CurrentMessengerNum = 3;
+			MaxMessengerNum = 3;
+			base.Awake ();
+		}
 	
 	// Use this for initialization
 	public override void Init()
@@ -34,10 +40,10 @@ public class GeneralUnit : Unit
 		base.FixedUpdate();
 		MessengerRechargePerDeltaTime();
 		CannonRechargePerDeltaTime();
-		if (Input.GetMouseButtonDown(0))
-		{
-			ShootCannonForward();
-		}
+//		if (Input.GetMouseButtonDown(0))
+//		{
+//			ShootCannonForward();
+//		}
 	}
 
 	void MessengerRechargePerDeltaTime()
