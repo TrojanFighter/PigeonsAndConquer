@@ -346,16 +346,10 @@ namespace Lords
 		protected void MouseLogic()
 		{
 			// Mouse logic
+			// Mouse logic
 			if (mouseMode) {
 				if (Input.GetMouseButtonDown (0)) {
-					Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-					RaycastHit hit;
-					if (GetComponent<Collider> ().Raycast (ray, out hit, 100.0F)) {
-						isBeingDragged = true;
-						m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
-						GetComponent<LineRenderer> ().enabled = true;
 
-					}
 				}
 
 				if (isBeingDragged) {
@@ -363,10 +357,11 @@ namespace Lords
 					arrowPos.z = -1f;
 					m_currentArrow.transform.position = arrowPos;
 					GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
-					if (Input.GetMouseButtonUp (0)) {
-						MovementDecided ();
-						StartPatrol(arrowPos);
-					}
+//				if (Input.GetMouseButtonUp (0)) {
+//					dragging = false;
+//					Destroy (currentArrow);
+//					GetComponent<LineRenderer> ().enabled = false;
+//				}
 				}
 			} else {
 				// Touch logic
@@ -374,8 +369,6 @@ namespace Lords
 					if (Input.touches.Length == 0) {
 						// Dragging has ended
 						MovementDecided ();
-						
-						StartPatrol(m_destination);
 					}
 					for(int i=0; i < Input.touches.Length; i++) {
 						if (Input.touches [i].fingerId == touchFingerId) {
@@ -384,52 +377,50 @@ namespace Lords
 						} else if (i == Input.touches.Length - 1) {
 							// Dragging has ended
 							MovementDecided();
-							StartPatrol(m_destination);
 						}
 					}
 				} else {
-					// Check to see if we're touching this object
-					foreach (Touch touch in Input.touches) {
-						Ray ray = Camera.main.ScreenPointToRay (touch.position);
-						RaycastHit hit;
-						if (GetComponent<Collider> ().Raycast (ray, out hit, 100.0F)) {
-							isBeingDragged = true;
-							touchFingerId = touch.fingerId;
-							m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
-							GetComponent<LineRenderer> ().enabled = true;
-						}
-					}
+
 				}
 			}
 		}
 		
-		protected void MovementDecided() {
+		public void Grab() {
+			if (!isBeingDragged) {
+				isBeingDragged = true;
+				m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
+				GetComponent<LineRenderer> ().enabled = true;
+			}
+		}
+
+		public void Grab(int touchFID) {
+			if (!isBeingDragged) {
+				touchFingerId = touchFID;
+				Grab ();
+			}
+		}
+
+		public void LetGo() {
 			isBeingDragged = false;
-			if(m_currentArrow!=null)
-				Destroy (m_currentArrow);
+			Destroy (m_currentArrow);
+			GetComponent<LineRenderer> ().enabled = false;
+		}
+
+		public void MovementDecided() {
+			isBeingDragged = false;
+			Destroy (m_currentArrow);
 			GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, transform.position }); // Resets line to 0
 			GetComponent<LineRenderer> ().enabled = false;
 			// At this point we need to generate a messenger from the general
 		}
 
-		protected void TouchDrag(Touch currentTouch) {
+		public void TouchDrag(Touch currentTouch) {
 			Vector3 arrowPos = Camera.main.ScreenToWorldPoint (currentTouch.position);
 			arrowPos.z = -1f;
 			m_destination = arrowPos;
 			m_currentArrow.transform.position = arrowPos;
 			GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
 		}
-		
-
-		/*
-		protected void Move() {
-			float step = UnitSpeed * Time.deltaTime;
-			transform.position = Vector2.MoveTowards(transform.position, m_destination, step);
-			if (transform.position == m_destination) {
-				//moving = false;
-				unitState = GlobalDefine.UnitState.Standing;
-			}
-		}*/
 
 
 		public bool ReceiveCommand(int CommandID)
