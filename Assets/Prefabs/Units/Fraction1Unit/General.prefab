@@ -40,7 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4809864019902510}
   - component: {fileID: 212305065545159208}
-  - component: {fileID: 50973565216579374}
   - component: {fileID: 61889009648789232}
   - component: {fileID: 114502909759679378}
   m_Layer: 9
@@ -57,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1317248045876186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.4929905, y: 2.941759, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4809864019902510}
@@ -91,27 +90,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!50 &50973565216579374
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1479325354010116}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -185,11 +164,18 @@ MonoBehaviour:
   unitState: 0
   m_hitCollider: {fileID: 61899559299426238}
   attackRangeCollider: {fileID: 114502909759679378}
+  m_rigidbody2D: {fileID: 50209011472819988}
   m_transform: {fileID: 4481527274532604}
-  m_destination: {x: 0, y: 0}
+  m_destination: {x: 0, y: 0, z: 0}
+  m_pursueTargetID: -1
   UnitSpeed: 1
+  RotationSpeed: 5
   TargetUnitList: []
   normalHP: 0
+  m_currentArrow: {fileID: 0}
+  touchFingerId: 0
+  mouseMode: 0
+  isBeingDragged: 0
   CurrentMessengerNum: 4
   MaxMessengerNum: 4
   MessengerRechargeRate: 0.2
@@ -207,7 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myfraction: 0
   myunitclass: 2
-  myunit: {fileID: 0}
+  myunit: {fileID: 114068396909786648}
 --- !u!120 &120624944808897930
 LineRenderer:
   m_ObjectHideFlags: 1

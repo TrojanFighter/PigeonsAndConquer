@@ -117,8 +117,8 @@ namespace Lords
 		/*
 		void OnTriggerEnter (Collider other)
 		{
-			//other.GetComponent<Unit>()&&&&other.GetComponent<Unit>().fraction != m_fraction&&other.GetComponent<Unit>().unitState==GlobalDefine.UnitState.Advancing
-			if (other.GetComponent<Unit>()&&other.GetComponent<Unit>().fraction != baseFraction&&other.GetComponent<Unit>().unitState==GlobalDefine.UnitState.Advancing) {
+			//other.GetComponent<Unit>()&&&&other.GetComponent<Unit>().fraction != m_fraction&&other.GetComponent<Unit>().unitState==GlobalDefine.UnitState.Patrolling
+			if (other.GetComponent<Unit>()&&other.GetComponent<Unit>().fraction != baseFraction&&other.GetComponent<Unit>().unitState==GlobalDefine.UnitState.Patrolling) {
 				Destroy (other.gameObject);
 			}
 	

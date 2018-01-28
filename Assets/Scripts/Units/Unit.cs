@@ -15,9 +15,11 @@ namespace Lords
 		public SoldierType soldierType;
 		public Collider2D m_hitCollider;
 		public AttackRangeCollider attackRangeCollider;
+		public Rigidbody2D m_rigidbody2D;
 		public Transform m_transform;
 		public Vector3 m_destination;
-		public float UnitSpeed=1;
+		public int m_pursueTargetID = -1;
+		public float UnitSpeed=2,RotationSpeed = 5;
 		public List<Unit> TargetUnitList;
 		public int normalHP;
 		//protected MeshRenderer meshRenderer;
@@ -42,6 +44,7 @@ namespace Lords
 
 		public virtual void Init()
 		{
+			
 			m_transform = this.transform;
 			if (attackRangeCollider == null)
 			{
@@ -53,14 +56,14 @@ namespace Lords
 				m_hitCollider = GetComponent<Collider2D>();
 			}
 
-
+			m_rigidbody2D = GetComponent<Rigidbody2D>();
 			soldierType = DataManager.SoldierTypes[(int) unitClass];
 			attackRangeCollider.myunitclass = unitClass;
 			//SetAttackRange(soldierType.AttackRange);
 			normalHP = soldierType.NormalHP;
 			//Debug.Log (soldierType.AttackRange);
 
-			unitState = GlobalDefine.UnitState.Advancing;
+			unitState = GlobalDefine.UnitState.Standing;
 
 			TargetUnitList = new List<Unit>();
 
@@ -139,7 +142,7 @@ namespace Lords
 				try
 				{
 					StopAllCoroutines();
-					unitState = GlobalDefine.UnitState.Advancing;
+					unitState = GlobalDefine.UnitState.Patrolling;
 				}
 				catch
 				{
@@ -298,24 +301,55 @@ namespace Lords
 			Destroy(this.gameObject);
 		}
 
-		public virtual void FixedUpdate()
+		protected virtual void FixedUpdate()
 		{
-
+			FixedUpdateMove();
 		}
 
-		void MouseLogic()
+		protected virtual void FixedUpdateMove()
 		{
+			if (unitState == GlobalDefine.UnitState.Standing)
+			{
+				m_destination=m_rigidbody2D.position;
+				return;
+			}
+
+			Vector3 pos = m_rigidbody2D.position;
+
+			//Vector3 target = waypoints[_currentWaypoint];
+			//target.y = pos.y;
+
+			pos = Vector3.MoveTowards(pos, m_destination, UnitSpeed * Time.fixedDeltaTime);
+			if ((pos - m_destination).sqrMagnitude < 1)
+			{
+				unitState = GlobalDefine.UnitState.Standing;
+			}
+			else
+			{
+				Vector3 vectorToTarget = m_destination - transform.position;
+				float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+				Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+				
+				
+				m_rigidbody2D.MoveRotation(Mathf.LerpAngle(m_rigidbody2D.rotation,Quaternion.Slerp(transform.rotation, q, Time.deltaTime * RotationSpeed).eulerAngles.y, RotationSpeed * Time.deltaTime));
+			}
+			//m_rigidbody2D.rotation = Quaternion.Slerp(m_rigidbody2D.rotation, Quaternion.LookRotation(target - pos, Vector3.up), UnitSpeed * Time.fixedDeltaTime);
+
+			m_rigidbody2D.position = pos;
+		}
+
+		protected virtual void Update()
+		{
+			MouseLogic();
+		}
+
+		protected void MouseLogic()
+		{
+			// Mouse logic
 			// Mouse logic
 			if (mouseMode) {
 				if (Input.GetMouseButtonDown (0)) {
-					Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-					RaycastHit hit;
-					if (GetComponent<Collider> ().Raycast (ray, out hit, 100.0F)) {
-						isBeingDragged = true;
-						m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
-						GetComponent<LineRenderer> ().enabled = true;
 
-					}
 				}
 
 				if (isBeingDragged) {
@@ -323,12 +357,11 @@ namespace Lords
 					arrowPos.z = -1f;
 					m_currentArrow.transform.position = arrowPos;
 					GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
-					if (Input.GetMouseButtonUp (0)) {
-						isBeingDragged = false;
-						if(m_currentArrow!=null)
-						Destroy (m_currentArrow);
-						GetComponent<LineRenderer> ().enabled = false;
-					}
+//				if (Input.GetMouseButtonUp (0)) {
+//					dragging = false;
+//					Destroy (currentArrow);
+//					GetComponent<LineRenderer> ().enabled = false;
+//				}
 				}
 			} else {
 				// Touch logic
@@ -347,25 +380,35 @@ namespace Lords
 						}
 					}
 				} else {
-					// Check to see if we're touching this object
-					foreach (Touch touch in Input.touches) {
-						Ray ray = Camera.main.ScreenPointToRay (touch.position);
-						RaycastHit hit;
-						if (GetComponent<Collider> ().Raycast (ray, out hit, 100.0F)) {
-							isBeingDragged = true;
-							touchFingerId = touch.fingerId;
-							m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
-							GetComponent<LineRenderer> ().enabled = true;
-						}
-					}
+
 				}
 			}
 		}
 		
+		public void Grab() {
+			if (!isBeingDragged) {
+				isBeingDragged = true;
+				m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
+				GetComponent<LineRenderer> ().enabled = true;
+			}
+		}
+
+		public void Grab(int touchFID) {
+			if (!isBeingDragged) {
+				touchFingerId = touchFID;
+				Grab ();
+			}
+		}
+
+		public void LetGo() {
+			isBeingDragged = false;
+			Destroy (m_currentArrow);
+			GetComponent<LineRenderer> ().enabled = false;
+		}
+
 		public void MovementDecided() {
 			isBeingDragged = false;
-			if(m_currentArrow!=null)
-				Destroy (m_currentArrow);
+			Destroy (m_currentArrow);
 			GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, transform.position }); // Resets line to 0
 			GetComponent<LineRenderer> ().enabled = false;
 			// At this point we need to generate a messenger from the general
@@ -378,18 +421,13 @@ namespace Lords
 			m_currentArrow.transform.position = arrowPos;
 			GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
 		}
-		
 
-		public void Move() {
-			float step = UnitSpeed * Time.deltaTime;
-			transform.position = Vector2.MoveTowards(transform.position, m_destination, step);
-			if (transform.position == m_destination) {
-				//moving = false;
-				unitState = GlobalDefine.UnitState.Standing;
-			}
+
+		public bool ReceiveCommand(int CommandID)
+		{
+			Command receivedCommand=CommandManager.instance.GetCommand(CommandID);
+			return ReceiveCommand(receivedCommand);
 		}
-
-
 		//Happens when a messenger Reaches the unit. Only the non-direct-controlled unit with correct id will accept it.
 		public bool ReceiveCommand(Command receivedCommand)
 		{
@@ -406,7 +444,7 @@ namespace Lords
 			m_destination = receivedCommand.m_commandTargetPostion;
 			if (unitState == GlobalDefine.UnitState.Standing)
 			{
-				unitState = GlobalDefine.UnitState.Advancing;
+				unitState = GlobalDefine.UnitState.Patrolling;
 			}
 
 			return true;
@@ -417,7 +455,19 @@ namespace Lords
 			Destroy(this.gameObject);
 		}
 
-		public void StartPursuingTarget(int targetID)
+		public void StartPatrol(Vector2 destinationposition)
+		{
+			unitState = GlobalDefine.UnitState.Patrolling;
+			m_destination = destinationposition;
+		}
+
+		public void StartPursueTarget(int targetID)
+		{
+			m_pursueTargetID = targetID;
+			unitState = GlobalDefine.UnitState.PursuingTarget;
+		}
+
+		public void StartIssueCommand()
 		{
 			
 		}
