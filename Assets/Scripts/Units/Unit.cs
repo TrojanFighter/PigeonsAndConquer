@@ -355,7 +355,7 @@ namespace Lords
 
 				if (isBeingDragged) {
 					Vector3 arrowPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-					arrowPos.z = 0f;
+					arrowPos.z = -1f;
 					if (m_currentArrow == null)
 					{
 						m_currentArrow = Instantiate (SceneManager.instance.arrowPrefab) as GameObject;
