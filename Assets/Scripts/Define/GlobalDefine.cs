@@ -20,6 +20,12 @@ public static class GlobalDefine  {
 		PursuingTarget
 	}
 
+	public enum CommandState
+	{
+		idle=0,
+		Executing=1
+	}
+
 	public enum CommandType
 	{
 		Unable=0,

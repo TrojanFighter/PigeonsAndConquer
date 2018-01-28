@@ -17,7 +17,7 @@ namespace Lords
 		public AttackRangeCollider attackRangeCollider;
 		public Rigidbody2D m_rigidbody2D;
 		public Transform m_transform;
-		public Vector3 m_destination;
+		public Vector3 m_commanddestination,m_patrollingdestination;
 		public int m_pursueTargetID = -1;
 		public float UnitSpeed=2,RotationSpeed = 5;
 		public List<Unit> TargetUnitList;
@@ -310,7 +310,7 @@ namespace Lords
 		{
 			if (unitState == GlobalDefine.UnitState.Standing)
 			{
-				m_destination=m_rigidbody2D.position;
+				//m_patrollingdestination=m_rigidbody2D.position;
 				return;
 			}
 
@@ -319,14 +319,14 @@ namespace Lords
 			//Vector3 target = waypoints[_currentWaypoint];
 			//target.y = pos.y;
 
-			pos = Vector3.MoveTowards(pos, m_destination, UnitSpeed * Time.fixedDeltaTime);
-			if ((pos - m_destination).sqrMagnitude < 1)
+			pos = Vector3.MoveTowards(pos, m_patrollingdestination, UnitSpeed * Time.fixedDeltaTime);
+			if ((pos - m_patrollingdestination).sqrMagnitude < 0.1f)
 			{
 				unitState = GlobalDefine.UnitState.Standing;
 			}
 			else
 			{
-				Vector3 vectorToTarget = m_destination - transform.position;
+				Vector3 vectorToTarget = m_patrollingdestination - transform.position;
 				float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
 				Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
 				
@@ -355,8 +355,14 @@ namespace Lords
 				if (isBeingDragged) {
 					Vector3 arrowPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 					arrowPos.z = -1f;
+					if (m_currentArrow == null)
+					{
+						m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
+					}
+
 					m_currentArrow.transform.position = arrowPos;
 					GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
+					m_commanddestination = arrowPos;
 //				if (Input.GetMouseButtonUp (0)) {
 //					dragging = false;
 //					Destroy (currentArrow);
@@ -411,13 +417,14 @@ namespace Lords
 			Destroy (m_currentArrow);
 			GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, transform.position }); // Resets line to 0
 			GetComponent<LineRenderer> ().enabled = false;
+			StartPatrol(m_commanddestination);
 			// At this point we need to generate a messenger from the general
 		}
 
 		public void TouchDrag(Touch currentTouch) {
 			Vector3 arrowPos = Camera.main.ScreenToWorldPoint (currentTouch.position);
 			arrowPos.z = -1f;
-			m_destination = arrowPos;
+			m_commanddestination = arrowPos;
 			m_currentArrow.transform.position = arrowPos;
 			GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
 		}
@@ -441,7 +448,7 @@ namespace Lords
 				return false;
 			}
 
-			m_destination = receivedCommand.m_commandTargetPostion;
+			m_patrollingdestination = receivedCommand.m_commandTargetPostion;
 			if (unitState == GlobalDefine.UnitState.Standing)
 			{
 				unitState = GlobalDefine.UnitState.Patrolling;
@@ -458,7 +465,7 @@ namespace Lords
 		public void StartPatrol(Vector2 destinationposition)
 		{
 			unitState = GlobalDefine.UnitState.Patrolling;
-			m_destination = destinationposition;
+			m_patrollingdestination = destinationposition;
 		}
 
 		public void StartPursueTarget(int targetID)

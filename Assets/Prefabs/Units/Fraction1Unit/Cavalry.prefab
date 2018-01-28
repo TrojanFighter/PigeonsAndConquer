@@ -185,11 +185,19 @@ MonoBehaviour:
   unitState: 0
   m_hitCollider: {fileID: 61090777357005866}
   attackRangeCollider: {fileID: 114751785547824944}
+  m_rigidbody2D: {fileID: 50549432468254550}
   m_transform: {fileID: 4851631896419874}
-  m_destination: {x: 0, y: 0}
+  m_commanddestination: {x: 0, y: 0, z: 0}
+  m_patrollingdestination: {x: 0, y: 0, z: 0}
+  m_pursueTargetID: -1
   UnitSpeed: 1
+  RotationSpeed: 5
   TargetUnitList: []
   normalHP: 0
+  m_currentArrow: {fileID: 0}
+  touchFingerId: 0
+  mouseMode: 1
+  isBeingDragged: 0
 --- !u!114 &114751785547824944
 MonoBehaviour:
   m_ObjectHideFlags: 1

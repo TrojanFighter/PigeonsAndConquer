@@ -489,11 +489,13 @@
             <e p="GlobalDefine.cs" t="Include" />
             <e p="SoldierType.cs" t="Include" />
           </e>
-          <e p="DragableController.cs" t="Include" />
-          <e p="DragableObjects.cs" t="Include" />
-          <e p="GameController.cs" t="Include" />
-          <e p="General.cs" t="Include" />
-          <e p="Map.cs" t="Include" />
+          <e p="Kelly" t="Include">
+            <e p="DragableController.cs" t="Include" />
+            <e p="DragableObjects.cs" t="Include" />
+            <e p="GameController.cs" t="Include" />
+            <e p="General.cs" t="Include" />
+            <e p="Map.cs" t="Include" />
+          </e>
           <e p="Scene" t="Include">
             <e p="BasePoint.cs" t="Include" />
             <e p="CommandManager.cs" t="Include" />
