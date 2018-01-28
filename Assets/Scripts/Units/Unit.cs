@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using UnityEditor;
 
 namespace Lords
 {
@@ -25,6 +26,9 @@ namespace Lords
 		public List<Unit> TargetUnitList;
 		public int normalHP;
 		public bool isDraggable = true;
+		public bool bUnderPikeEffect = false;
+
+		public float lastPikedTime = 0f, PikeRecoverTime = 0.5f,pikedSpeedModifier=0.3f;
 
 		public MessengerReceiver m_MessengerReceiver;
 		//protected MeshRenderer meshRenderer;
@@ -67,7 +71,7 @@ namespace Lords
 
 			m_rigidbody2D = GetComponent<Rigidbody2D>();
 			soldierType = DataManager.SoldierTypes[(int) unitClass];
-			attackRangeCollider.myunitclass = unitClass;
+			//attackRangeCollider.myunitclass = unitClass;
 			//SetAttackRange(soldierType.AttackRange);
 			normalHP = soldierType.NormalHP;
 			UnitSpeed = soldierType.NormalMoveSpeed;
@@ -98,21 +102,21 @@ namespace Lords
 				fraction = GlobalDefine.Fraction.One;
 				oppositeFraction = GlobalDefine.Fraction.Two;
 				this.gameObject.tag = GlobalDefine.ObjectTag.Fraction1Tag;
-				attackRangeCollider.myfraction = GlobalDefine.Fraction.One;
+				//attackRangeCollider.myfraction = GlobalDefine.Fraction.One;
 			}
 			else if (toFraction == GlobalDefine.Fraction.Two)
 			{
 				fraction = GlobalDefine.Fraction.Two;
 				oppositeFraction = GlobalDefine.Fraction.One;
 				this.gameObject.tag = GlobalDefine.ObjectTag.Fraction2Tag;
-				attackRangeCollider.myfraction = GlobalDefine.Fraction.Two;
+				//attackRangeCollider.myfraction = GlobalDefine.Fraction.Two;
 			}
 			else
 			{
 				fraction = GlobalDefine.Fraction.Netrual;
 				oppositeFraction = GlobalDefine.Fraction.Netrual;
 				this.gameObject.tag = GlobalDefine.ObjectTag.Fraction0Tag;
-				attackRangeCollider.myfraction = GlobalDefine.Fraction.Netrual;
+				//attackRangeCollider.myfraction = GlobalDefine.Fraction.Netrual;
 			}
 		}
 
@@ -158,7 +162,14 @@ namespace Lords
 				try
 				{
 					StopAllCoroutines();
-					unitState = GlobalDefine.UnitState.Patrolling;
+					if (m_pursueTargetID < 0)
+					{
+						unitState = GlobalDefine.UnitState.Patrolling;
+					}
+					else
+					{
+						unitState = GlobalDefine.UnitState.PursuingTarget;
+					}
 				}
 				catch
 				{
@@ -198,7 +209,7 @@ namespace Lords
 					if (soldierType.AttackType == 1)
 					{
 						//近程攻击不打子弹
-						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower);
+						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower,soldierType.MakePikeEffect);
 						InAudio.PostEvent(gameObject, SceneManager.instance.KnightAttackEvent);
 					}
 
@@ -217,11 +228,17 @@ namespace Lords
 
 
 
-		public virtual void TakeNormalAttack(int hpAttack)
+		public virtual void TakeNormalAttack(int hpAttack,bool attackpikeeffect=false)
 		{
 			if (hpAttack > soldierType.ArmorAgainstNormalAttack)
 			{
 				normalHP -= hpAttack - soldierType.ArmorAgainstNormalAttack;
+			}
+
+			if (attackpikeeffect && soldierType.BePikeAffected)
+			{
+				bUnderPikeEffect = true;
+				lastPikedTime = Time.time;
 			}
 
 			if (normalHP <= 0)
@@ -229,6 +246,7 @@ namespace Lords
 				UnitDie();
 			}
 		}
+
 
 		protected virtual void UnitDie()
 		{
@@ -287,6 +305,7 @@ namespace Lords
 				//m_patrollingdestination=m_rigidbody2D.position;
 				return;
 			}
+			if (m_rigidbody2D == null) return;
 			
 			Vector3 targetPosition=new Vector3();
 
@@ -305,11 +324,24 @@ namespace Lords
 				}
 			}
 
-			{
 
 				Vector3 pos = m_rigidbody2D.position;
 
-				pos = Vector3.MoveTowards(pos, targetPosition, UnitSpeed * Time.fixedDeltaTime);
+			if (bUnderPikeEffect&&soldierType.BePikeAffected)
+			{
+				if (Time.time - lastPikedTime > PikeRecoverTime)
+				{
+					bUnderPikeEffect = false;
+				}
+			}
+
+			float speed = UnitSpeed * Time.fixedDeltaTime;
+			if (bUnderPikeEffect)
+			{
+				speed = speed * pikedSpeedModifier;
+			}
+
+			pos = Vector3.MoveTowards(pos, targetPosition, speed);
 				if ((pos - targetPosition).sqrMagnitude < 0.1f)
 				{
 					unitState = GlobalDefine.UnitState.Standing;
@@ -333,9 +365,8 @@ namespace Lords
 					//m_turnableRoot.localRotation = Quaternion.Slerp(m_turnableRoot.localRotation, Quaternion.LookRotation(vectorToTarget, Vector3.up), RotationSpeed * Time.fixedDeltaTime);
 				}
 				//m_rigidbody2D.rotation = Quaternion.Slerp(m_rigidbody2D.rotation, Quaternion.LookRotation(target - pos, Vector3.up), UnitSpeed * Time.fixedDeltaTime);
-
+			//if (m_rigidbody2D == null) return;
 				m_rigidbody2D.position = pos;
-			}
 		}
 
 		protected virtual void Update()
