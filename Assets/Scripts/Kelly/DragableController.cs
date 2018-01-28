@@ -17,7 +17,7 @@ namespace Lords
 
 		void Awake() {
 			// CHANGE FOR PC/TOUCH
-			mouseMode = false;
+			mouseMode = (Application.platform != RuntimePlatform.Android);
 			fingerIDs = new List<int> ();
 			missingIDs = new List<int> ();
 		}

@@ -47,7 +47,7 @@ namespace Lords
 
 		protected virtual void Awake(){
 			//Init();
-			mouseMode = false;
+			mouseMode = (Application.platform != RuntimePlatform.Android);
 			attackFrames = -1;
 		}
 
