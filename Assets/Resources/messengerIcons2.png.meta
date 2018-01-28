@@ -1,13 +1,14 @@
 fileFormatVersion: 2
-guid: b02e5b8f189dc481f89bac7fc0aa785e
-timeCreated: 1517092716
+guid: e827d6d2e621c40369f5caf64badf87e
+timeCreated: 1517094590
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: messengerStorage_0
-    21300002: messengerStorage_1
-    21300004: messengerStorage_2
-    21300006: messengerStorage_3
+    21300000: messengerIcons2_0
+    21300002: messengerIcons2_1
+    21300004: messengerIcons2_2
+    21300006: messengerIcons2_3
+    21300008: messengerIcons2_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -94,13 +95,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: messengerStorage_0
+      name: messengerIcons2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 8
-        width: 20
-        height: 7
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,13 +109,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: messengerStorage_1
+      name: messengerIcons2_1
       rect:
         serializedVersion: 2
-        x: 20
-        y: 8
-        width: 20
-        height: 7
+        x: 16
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,13 +123,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: messengerStorage_2
+      name: messengerIcons2_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 20
-        height: 7
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,13 +137,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: messengerStorage_3
+      name: messengerIcons2_3
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1
-        width: 20
-        height: 7
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: messengerIcons2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
