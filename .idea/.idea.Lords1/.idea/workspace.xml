@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfd8948c-56cd-40de-8982-e50a537a42fe" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Animations.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Archer1.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Archer1.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Cavalry1.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Cavalry1.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/General1.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/General1.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Messenger1.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Messenger1.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Pikeman1.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction1Unit/Pikeman1.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Archer2.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Archer2.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Cavalry2.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Cavalry2.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/General2.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/General2.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Messenger2.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Messenger2.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Pikeman2.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Units/Fraction2Unit/Pikeman2.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/XML/Soldiers.xml" afterPath="$PROJECT_DIR$/Assets/Resources/XML/Soldiers.xml" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/Main1.unity" afterPath="$PROJECT_DIR$/Assets/Scene/Main1.unity" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lords1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Lords1/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/GeneralUnit.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/GeneralUnit.cs" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -93,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Unit.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Unit.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
@@ -189,30 +173,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SceneManager.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SceneManager.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="81" column="30" lean-forward="false" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+            <state relative-caret-position="304">
+              <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
               <folding>
-                <marker date="1517173233053" expanded="true" signature="6:113" ph="..." />
-                <marker date="1517173233053" expanded="true" signature="130:3004" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="192:3002" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="707:794" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="883:982" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="1012:1272" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="1035:1262" ph="/* if (GeneralFraction1 != null) ... */" />
-                <marker date="1517173233053" expanded="true" signature="1295:1460" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="1375:1450" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="1504:1690" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="1738:1985" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="1798:1900" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="1917:1975" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="2030:2168" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="2222:2497" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="2418:2487" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="2569:2995" ph="{...}" />
-                <marker date="1517173233053" expanded="true" signature="2609:2985" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="6:113" ph="..." />
+                <marker date="1517173867072" expanded="true" signature="130:3037" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="192:3035" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="707:827" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="916:1015" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="1045:1305" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="1068:1295" ph="/* if (GeneralFraction1 != null) ... */" />
+                <marker date="1517173867072" expanded="true" signature="1328:1493" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="1408:1483" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="1537:1723" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="1771:2018" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="1831:1933" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="1950:2008" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="2063:2201" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="2255:2530" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="2451:2520" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="2602:3028" ph="{...}" />
+                <marker date="1517173867072" expanded="true" signature="2642:3018" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -599,8 +583,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Kelly/DragableController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Units/GeneralUnit.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs" />
       </list>
     </option>
   </component>
@@ -678,12 +662,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517150353506</updated>
-      <workItem from="1517150357928" duration="16965000" />
+      <workItem from="1517150357928" duration="17526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16965000" />
+    <option name="totallyTimeSpent" value="17526000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1770,33 +1754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="81" column="30" lean-forward="false" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
-          <folding>
-            <marker date="1517173233053" expanded="true" signature="6:113" ph="..." />
-            <marker date="1517173233053" expanded="true" signature="130:3004" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="192:3002" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="707:794" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="883:982" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="1012:1272" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="1035:1262" ph="/* if (GeneralFraction1 != null) ... */" />
-            <marker date="1517173233053" expanded="true" signature="1295:1460" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="1375:1450" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="1504:1690" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="1738:1985" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="1798:1900" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="1917:1975" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="2030:2168" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="2222:2497" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="2418:2487" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="2569:2995" ph="{...}" />
-            <marker date="1517173233053" expanded="true" signature="2609:2985" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Units/Unit.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1887,6 +1844,33 @@
             <marker date="1517173237334" expanded="true" signature="12994:13102" ph="{...}" />
             <marker date="1517173237334" expanded="true" signature="13152:13246" ph="{...}" />
             <marker date="1517173237334" expanded="true" signature="13308:13416" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Scene/SceneManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <marker date="1517173867072" expanded="true" signature="6:113" ph="..." />
+            <marker date="1517173867072" expanded="true" signature="130:3037" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="192:3035" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="707:827" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="916:1015" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="1045:1305" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="1068:1295" ph="/* if (GeneralFraction1 != null) ... */" />
+            <marker date="1517173867072" expanded="true" signature="1328:1493" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="1408:1483" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="1537:1723" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="1771:2018" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="1831:1933" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="1950:2008" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="2063:2201" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="2255:2530" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="2451:2520" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="2602:3028" ph="{...}" />
+            <marker date="1517173867072" expanded="true" signature="2642:3018" ph="{...}" />
           </folding>
         </state>
       </provider>

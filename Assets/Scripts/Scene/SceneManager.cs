@@ -21,6 +21,7 @@ namespace Lords
 
         public void Restart()
         {
+            Destroy(gameObject);
             UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
 
