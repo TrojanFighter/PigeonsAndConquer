@@ -129,7 +129,7 @@ Transform:
   m_GameObject: {fileID: 1838512648178374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 4975120290286404}
   - {fileID: 4018969020096016}
@@ -232,8 +232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841da1188414fc745b7f7077e471d5e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myfraction: 0
-  myunitclass: 4
   myunit: {fileID: 0}
 --- !u!114 &114684794338967258
 MonoBehaviour:
@@ -292,6 +290,10 @@ MonoBehaviour:
   TargetUnitList: []
   normalHP: 0
   isDraggable: 1
+  bUnderPikeEffect: 0
+  lastPikedTime: 0
+  PikeRecoverTime: 0.5
+  pikedSpeedModifier: 0.3
   m_MessengerReceiver: {fileID: 114731532381245964}
   m_currentArrow: {fileID: 0}
   touchFingerId: 0

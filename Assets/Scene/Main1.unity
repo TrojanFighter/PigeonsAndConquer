@@ -1592,6 +1592,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbedUnit: {fileID: 0}
   mouseMode: 0
+  fingerIDs: 
+  missingIDs: 
 --- !u!4 &1809063520 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: c279909b5d840094ab2f3b54a72efa4c, type: 2}
