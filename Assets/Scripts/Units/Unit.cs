@@ -32,9 +32,12 @@ namespace Lords
 
 		public GameObject m_currentArrow;
 		public int touchFingerId;
-		public bool mouseMode,isBeingDragged;
+		public bool mouseMode, isBeingDragged;
 
-
+		void Awake() {
+			// CHANGE FOR PC/TOUCH
+			mouseMode = false;
+		}
 
 		public virtual void OnEnable()
 		{
@@ -44,7 +47,6 @@ namespace Lords
 
 		public virtual void Init()
 		{
-			
 			m_transform = this.transform;
 			if (attackRangeCollider == null)
 			{
