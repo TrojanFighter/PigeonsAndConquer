@@ -252,13 +252,14 @@ MonoBehaviour:
   RotationSpeed: 5
   TargetUnitList: []
   normalHP: 0
+  isDraggable: 1
   m_MessengerReceiver: {fileID: 0}
   m_currentArrow: {fileID: 0}
   touchFingerId: 0
   mouseMode: 0
   isBeingDragged: 0
   m_commandID: 0
-  m_targetUnitID: 0
+  m_commandTargetUnitID: 0
 --- !u!120 &120745191821378270
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -425,7 +426,7 @@ SpriteRenderer:
   m_SortingLayerID: -1475814719
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300180, guid: 351ac58962660412e8b1f37e65e8b5db, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eddcf85aa70b24e23ab7dbf5b86a9132, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
