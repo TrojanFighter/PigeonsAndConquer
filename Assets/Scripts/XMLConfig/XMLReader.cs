@@ -45,11 +45,13 @@ public static class XMLReader{
 				newSoldierType.NormalAttackPower= int.Parse(GetInnerData(rowNode.ChildNodes[8]));
 				newSoldierType.ArmorAgainstNormalAttack =int.Parse( GetInnerData(rowNode.ChildNodes[9]));
 
-				int AttackWhenMove=int.Parse(GetInnerData(rowNode.ChildNodes[10]));
-				newSoldierType.AttackWhenMove= AttackWhenMove == 1 ? true : false;
-				int JoinCombatOrNotInt=int.Parse(GetInnerData(rowNode.ChildNodes[11]));
+				int MakePikeEffect=int.Parse(GetInnerData(rowNode.ChildNodes[10]));
+				newSoldierType.MakePikeEffect= MakePikeEffect == 1 ? true : false;
+				int BePikeAffected=int.Parse(GetInnerData(rowNode.ChildNodes[11]));
+				newSoldierType.BePikeAffected= BePikeAffected == 1 ? true : false;
+				int JoinCombatOrNotInt=int.Parse(GetInnerData(rowNode.ChildNodes[12]));
 				newSoldierType.JoinCombat = JoinCombatOrNotInt == 1 ? true : false;
-				newSoldierType.LifeTime=float.Parse(GetInnerData(rowNode.ChildNodes[12]));
+				newSoldierType.LifeTime=float.Parse(GetInnerData(rowNode.ChildNodes[13]));
 
 				/*string GapTimeString = GetInnerData(rowNode.ChildNodes[10]);
                 string[] GapTimeStringArray = GapTimeString.Split('+');

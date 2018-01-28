@@ -13,7 +13,8 @@ public class SoldierType {
 	public float AttackTime;//兵种攻击时间间隔
 	public int NormalAttackPower;//兵种普通攻击伤害
 	public int ArmorAgainstNormalAttack;//兵种抵抗普通攻击护甲值
-	public bool AttackWhenMove;//兵种只遭到对方祭司信仰攻击时是否停下攻击与移动，0为坚持战斗，1为立即停止（敌方和我方祭司同时进行信仰攻击时不生效）
+	public bool MakePikeEffect;//兵种会不会造成长矛减速效果
+	public bool BePikeAffected;//兵种会不会造成长矛减速效果
 	public bool JoinCombat;//兵种是否参与战斗，0为不参与战斗（不会被选作攻击目标也不会攻击敌人），1为参与战斗
 	public float LifeTime;//兵种默认存活时间，0为永久存活不限时，大于0则为自动存活时长
 

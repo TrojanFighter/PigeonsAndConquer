@@ -6,8 +6,8 @@ namespace Lords
 	public class AttackRangeCollider : MonoBehaviour
 	{
 
-		public GlobalDefine.Fraction myfraction;
-		public GlobalDefine.UnitClass myunitclass;
+		//public GlobalDefine.Fraction myfraction;
+		//public GlobalDefine.UnitClass myunitclass;
 		public Unit myunit;
 
 		public delegate void AddTargetUnitListDelegate(Unit unit);
@@ -33,8 +33,12 @@ namespace Lords
 		{
 			if (other.GetComponent<Unit>() && other.GetComponent<Unit>() != myunit)
 			{
+				if (other.GetComponent<Unit>().unitClass == GlobalDefine.UnitClass.Messenger||myunit.unitClass == GlobalDefine.UnitClass.Messenger)
+				{
+					return;
+				}
 
-				if (myfraction !=other.GetComponent<Unit>().fraction)
+				if (myunit.fraction !=other.GetComponent<Unit>().fraction)
 				{
 					//myunit.SendMessage ("AddTargetUnitList",other.GetComponent<Unit>());
 					other.GetComponent<Unit>().informingUnitDieOrBetray += this.BeingInformedUnitDie;
@@ -67,7 +71,7 @@ namespace Lords
 		{
 			if (other.GetComponent<Unit>() && other.GetComponent<Unit>() != myunit)
 			{
-				if (myfraction != other.GetComponent<Unit>().fraction)
+				if (myunit.fraction != other.GetComponent<Unit>().fraction)
 				{
 					//myunit.SendMessage ("RemoveTargetUnitList",other.GetComponent<Unit>());
 					other.GetComponent<Unit>().informingUnitDieOrBetray -= this.BeingInformedUnitDie;
