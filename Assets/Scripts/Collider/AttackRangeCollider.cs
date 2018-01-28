@@ -34,7 +34,7 @@ namespace Lords
 			if (other.GetComponent<Unit>() && other.GetComponent<Unit>() != myunit)
 			{
 
-				if (myfraction == GlobalDefine.Fraction.One && other.GetComponent<Unit>().fraction == GlobalDefine.Fraction.Two)
+				if (myfraction !=other.GetComponent<Unit>().fraction)
 				{
 					//myunit.SendMessage ("AddTargetUnitList",other.GetComponent<Unit>());
 					other.GetComponent<Unit>().informingUnitDieOrBetray += this.BeingInformedUnitDie;
@@ -42,7 +42,7 @@ namespace Lords
 					{
 						AddingTargetUnitList(other.GetComponent<Unit>());
 					}
-				}
+				}/*
 				else if (myfraction == GlobalDefine.Fraction.Two &&
 				         other.GetComponent<Unit>().fraction == GlobalDefine.Fraction.One)
 				{
@@ -52,7 +52,7 @@ namespace Lords
 					{
 						AddingTargetUnitList(other.GetComponent<Unit>());
 					}
-				}
+				}*/
 			}
 
 
@@ -67,7 +67,7 @@ namespace Lords
 		{
 			if (other.GetComponent<Unit>() && other.GetComponent<Unit>() != myunit)
 			{
-				if (myfraction == GlobalDefine.Fraction.One && other.GetComponent<Unit>().fraction == GlobalDefine.Fraction.Two)
+				if (myfraction != other.GetComponent<Unit>().fraction)
 				{
 					//myunit.SendMessage ("RemoveTargetUnitList",other.GetComponent<Unit>());
 					other.GetComponent<Unit>().informingUnitDieOrBetray -= this.BeingInformedUnitDie;
@@ -76,7 +76,7 @@ namespace Lords
 						RemovingTargetUnitList(other.GetComponent<Unit>());
 					}
 
-				}
+				}/*
 				else if (myfraction == GlobalDefine.Fraction.Two &&
 				         other.GetComponent<Unit>().fraction == GlobalDefine.Fraction.One)
 				{
@@ -87,7 +87,7 @@ namespace Lords
 						RemovingTargetUnitList(other.GetComponent<Unit>());
 					}
 
-				}
+				}*/
 
 			}
 		}

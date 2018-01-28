@@ -71,6 +71,8 @@ namespace Lords
 			attackRangeCollider.myunitclass = unitClass;
 			//SetAttackRange(soldierType.AttackRange);
 			normalHP = soldierType.NormalHP;
+			UnitSpeed = soldierType.NormalMoveSpeed;
+			
 			//Debug.Log (soldierType.AttackRange);
 
 			unitState = GlobalDefine.UnitState.Standing;
@@ -128,6 +130,7 @@ namespace Lords
 			TargetUnitList.Add(other);
 			if (prevUnitListCount == 0 && TargetUnitList.Count == 1)
 			{
+				/*
 				if (soldierType.AttackType == 3)
 				{
 					//信仰攻击
@@ -142,7 +145,8 @@ namespace Lords
 					//unitState = GlobalDefine.UnitState.Attack;
 					StartAttackClosestTarget();
 
-				}
+				}*/
+				StartAttackClosestTarget();
 			}
 
 		}
@@ -164,50 +168,7 @@ namespace Lords
 			}
 		}
 
-		/*public void OnTriggerEnter(Collider other){
-			
-		}*/
-		public virtual void StartAttackTargetList()
-		{
-			//持续攻击全体
-			StartCoroutine(AttackTargetListOnce(soldierType.AttackTime));
-		}
 
-		IEnumerator AttackTargetListOnce(float attackTime)
-		{
-			//单次攻击全体
-			while (true)
-			{
-				/*if (soldierType.AttackType == 1) {//近程攻击不打子弹
-				foreach (Unit u in TargetUnitList) {
-					u.TakeNormalAttack (soldierType.NormalAttackPower);
-				}
-			}
-				if (soldierType.AttackType == 2) {//远程攻击要打子弹
-					foreach (Unit u in TargetUnitList) {
-						u.TakeNormalAttack (soldierType.NormalAttackPower);
-					}
-				}*/
-
-				if (soldierType.AttackType == 3)
-				{
-					//信仰攻击
-					/*if(TargetUnitList.Count>0){
-						for (int i = 0; i < TargetUnitList.Count; i++) {
-							TargetUnitList[i].TakeLoyaltyAttack (soldierType.LoyaltyAttackPower, this.fraction);
-							InAudio.PostEvent(gameObject, GameManager.Instance.ShamanAttackEvent);
-						}
-	
-					}*/
-					/*foreach (Unit u in TargetUnitList) {
-						u.TakeLoyaltyAttack (soldierType.LoyaltyAttackPower, this.fraction);
-					}*/
-
-				}
-
-				yield return new WaitForSeconds(attackTime);
-			}
-		}
 
 		public virtual void StartAttackClosestTarget()
 		{
@@ -277,7 +238,8 @@ namespace Lords
 				informingUnitDieOrBetray(this);
 			}
 
-			Destroy(this.gameObject);
+			//Destroy(this.gameObject);
+			SelfDestroy();
 		}
 
 
@@ -490,6 +452,7 @@ namespace Lords
 
 		public void SelfDestroy()
 		{
+			SceneManager.instance.UnRegisterUnit(this.UnitID);
 			Destroy(this.gameObject);
 		}
 
