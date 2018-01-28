@@ -346,11 +346,11 @@ namespace Lords
 		protected void MouseLogic()
 		{
 			// Mouse logic
-			// Mouse logic
 			if (mouseMode) {
-				if (Input.GetMouseButtonDown (0)) {
-
+				if (Input.GetMouseButtonDown(0))
+				{
 				}
+
 
 				if (isBeingDragged) {
 					Vector3 arrowPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
@@ -363,11 +363,6 @@ namespace Lords
 					m_currentArrow.transform.position = arrowPos;
 					GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, arrowPos });
 					m_commanddestination = arrowPos;
-//				if (Input.GetMouseButtonUp (0)) {
-//					dragging = false;
-//					Destroy (currentArrow);
-//					GetComponent<LineRenderer> ().enabled = false;
-//				}
 				}
 			} else {
 				// Touch logic
@@ -385,8 +380,6 @@ namespace Lords
 							MovementDecided();
 						}
 					}
-				} else {
-
 				}
 			}
 		}
@@ -394,7 +387,10 @@ namespace Lords
 		public void Grab() {
 			if (!isBeingDragged) {
 				isBeingDragged = true;
-				m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
+				if (m_currentArrow == null)
+				{
+					m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
+				}
 				GetComponent<LineRenderer> ().enabled = true;
 			}
 		}
@@ -404,12 +400,6 @@ namespace Lords
 				touchFingerId = touchFID;
 				Grab ();
 			}
-		}
-
-		public void LetGo() {
-			isBeingDragged = false;
-			Destroy (m_currentArrow);
-			GetComponent<LineRenderer> ().enabled = false;
 		}
 
 		public void MovementDecided() {
