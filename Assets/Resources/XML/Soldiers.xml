@@ -112,7 +112,7 @@
     <Cell ss:StyleID="s62"><Data ss:Type="String">General</Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
-    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1.2</Data></Cell>
     <Cell><Data ss:Type="Number">100</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
@@ -148,7 +148,7 @@
     <Cell><Data ss:Type="Number">20</Data></Cell>
     <Cell><Data ss:Type="Number">8</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
-    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="Number">0</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="Number">0</Data></Cell>
@@ -164,7 +164,7 @@
     <Cell><Data ss:Type="Number">30</Data></Cell>
     <Cell><Data ss:Type="Number">5</Data></Cell>
     <Cell><Data ss:Type="Number">0.4</Data></Cell>
-    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="Number">1</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="Number">0</Data></Cell>
