@@ -484,7 +484,6 @@ namespace Lords
 
 		void StartCommanding(Vector2 destinationposition)
 		{
-			Debug.Log ("soldierType.CommandType = " + (int)soldierType.CommandType);
 			switch (soldierType.CommandType)
 			{
 				case	(int)GlobalDefine.CommandType.DirectControl:

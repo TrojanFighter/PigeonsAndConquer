@@ -34,7 +34,7 @@ public class GeneralUnit : Unit
 		base.FixedUpdate();
 		MessengerRechargePerDeltaTime();
 		CannonRechargePerDeltaTime();
-		if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetMouseButtonDown(0))
 		{
 			ShootCannonForward();
 		}

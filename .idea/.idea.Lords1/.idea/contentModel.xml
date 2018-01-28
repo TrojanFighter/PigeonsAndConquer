@@ -474,6 +474,12 @@
             <e p="AutoBackendAttributes.cs" t="Include" />
           </e>
         </e>
+        <e p="Resources" t="Include">
+          <e p="XML" t="Include">
+            <e p="Fractions.xml" t="Include" />
+            <e p="Soldiers.xml" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Base" t="Include">
             <e p="MonoSingleton.cs" t="Include" />
@@ -499,6 +505,7 @@
           <e p="Projectile" t="Include">
             <e p="CannonBall.cs" t="Include" />
             <e p="Projectile.cs" t="Include" />
+            <e p="SimpleSelfDestory.cs" t="Include" />
           </e>
           <e p="Scene" t="Include">
             <e p="BasePoint.cs" t="Include" />

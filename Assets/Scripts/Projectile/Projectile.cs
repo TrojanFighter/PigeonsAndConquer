@@ -20,6 +20,8 @@ namespace Lords
         public float explsionRadius = 2f;
         public int NormalAttackDamage = 20;
 
+        public GameObject explosionEffect;
+
         protected virtual void FixedUpdate()
         {
             var pos = transform.position + transform.up * speed * Time.fixedDeltaTime;
@@ -101,6 +103,10 @@ namespace Lords
 
         protected virtual void PlayExplosion()
         {
+            if (explosionEffect != null)
+            {
+                GameObject playExplosion =GameObject.Instantiate(explosionEffect, transform.position, transform.rotation);
+            }
         }
     }
 }

@@ -21,8 +21,10 @@ GameObject:
   - component: {fileID: 4833210188649814}
   - component: {fileID: 212012249057233762}
   - component: {fileID: 58306431475450920}
-  - component: {fileID: 114220872462682526}
-  m_Layer: 0
+  - component: {fileID: 114991515952114424}
+  - component: {fileID: 114161961528749066}
+  - component: {fileID: 61919452540471710}
+  m_Layer: 11
   m_Name: CannonBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,13 +53,38 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &114220872462682526
+--- !u!61 &61919452540471710
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1102789791954338}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &114161961528749066
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -65,9 +92,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1102789791954338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db8b1ba626e539d4e91e212cb48b0aa9, type: 3}
+  m_Script: {fileID: 11500000, guid: e16362059729fb44c972db155815c152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FiringUnit: {fileID: 0}
+  speed: 8
+  bSelfDestory: 1
+  impactWhenSelfDestroy: 1
+  m_selfDestoryTime: 2
+  explsionRadius: 2
+  NormalAttackDamage: 20
+  explosionEffect: {fileID: 1269611583921836, guid: 17980af5b2939b94e854aff2d6113843,
+    type: 2}
+--- !u!114 &114991515952114424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1102789791954338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715655405f7792442b10a3dc4c63ddbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolItemName: Cannon
 --- !u!212 &212012249057233762
 SpriteRenderer:
   m_ObjectHideFlags: 1
