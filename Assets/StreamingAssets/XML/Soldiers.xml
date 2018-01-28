@@ -37,7 +37,7 @@
   </Style>
  </Styles>
  <Worksheet ss:Name="Sheet1">
-  <Table ss:ExpandedColumnCount="13" ss:ExpandedRowCount="11" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="13" ss:ExpandedRowCount="8" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="53.84873949579832"
    ss:DefaultRowHeight="14.218487394957982">
    <Column ss:Index="5" ss:AutoFitWidth="0" ss:Width="113.14285714285714"/>
@@ -45,8 +45,7 @@
     <Cell><Data ss:Type="String">SoldierTypeID</Data></Cell>
     <Cell><Data ss:Type="String">SoliderTypeName</Data></Cell>
     <Cell><Data ss:Type="String">AttackType</Data></Cell>
-    <Cell ss:StyleID="s62"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">CommandType</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">CommandType</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">NormalMoveSpeed</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">NormalHP</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">AttackRange</Data></Cell>
@@ -61,8 +60,7 @@
     <Cell><Data ss:Type="String">兵种ID</Data></Cell>
     <Cell><Data ss:Type="String">兵种名称</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">兵种攻击类型,0为无法攻击，1为AttackWhenMoving，2 AttackWhenNotMoving</Data></Cell>
-    <Cell ss:StyleID="s62"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">兵种指挥类型,0为无法指挥，1为直接控制无需信使，2为需要信使传达命令</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">兵种指挥类型,0为无法指挥，1为直接控制无需信使，2为需要信使传达命令</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">兵种正常状态移动速度</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">兵种普通HP</Data></Cell>
     <Cell ss:StyleID="s62"><Data ss:Type="String">兵种射程</Data></Cell>
@@ -163,24 +161,6 @@
     <Cell><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:StyleID="s62"/>
-    <Cell ss:Index="11" ss:StyleID="s62"/>
-    <Cell ss:StyleID="s62"/>
-    <Cell ss:StyleID="s62"/>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:StyleID="s62"/>
-    <Cell ss:Index="11" ss:StyleID="s62"/>
-    <Cell ss:StyleID="s62"/>
-    <Cell ss:StyleID="s62"/>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell ss:Index="2" ss:StyleID="s62"/>
-    <Cell ss:Index="11" ss:StyleID="s62"/>
-    <Cell ss:StyleID="s62"/>
-    <Cell ss:StyleID="s62"/>
-   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -207,8 +187,9 @@
     </Pane>
     <Pane>
      <Number>1</Number>
-     <ActiveRow>1</ActiveRow>
-     <ActiveCol>3</ActiveCol>
+     <ActiveRow>8</ActiveRow>
+     <ActiveCol>0</ActiveCol>
+     <RangeSelection>R9:R14</RangeSelection>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

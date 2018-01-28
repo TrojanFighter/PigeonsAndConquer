@@ -20,14 +20,20 @@ namespace Lords
 				if (hits.Length > 0)
 				{
 					grabbedUnit = hits[0].transform;
-					grabbedUnit.GetComponent<Unit>().Grab();
+					if (grabbedUnit.GetComponent<Unit>())
+					{
+						grabbedUnit.GetComponent<Unit>().Grab();
+					}
 				}
 			}
 
 			if (Input.GetMouseButtonUp(0) && grabbedUnit != null)
 			{
-				grabbedUnit.GetComponent<Unit>().MovementDecided();
-				grabbedUnit = null;
+				if (grabbedUnit.GetComponent<Unit>())
+				{
+					grabbedUnit.GetComponent<Unit>().MovementDecided();
+					grabbedUnit = null;
+				}
 			}
 
 			if (Input.touches.Length > 0)

@@ -39,8 +39,9 @@ GameObject:
   - component: {fileID: 120624944808897930}
   - component: {fileID: 50209011472819988}
   - component: {fileID: 61899559299426238}
+  - component: {fileID: 114389814300489088}
   m_Layer: 8
-  m_Name: General
+  m_Name: General1
   m_TagString: Fraction1Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,6 +212,18 @@ MonoBehaviour:
   MaxMessengerNum: 4
   MessengerRechargeRate: 0.2
   MessengerRechargePercentage: 0
+--- !u!114 &114389814300489088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317248045876186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715655405f7792442b10a3dc4c63ddbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolItemName: General1
 --- !u!114 &114502909759679378
 MonoBehaviour:
   m_ObjectHideFlags: 1

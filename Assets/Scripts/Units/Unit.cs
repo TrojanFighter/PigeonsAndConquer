@@ -7,6 +7,7 @@ namespace Lords
 	public abstract class Unit : MonoBehaviour
 	{
 
+		public bool inited = false;	
 		public int UnitID;
 		
 		public GlobalDefine.UnitClass unitClass;
@@ -35,15 +36,19 @@ namespace Lords
 		public bool mouseMode,isBeingDragged;
 
 
+		protected virtual void Awake(){
+			//Init();
+		}
 
-		public virtual void OnEnable()
+		protected virtual void OnEnable()
 		{
-			//Init ();
+			Init ();
 		}
 
 
 		public virtual void Init()
 		{
+			if (inited) return;
 			
 			m_transform = this.transform;
 			if (attackRangeCollider == null)
@@ -72,6 +77,7 @@ namespace Lords
 
 			//meshRenderer = this.GetComponent<MeshRenderer>();
 			//originMaterial = meshRenderer.material;
+			inited = true;
 
 		}
 
@@ -226,14 +232,14 @@ namespace Lords
 					{
 						//近程攻击不打子弹
 						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower);
-						InAudio.PostEvent(gameObject, SceneManager.Instance.KnightAttackEvent);
+						InAudio.PostEvent(gameObject, SceneManager.instance.KnightAttackEvent);
 					}
 
 					if (soldierType.AttackType == 2)
 					{
 						//远程攻击要打子弹
 						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower);
-						InAudio.PostEvent(gameObject, SceneManager.Instance.ArcherAttackEvent);
+						InAudio.PostEvent(gameObject, SceneManager.instance.ArcherAttackEvent);
 					}
 				}
 
@@ -366,7 +372,7 @@ namespace Lords
 					arrowPos.z = 0f;
 					if (m_currentArrow == null)
 					{
-						m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
+						m_currentArrow = Instantiate (SceneManager.instance.arrowPrefab) as GameObject;
 					}
 
 					m_currentArrow.transform.position = arrowPos;
@@ -398,7 +404,7 @@ namespace Lords
 				isBeingDragged = true;
 				if (m_currentArrow == null)
 				{
-					m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
+					m_currentArrow = Instantiate (SceneManager.instance.arrowPrefab) as GameObject;
 				}
 				GetComponent<LineRenderer> ().enabled = true;
 			}
@@ -416,7 +422,7 @@ namespace Lords
 			Destroy (m_currentArrow);
 			GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, transform.position }); // Resets line to 0
 			GetComponent<LineRenderer> ().enabled = false;
-			StartPatrol(m_commanddestination);
+			StartCommanding(m_commanddestination);
 			// At this point we need to generate a messenger from the general
 		}
 
@@ -490,7 +496,7 @@ namespace Lords
 
 		public void StartIssueCommand(Vector2 destinationposition)
 		{
-			SceneManager.Instance.FindGeneral(fraction).IssueCommand(fraction, UnitID, destinationposition);
+			SceneManager.instance.FindGeneral(fraction).IssueCommand(fraction, UnitID, destinationposition);
 		}
 
 	}

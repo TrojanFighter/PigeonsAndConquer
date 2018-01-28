@@ -4,9 +4,8 @@ using UnityEngine;
 
 namespace Lords
 {
-    public class SceneManager : MonoBehaviour
+    public class SceneManager : MonoSingleton<SceneManager>
     {
-        public static SceneManager Instance;
         public Unit Messenger,General, Cavalary, Archer, Pikeman;
         private int currentUnitIDNum = 1;
         private static Dictionary<int, Unit> PresentUnits;
@@ -17,9 +16,9 @@ namespace Lords
 
         public InAudioEvent MessengerDeliverEvent, KnightAttackEvent, ArcherAttackEvent, PickmanAttackEvent, VictoryBlast;
         //public Animator LeftPanel, RightPanel;
-        private void Awake()
+        protected override void Init()
         {
-            Instance = this;
+            base.Init();
             PresentUnits=new Dictionary<int, Unit>();
         }
 

@@ -5,14 +5,14 @@ using System.Collections.Generic;
 
 namespace Lords
 {
-	public class DataManager :Singleton<DataManager>
+	public class DataManager :MonoSingleton<DataManager>
 	{
 		//public static GameManager Instance;
 		public static Dictionary<int, SoldierType> SoldierTypes;
 		public static Dictionary<int, Fraction> Fractions;
 
 
-		public override void Init()
+		protected override void Init()
 		{
 			base.Init();
 			SoldierTypes = XMLReader.ReadSoldierTypeFile(Application.dataPath + GlobalDefine.PathDefines.XML_Path +
