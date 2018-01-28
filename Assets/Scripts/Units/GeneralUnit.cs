@@ -10,6 +10,9 @@ public class GeneralUnit : Unit
 	public int CurrentMessengerNum = 4, MaxMessengerNum = 4;
 
 	public float MessengerRechargeRate = 0.2f, MessengerRechargePercentage = 0f;
+
+	public int CurrentCannonNum = 1, MaxCannonNum = 1;
+	public float CannonRechargeRate = 0.1f, CannonRechargePercentage = 0;
 	// Use this for initialization
 	public override void Init()
 	{
@@ -33,6 +36,18 @@ public class GeneralUnit : Unit
 			{
 				CurrentMessengerNum++;
 				MessengerRechargePercentage = 0f;
+			}
+		}
+	}
+	void CannonRechargePerDeltaTime()
+	{
+		if (CurrentCannonNum < MaxCannonNum)
+		{
+			CannonRechargePercentage += CannonRechargeRate * Time.fixedDeltaTime;
+			if (CannonRechargePercentage >= 1f)
+			{
+				CurrentCannonNum++;
+				CannonRechargePercentage = 0f;
 			}
 		}
 	}
