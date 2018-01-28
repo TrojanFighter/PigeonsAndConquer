@@ -6,7 +6,7 @@ namespace Lords
 {
     public class SceneManager : MonoSingleton<SceneManager>
     {
-        public Unit Messenger,General, Cavalary, Archer, Pikeman;
+        public GameObject Messenger1, Messenger2;//General1,General2//, Cavalary, Archer, Pikeman;
         private int currentUnitIDNum = 1;
         private static Dictionary<int, Unit> PresentUnits;
 
@@ -24,14 +24,14 @@ namespace Lords
 
         private void Start()
         {
-            if (GeneralFraction1 != null)
+            /*if (GeneralFraction1 != null)
             {
                 RegisterUnit(GeneralFraction1);
             }
             if (GeneralFraction2 != null)
             {
                 RegisterUnit(GeneralFraction2);
-            }
+            }*/
         }
 
         public int RegisterUnit(Unit unit)
@@ -60,6 +60,18 @@ namespace Lords
             Unit queryUnit;
             PresentUnits.TryGetValue(unitID,out queryUnit);
             return queryUnit;
+        }
+
+        public Vector3 QueryUnitPosition(int unitID)
+        {
+            Unit queryUnit;
+            PresentUnits.TryGetValue(unitID,out queryUnit);
+            if(queryUnit!=null)
+            return queryUnit.transform.position;
+            else
+            {
+                return Vector3.negativeInfinity;
+            }
         }
 
         public GeneralUnit FindGeneral(GlobalDefine.Fraction fraction)

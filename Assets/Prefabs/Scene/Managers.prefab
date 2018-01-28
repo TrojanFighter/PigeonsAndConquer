@@ -53,12 +53,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5183e0ba148f874abb94c8824c1fd75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Messenger: {fileID: 114653238564775384, guid: 3688fdd9749d1db4b991ebdc00e5046c,
-    type: 2}
-  General: {fileID: 114068396909786648, guid: 930e493aee16fc641866312760da9489, type: 2}
-  Cavalary: {fileID: 114029318440324108, guid: 202680e3d06df47409b6ec56b4d0441d, type: 2}
-  Archer: {fileID: 114005664748999010, guid: f5bda1b848e425149a2e526357bc7a27, type: 2}
-  Pikeman: {fileID: 114911274968152870, guid: ead88585d459673488efbb85d6a75407, type: 2}
+  Messenger1: {fileID: 1030403845936610, guid: 3688fdd9749d1db4b991ebdc00e5046c, type: 2}
+  Messenger2: {fileID: 1925491703355406, guid: 7343abab864fbd747b2388c542935f4e, type: 2}
   GeneralFraction1: {fileID: 0}
   GeneralFraction2: {fileID: 0}
   arrowPrefab: {fileID: 1563718506604590, guid: 2f361939c73f841da9081ff955035d4d,

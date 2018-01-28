@@ -46,9 +46,10 @@ namespace Lords
 					//myunit.SendMessage ("AddTargetUnitList",other.GetComponent<Unit>());
 
 				}
-				else if (other.GetComponent<MessengerUnit>()&&other.GetComponent<MessengerUnit>().m_targetUnitID==myunit.UnitID)
+				else if (other.GetComponent<MessengerUnit>()&&other.GetComponent<MessengerUnit>().m_commandTargetUnitID==myunit.UnitID)
 				{
 					myunit.ReceiveCommand(other.GetComponent<MessengerUnit>().m_commandID);
+					other.GetComponent<MessengerUnit>().SelfDestroy();
 					//myunit.SendMessage ("AddTargetUnitList",other.GetComponent<Unit>());
 				}
 			}

@@ -19,11 +19,28 @@ namespace Lords
 				RaycastHit2D[] hits = Physics2D.RaycastAll(inputPos, inputPos);
 				if (hits.Length > 0)
 				{
+					bool hasDraggable = false;
+					for (int i = 0; i < hits.Length; i++)
+					{
+						grabbedUnit = hits[i].transform;
+						if (grabbedUnit.GetComponent<Unit>())
+						{
+							if (grabbedUnit.GetComponent<Unit>().isDraggable)
+							{
+								grabbedUnit.GetComponent<Unit>().Grab();
+								break;
+							}
+							else
+							{
+								continue;
+							}
+						}
+					}/*
 					grabbedUnit = hits[0].transform;
 					if (grabbedUnit.GetComponent<Unit>())
 					{
 						grabbedUnit.GetComponent<Unit>().Grab();
-					}
+					}*/
 				}
 			}
 
