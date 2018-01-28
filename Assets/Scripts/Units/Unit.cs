@@ -46,6 +46,7 @@ namespace Lords
 
 		protected virtual void Awake(){
 			//Init();
+			mouseMode = true;
 		}
 
 		protected virtual void OnEnable()
