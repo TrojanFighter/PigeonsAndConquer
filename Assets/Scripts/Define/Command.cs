@@ -9,7 +9,7 @@ namespace Lords
     {
 
         public int CommandID;
-        public Fraction m_fraction;
+        public GlobalDefine.Fraction m_fraction;
         public int m_TargetUnitID;
         public Vector2 m_commandTargetPostion;
 

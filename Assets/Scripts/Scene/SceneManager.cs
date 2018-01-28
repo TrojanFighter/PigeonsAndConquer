@@ -63,5 +63,20 @@ namespace Lords
             return queryUnit;
         }
 
+        public GeneralUnit FindGeneral(GlobalDefine.Fraction fraction)
+        {
+            switch (fraction)
+            {
+                    case GlobalDefine.Fraction.One:
+                        return GeneralFraction1;
+                        break;
+                        
+                        case GlobalDefine.Fraction.Two :
+                            return GeneralFraction2;
+                        break;
+                            default: return null;
+            }
+        }
+
     }
 }

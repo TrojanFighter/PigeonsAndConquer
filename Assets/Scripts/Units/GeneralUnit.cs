@@ -37,7 +37,7 @@ public class GeneralUnit : Unit
 		}
 	}
 
-	public bool IssueCommand(Fraction fraction, int TargetUnitID, Vector2 destinationPosition)
+	public bool IssueCommand(GlobalDefine.Fraction fraction, int TargetUnitID, Vector2 destinationPosition)
 	{
 		if (CurrentMessengerNum <= 0)
 		{

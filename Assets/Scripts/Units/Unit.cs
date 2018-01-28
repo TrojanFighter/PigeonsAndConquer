@@ -16,7 +16,7 @@ namespace Lords
 		public Collider2D m_hitCollider;
 		public AttackRangeCollider attackRangeCollider;
 		public Rigidbody2D m_rigidbody2D;
-		public Transform m_transform;
+		public Transform m_transform, m_turnableRoot;
 		public Vector3 m_commanddestination,m_patrollingdestination;
 		public int m_pursueTargetID = -1;
 		public float UnitSpeed=2,RotationSpeed = 5;
@@ -327,11 +327,20 @@ namespace Lords
 			else
 			{
 				Vector3 vectorToTarget = m_patrollingdestination - transform.position;
-				float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
-				Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+				
+				//vectorToTarget.Normalize();
+ 
+				float rot_z = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+				//transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
 				
 				
-				m_rigidbody2D.MoveRotation(Mathf.LerpAngle(m_rigidbody2D.rotation,Quaternion.Slerp(transform.rotation, q, Time.deltaTime * RotationSpeed).eulerAngles.y, RotationSpeed * Time.deltaTime));
+				//m_rigidbody2D.MoveRotation(Mathf.LerpAngle(m_rigidbody2D.rotation,rot_z - 90, RotationSpeed * Time.deltaTime));
+				//m_turnableRoot.transform.eulerAngles=new Vector3(0,0,Mathf.LerpAngle(m_turnableRoot.transform.eulerAngles.z,rot_z - 90, RotationSpeed * Time.deltaTime));
+				
+				//Quaternion newRot = Quaternion.Euler(new Vector3(0,0,rot_z - 90));
+				m_turnableRoot.eulerAngles = new Vector3(0, 0, rot_z - 90);
+
+				//m_turnableRoot.localRotation = Quaternion.Slerp(m_turnableRoot.localRotation, Quaternion.LookRotation(vectorToTarget, Vector3.up), RotationSpeed * Time.fixedDeltaTime);
 			}
 			//m_rigidbody2D.rotation = Quaternion.Slerp(m_rigidbody2D.rotation, Quaternion.LookRotation(target - pos, Vector3.up), UnitSpeed * Time.fixedDeltaTime);
 
@@ -354,7 +363,7 @@ namespace Lords
 
 				if (isBeingDragged) {
 					Vector3 arrowPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-					arrowPos.z = -1f;
+					arrowPos.z = 0f;
 					if (m_currentArrow == null)
 					{
 						m_currentArrow = Instantiate (SceneManager.Instance.arrowPrefab) as GameObject;
@@ -452,21 +461,36 @@ namespace Lords
 			Destroy(this.gameObject);
 		}
 
-		public void StartPatrol(Vector2 destinationposition)
+		void StartCommanding(Vector2 destinationposition)
+		{
+			switch (soldierType.CommandType)
+			{
+				case	(int)GlobalDefine.CommandType.DirectControl:
+					StartPatrol(destinationposition);
+					break;
+				case (int)GlobalDefine.CommandType.MessengerControl:
+					StartIssueCommand(destinationposition);
+					break;
+				case (int)GlobalDefine.CommandType.Unable:
+					break;
+			}
+		}
+
+		void StartPatrol(Vector2 destinationposition)
 		{
 			unitState = GlobalDefine.UnitState.Patrolling;
 			m_patrollingdestination = destinationposition;
 		}
 
-		public void StartPursueTarget(int targetID)
+		void StartPursueTarget(int targetID)
 		{
 			m_pursueTargetID = targetID;
 			unitState = GlobalDefine.UnitState.PursuingTarget;
 		}
 
-		public void StartIssueCommand()
+		public void StartIssueCommand(Vector2 destinationposition)
 		{
-			
+			SceneManager.Instance.FindGeneral(fraction).IssueCommand(fraction, UnitID, destinationposition);
 		}
 
 	}
