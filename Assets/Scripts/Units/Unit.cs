@@ -211,9 +211,9 @@ namespace Lords
 
 					if (soldierType.AttackType == 1)
 					{
+						Vector3 pos = TargetUnitList [closestTargetNum].transform.position;
 						//近程攻击不打子弹
 						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower,soldierType.MakePikeEffect);
-						Vector3 pos = TargetUnitList [closestTargetNum].transform.position;
 						pos.z = -1;
 						GetComponent<LineRenderer> ().enabled = true;
 						GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, pos });
@@ -223,9 +223,10 @@ namespace Lords
 
 					if (soldierType.AttackType == 2)
 					{
+						Vector3 pos = TargetUnitList [closestTargetNum].transform.position;
 						//远程攻击要打子弹
 						TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower);
-						Vector3 pos = TargetUnitList [closestTargetNum].transform.position;
+
 						pos.z = -1;
 						GetComponent<LineRenderer> ().enabled = true;
 						GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, pos });
