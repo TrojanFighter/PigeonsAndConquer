@@ -48,7 +48,7 @@ public class GeneralUnit : Unit
 			if (MessengerRechargePercentage >= 1f)
 			{
 				CurrentMessengerNum++;
-//				pidgeonUI.GetComponent<SpriteRenderer> ().sprite = pidgeonUISprites [CurrentMessengerNum];
+				pidgeonUI.GetComponent<SpriteRenderer> ().sprite = pidgeonUISprites [CurrentMessengerNum];
 				MessengerRechargePercentage = 0f;
 			}
 		}
@@ -96,7 +96,7 @@ public class GeneralUnit : Unit
 			int commandID= CommandManager.instance.GenerateCommand(command);
 			SendMessenger(commandID);
 			CurrentMessengerNum--;
-//			pidgeonUI.GetComponent<SpriteRenderer> ().sprite = pidgeonUISprites [CurrentMessengerNum];
+			pidgeonUI.GetComponent<SpriteRenderer> ().sprite = pidgeonUISprites [CurrentMessengerNum];
 			return true;
 		}
 
