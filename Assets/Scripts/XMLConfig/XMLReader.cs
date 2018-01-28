@@ -18,6 +18,7 @@ public static class XMLReader{
 //				xDoc.Load (path);
 //			}
 			TextAsset soldierXML = Resources.Load<TextAsset> ("XML/Soldiers");
+			Debug.Log (soldierXML.text);
 			xDoc.LoadXml (soldierXML.text);
 		XmlNamespaceManager xnm = new XmlNamespaceManager(xDoc.NameTable);
 		xnm.AddNamespace("WB", "urn:schemas-microsoft-com:office:spreadsheet");
@@ -79,13 +80,15 @@ public static class XMLReader{
 	{
 		Dictionary<int,Fraction> fractionsList = new Dictionary<int, Fraction>();
 		XmlDocument xDoc = new XmlDocument();
-			if (Application.platform == RuntimePlatform.Android) {
-				TextAsset fractionXML = Resources.Load<TextAsset> ("XML/Fractions");
-				xDoc.LoadXml (fractionXML.text);
-			} else {
-				xDoc.Load (path);
-			}
+//			if (Application.platform == RuntimePlatform.Android) {
+//				TextAsset fractionXML = Resources.Load<TextAsset> ("XML/Fractions");
+//				xDoc.LoadXml (fractionXML.text);
+//			} else {
+//				xDoc.Load (path);
+//			}
 
+			TextAsset fractionXML = Resources.Load<TextAsset> ("XML/Fractions");
+			xDoc.LoadXml (fractionXML.text);
 		XmlNamespaceManager xnm = new XmlNamespaceManager(xDoc.NameTable);
 		xnm.AddNamespace("WB", "urn:schemas-microsoft-com:office:spreadsheet");
 		XmlElement root = xDoc.DocumentElement;

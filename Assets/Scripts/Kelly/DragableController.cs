@@ -17,7 +17,7 @@ namespace Lords
 
 		void Awake() {
 			// CHANGE FOR PC/TOUCH
-			mouseMode = true;
+			mouseMode = false;
 			fingerIDs = new List<int> ();
 			missingIDs = new List<int> ();
 		}
