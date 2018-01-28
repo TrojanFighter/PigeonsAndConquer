@@ -15,7 +15,7 @@ public static class GlobalDefine  {
 	public enum UnitState
 	{
 		Standing=0,
-		Advancing,
+		Patrolling,
 		BeingPiked,
 		PursuingTarget
 	}

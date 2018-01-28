@@ -11,7 +11,6 @@ namespace Lords
 		public static Dictionary<int, SoldierType> SoldierTypes;
 		public static Dictionary<int, Fraction> Fractions;
 
-		public static Dictionary<int, Unit> PresentUnits;
 
 		public override void Init()
 		{
@@ -19,7 +18,6 @@ namespace Lords
 			                                             GlobalDefine.FileName.SoldierType);
 			Fractions = XMLReader.ReadFractionsFile(Application.dataPath + GlobalDefine.PathDefines.XML_Path +
 			                                        GlobalDefine.FileName.Fraction);
-			PresentUnits=new Dictionary<int, Unit>();
 			//BasePoints = new Dictionary<GlobalDefine.Fraction, BasePoint>();
 			//BasePoints.Add(GlobalDefine.Fraction.One, BasePointArray[0]);
 			//BasePoints.Add(GlobalDefine.Fraction.Two, BasePointArray[1]);

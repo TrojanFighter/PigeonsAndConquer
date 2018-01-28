@@ -439,6 +439,9 @@
                 </e>
               </e>
             </e>
+            <e p="JetBrains" t="Include">
+              <e p="Unity3DRider.cs" t="Include" />
+            </e>
             <e p="RelationsInspector" t="Include">
               <e p="Backends" t="Include">
                 <e p="AutoBackend" t="Include">

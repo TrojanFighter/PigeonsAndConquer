@@ -8,7 +8,7 @@ namespace Lords
     public class CommandManager:Singleton<CommandManager>
     {
         private Dictionary<int, Command> CommandDictionary;
-        private int currentCommandIDNum = 0;
+        private int currentCommandIDNum = 1;
 
         public override void Init()
         {
@@ -23,6 +23,7 @@ namespace Lords
         public int GenerateCommand(Command command)
         {
             currentCommandIDNum++;
+            command.CommandID = currentCommandIDNum;
             CommandDictionary.Add(currentCommandIDNum,command);
             return currentCommandIDNum;
         }

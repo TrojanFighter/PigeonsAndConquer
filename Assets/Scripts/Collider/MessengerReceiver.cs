@@ -9,32 +9,46 @@ namespace Lords
 		public GlobalDefine.Fraction myfraction;
 		public GlobalDefine.UnitClass myunitclass;
 		public Unit myunit;
+		public bool inited = false;
 		
-		void Awake()
+		void Init()
 		{
+			if (inited) return;
 			if(myunit==null)
 				myunit = this.transform.GetComponentInParent<Unit>();
+			myfraction = myunit.fraction;
+			myunitclass = myunit.unitClass;
+			inited = true;
 		}
 
-		
+		void Awake()
+		{
+			Init();
+		}
+
+
 		void OnTriggerEnter2D(Collider2D other)
 		{
-			if (GetComponent<MessengerUnit>())
+			Init();
+			if (myunitclass==GlobalDefine.UnitClass.Messenger)
 			{
+				enabled = false;
 				return;
 			}
 
 			if (other.GetComponent<MessengerUnit>() && other.GetComponent<MessengerUnit>() != myunit)
 			{
 
-				if (myfraction == GlobalDefine.Fraction.One && other.GetComponent<Unit>().fraction == GlobalDefine.Fraction.Two)
+				//Kill the opposite fraction Messenger
+				if (myfraction!=other.GetComponent<MessengerUnit>().fraction )
 				{
+					other.GetComponent<MessengerUnit>().SelfDestroy();
 					//myunit.SendMessage ("AddTargetUnitList",other.GetComponent<Unit>());
 
 				}
-				else if (myfraction == GlobalDefine.Fraction.Two &&
-				         other.GetComponent<Unit>().fraction == GlobalDefine.Fraction.One)
+				else if (other.GetComponent<MessengerUnit>()&&other.GetComponent<MessengerUnit>().m_targetUnitID==myunit.UnitID)
 				{
+					myunit.ReceiveCommand(other.GetComponent<MessengerUnit>().m_commandID);
 					//myunit.SendMessage ("AddTargetUnitList",other.GetComponent<Unit>());
 				}
 			}
