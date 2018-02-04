@@ -14,5 +14,9 @@ namespace Lords
 			unitClass = GlobalDefine.UnitClass.Archer;
 			base.Init();
 		}
+		protected override void PlayAttackSoundOnce()
+		{
+			InAudio.PostEvent(gameObject, SceneManager.instance.ArcherAttackEvent);
+		}
 	}
 }

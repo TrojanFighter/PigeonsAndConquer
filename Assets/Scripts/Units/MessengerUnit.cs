@@ -40,5 +40,9 @@ namespace Lords
 		{
 			return CommandManager.instance.GetCommand(m_commandID);
 		}
+		protected override void PlayAttackSoundOnce()
+		{
+			//InAudio.PostEvent(gameObject, SceneManager.instance.MessengerDeliverEvent);
+		}
 	}
 }

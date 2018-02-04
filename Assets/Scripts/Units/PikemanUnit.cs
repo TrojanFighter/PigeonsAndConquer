@@ -13,5 +13,9 @@ namespace Lords
 			unitClass = GlobalDefine.UnitClass.Pikeman;
 			base.Init();
 		}
+		protected override void PlayAttackSoundOnce()
+		{
+			InAudio.PostEvent(gameObject, SceneManager.instance.PickmanAttackEvent);
+		}
 	}
 }

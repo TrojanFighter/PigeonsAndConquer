@@ -31,9 +31,6 @@ namespace Lords
 		public float lastPikedTime = 0f, PikeRecoverTime = 0.5f,pikedSpeedModifier=0.3f;
 
 		public MessengerReceiver m_MessengerReceiver;
-		//protected MeshRenderer meshRenderer;
-		//protected Material originMaterial;
-		
 
 		public delegate void informUnitDieDelegate(Unit unit);
 
@@ -208,7 +205,18 @@ namespace Lords
 							closestTargetNum = i;
 						}
 					}
-
+					
+					Vector3 pos = TargetUnitList [closestTargetNum].transform.position;
+					//近程攻击不打子弹
+					TargetUnitList[closestTargetNum].TakeNormalAttack(soldierType.NormalAttackPower,soldierType.MakePikeEffect);
+					pos.z = -1;
+					GetComponent<LineRenderer> ().enabled = true;
+					GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, pos });
+					attackFrames = 20;
+					//InAudio.PostEvent(gameObject, SceneManager.instance.CavalryAttackEvent);
+					PlayAttackSoundOnce();
+					
+                    /*
 					if (soldierType.AttackType == 1)
 					{
 						Vector3 pos = TargetUnitList [closestTargetNum].transform.position;
@@ -218,7 +226,8 @@ namespace Lords
 						GetComponent<LineRenderer> ().enabled = true;
 						GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, pos });
 						attackFrames = 20;
-						InAudio.PostEvent(gameObject, SceneManager.instance.KnightAttackEvent);
+						//InAudio.PostEvent(gameObject, SceneManager.instance.CavalryAttackEvent);
+						PlayAttackSoundOnce();
 					}
 
 					if (soldierType.AttackType == 2)
@@ -231,13 +240,18 @@ namespace Lords
 						GetComponent<LineRenderer> ().enabled = true;
 						GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, pos });
 						attackFrames = 20;
-						InAudio.PostEvent(gameObject, SceneManager.instance.ArcherAttackEvent);
-					}
+						//InAudio.PostEvent(gameObject, SceneManager.instance.ArcherAttackEvent);
+					}*/
 				}
 
 				//Debug.Log ("AttackOnce: " + soldierType.NormalAttackPower);
 				yield return new WaitForSeconds(attackTime);
 			}
+		}
+
+		protected virtual void PlayAttackSoundOnce()
+		{
+			//InAudio.PostEvent(gameObject, SceneManager.instance.CavalryAttackEvent);
 		}
 
 
@@ -310,6 +324,11 @@ namespace Lords
 		protected virtual void FixedUpdate()
 		{
 			FixedUpdateMove();
+		}
+
+		//Mention there is an attack happening
+		protected void DrawAttackLine()
+		{
 			if (attackFrames == 0) {
 				if (!isBeingDragged) {
 					GetComponent<LineRenderer> ().SetPositions (new Vector3[] { transform.position, transform.position }); // Resets line to 0
@@ -323,33 +342,30 @@ namespace Lords
 
 		protected virtual void FixedUpdateMove()
 		{
-			if (unitState == GlobalDefine.UnitState.Standing)
-			{
-				//m_patrollingdestination=m_rigidbody2D.position;
-				return;
-			}
 			if (m_rigidbody2D == null) return;
-			
+
 			Vector3 targetPosition=new Vector3();
-
-			if (unitState == GlobalDefine.UnitState.Patrolling)
+			switch (unitState)
 			{
-				targetPosition = m_patrollingdestination;
+					case GlobalDefine.UnitState.Standing:
+						return;
+						break;
+					case GlobalDefine.UnitState.Patrolling:
+						targetPosition = m_patrollingdestination;
+						break;
+					case GlobalDefine.UnitState.PursuingTarget:
+						targetPosition = SceneManager.instance.QueryUnitPosition(m_pursueTargetID);
+						if (targetPosition == Vector3.negativeInfinity)
+						{
+							unitState = GlobalDefine.UnitState.Standing;
+							targetPosition = transform.position;
+							Debug.LogWarning("失去目标id: "+m_pursueTargetID);
+						}
+						break;
 			}
-			else if (unitState == GlobalDefine.UnitState.PursuingTarget)
-			{
-				targetPosition = SceneManager.instance.QueryUnitPosition(m_pursueTargetID);
-				if (targetPosition == Vector3.negativeInfinity)
-				{
-					unitState = GlobalDefine.UnitState.Standing;
-					targetPosition = transform.position;
-					Debug.LogWarning("失去目标id: "+m_pursueTargetID);
-				}
-			}
 
 
-				Vector3 pos = m_rigidbody2D.position;
-
+			//See if is being piked
 			if (bUnderPikeEffect&&soldierType.BePikeAffected)
 			{
 				if (Time.time - lastPikedTime > PikeRecoverTime)
@@ -357,39 +373,44 @@ namespace Lords
 					bUnderPikeEffect = false;
 				}
 			}
-
 			float speed = UnitSpeed * Time.fixedDeltaTime;
 			if (bUnderPikeEffect)
 			{
 				speed = speed * pikedSpeedModifier;
 			}
+			
+			//Calculate target position
+			Vector3 pos = m_rigidbody2D.position;
+
 
 			pos = Vector3.MoveTowards(pos, targetPosition, speed);
-				if ((pos - targetPosition).sqrMagnitude < 0.1f)
-				{
-					unitState = GlobalDefine.UnitState.Standing;
-				}
-				else
-				{
-					Vector3 vectorToTarget = targetPosition - transform.position;
+			//detect if reached the target
+			if ((pos - targetPosition).sqrMagnitude < 0.1f)
+			{
+				unitState = GlobalDefine.UnitState.Standing;
+			}
+			else
+			{
+				Vector3 vectorToTarget = targetPosition - transform.position;
 
-					//vectorToTarget.Normalize();
+				//vectorToTarget.Normalize();
 
-					float rot_z = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
-					//transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+				float rot_z = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+				//transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
 
 
-					//m_rigidbody2D.MoveRotation(Mathf.LerpAngle(m_rigidbody2D.rotation,rot_z - 90, RotationSpeed * Time.deltaTime));
-					//m_turnableRoot.transform.eulerAngles=new Vector3(0,0,Mathf.LerpAngle(m_turnableRoot.transform.eulerAngles.z,rot_z - 90, RotationSpeed * Time.deltaTime));
+				//m_rigidbody2D.MoveRotation(Mathf.LerpAngle(m_rigidbody2D.rotation,rot_z - 90, RotationSpeed * Time.deltaTime));
+				//m_turnableRoot.transform.eulerAngles=new Vector3(0,0,Mathf.LerpAngle(m_turnableRoot.transform.eulerAngles.z,rot_z - 90, RotationSpeed * Time.deltaTime));
 
-					//Quaternion newRot = Quaternion.Euler(new Vector3(0,0,rot_z - 90));
-					m_turnableRoot.eulerAngles = new Vector3(0, 0, rot_z - 90);
+				//Quaternion newRot = Quaternion.Euler(new Vector3(0,0,rot_z - 90));
+				m_turnableRoot.eulerAngles = new Vector3(0, 0, rot_z - 90);
 
-					//m_turnableRoot.localRotation = Quaternion.Slerp(m_turnableRoot.localRotation, Quaternion.LookRotation(vectorToTarget, Vector3.up), RotationSpeed * Time.fixedDeltaTime);
-				}
-				//m_rigidbody2D.rotation = Quaternion.Slerp(m_rigidbody2D.rotation, Quaternion.LookRotation(target - pos, Vector3.up), UnitSpeed * Time.fixedDeltaTime);
-			//if (m_rigidbody2D == null) return;
-				m_rigidbody2D.position = pos;
+				//m_turnableRoot.localRotation = Quaternion.Slerp(m_turnableRoot.localRotation, Quaternion.LookRotation(vectorToTarget, Vector3.up), RotationSpeed * Time.fixedDeltaTime);
+			}
+			//m_rigidbody2D.rotation = Quaternion.Slerp(m_rigidbody2D.rotation, Quaternion.LookRotation(target - pos, Vector3.up), UnitSpeed * Time.fixedDeltaTime);
+			
+            //Apply the calculated position
+			m_rigidbody2D.position = pos;
 		}
 
 		protected virtual void Update()

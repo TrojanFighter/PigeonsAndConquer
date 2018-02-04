@@ -15,7 +15,7 @@ namespace Lords
         
         public GameObject arrowPrefab;
 
-        public InAudioEvent MessengerDeliverEvent, KnightAttackEvent, ArcherAttackEvent, PickmanAttackEvent, VictoryBlast;
+        public InAudioEvent MessengerDeliverEvent, CavalryAttackEvent, ArcherAttackEvent, PickmanAttackEvent, VictoryBlast;
 
         public GameObject RestartScreen;
 
