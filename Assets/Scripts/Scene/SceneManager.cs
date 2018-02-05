@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,6 +20,10 @@ namespace Lords
 
         public GameObject RestartScreen;
 
+        public DataManager _dataManager;
+
+        public CommandManager _commandManager;
+        
         public void Restart()
         {
             Destroy(gameObject);
@@ -29,6 +34,10 @@ namespace Lords
         protected override void Init()
         {
             base.Init();
+            _dataManager=new DataManager();
+            _commandManager=new CommandManager();
+            _dataManager.Init();
+            _commandManager.Init();
             PresentUnits=new Dictionary<int, Unit>();
         }
 

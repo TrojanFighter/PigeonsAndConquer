@@ -5,14 +5,14 @@ using System.Collections.Generic;
 
 namespace Lords
 {
-	public class DataManager :MonoSingleton<DataManager>
+	public class DataManager :Singleton<DataManager>
 	{
 		//public static GameManager Instance;
 		public static Dictionary<int, SoldierType> SoldierTypes;
 		public static Dictionary<int, Fraction> Fractions;
 
 
-		protected override void Init()
+		public override void Init()
 		{
 			base.Init();
 			if (Application.platform == RuntimePlatform.Android) {
