@@ -44,5 +44,11 @@ namespace Lords
 		{
 			//InAudio.PostEvent(gameObject, SceneManager.instance.MessengerDeliverEvent);
 		}
+		
+		public override void SelfDestroy()
+		{
+			SceneManager.instance.UnRegisterUnit(this.UnitID);
+			Destroy(this.gameObject);
+		}
 	}
 }

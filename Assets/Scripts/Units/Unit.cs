@@ -1,11 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using GPP;
 using JetBrains.Annotations;
 //using UnityEditor;
 
 namespace Lords
 {
+	public class OnSpeedUp : GameEvent
+	{
+		public float upSpeed;
+
+		public OnSpeedUp(float speedUp)
+		{
+			upSpeed = speedUp;
+		}
+	}
+	
 	public abstract class Unit : MonoBehaviour
 	{
 
@@ -41,6 +52,7 @@ namespace Lords
 		public bool mouseMode,isBeingDragged;
 
 		public int attackFrames;
+		
 
 		protected virtual void Awake(){
 			//Init();
@@ -519,8 +531,10 @@ namespace Lords
 			return true;
 		}
 
-		public void SelfDestroy()
+		public virtual void SelfDestroy()
 		{
+			EventManager.Instance.Fire(new OnSpeedUp(1f));
+			Debug.Log("SpeedUp Fired");
 			SceneManager.instance.UnRegisterUnit(this.UnitID);
 			Destroy(this.gameObject);
 		}
