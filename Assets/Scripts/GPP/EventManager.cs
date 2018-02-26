@@ -28,11 +28,11 @@ namespace GPP
 
 		public void Register<EventType>(GameEvent.Handler handler) where EventType : GameEvent
 		{
-			System.Type type = typeof(GameEvent);
+			System.Type type = typeof(EventType);
 			GameEvent.Handler handlers;
 			if (_eventTypeToHandlersMap.ContainsKey(type))
 			{
-				_eventTypeToHandlersMap[type] = handler;
+				_eventTypeToHandlersMap[type] += handler;
 			}
 			else
 			{
@@ -42,7 +42,7 @@ namespace GPP
 
 		public void UnRegister<EventType>(GameEvent.Handler handler) where EventType : GameEvent
 		{
-			System.Type type = typeof(GameEvent);
+			System.Type type = typeof(EventType);
 			GameEvent.Handler handlers;
 			if (_eventTypeToHandlersMap.TryGetValue(type, out handlers))
 			{
